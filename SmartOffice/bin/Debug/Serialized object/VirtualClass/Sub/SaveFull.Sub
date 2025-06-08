@@ -1,0 +1,2294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>0</ImageIndex>
+  <Name>SaveFull</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</Statement>
+  <XmlFile />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) This will update a row In the table.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) This will update a row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    ''' &lt;param name="NUM_CLI"&gt;(Set|Get) The NUM_CLI as String.&lt;/param&gt;
+    ''' &lt;param name="TRI_NUM"&gt;(Set|Get) The TRI_NUM as Integer.&lt;/param&gt;
+    ''' &lt;param name="NOM_1ER"&gt;(Set|Get) The NOM_1ER as String.&lt;/param&gt;
+    ''' &lt;param name="NOM_2EM"&gt;(Set|Get) The NOM_2EM as String.&lt;/param&gt;
+    ''' &lt;param name="RUE_1ER"&gt;(Set|Get) The RUE_1ER as String.&lt;/param&gt;
+    ''' &lt;param name="RUE_2EM"&gt;(Set|Get) The RUE_2EM as String.&lt;/param&gt;
+    ''' &lt;param name="NPA_LOC"&gt;(Set|Get) The NPA_LOC as String.&lt;/param&gt;
+    ''' &lt;param name="LOC_GEO"&gt;(Set|Get) The LOC_GEO as String.&lt;/param&gt;
+    ''' &lt;param name="NUM_TEL"&gt;(Set|Get) The NUM_TEL as String.&lt;/param&gt;
+    ''' &lt;param name="NUM_FAX"&gt;(Set|Get) The NUM_FAX as String.&lt;/param&gt;
+    ''' &lt;param name="RMQ"&gt;(Set|Get) The RMQ as String.&lt;/param&gt;
+    ''' &lt;param name="ADR_EML"&gt;(Set|Get) The ADR_EML as String.&lt;/param&gt;
+    ''' &lt;param name="ADR_URL"&gt;(Set|Get) The ADR_URL as String.&lt;/param&gt;
+    ''' &lt;param name="PCOMPTA"&gt;(Set|Get) The PCOMPTA as Integer.&lt;/param&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) This will update a row In the table.") &gt;</string>
+    <string>   Public Sub SaveFull(ByVal [NUM_CLI] As String, 
+ByVal [TRI_NUM] As Integer, 
+ByVal [NOM_1ER] As String, 
+ByVal [NOM_2EM] As String, 
+ByVal [RUE_1ER] As String, 
+ByVal [RUE_2EM] As String, 
+ByVal [NPA_LOC] As String, 
+ByVal [LOC_GEO] As String, 
+ByVal [NUM_TEL] As String, 
+ByVal [NUM_FAX] As String, 
+ByVal [RMQ] As String, 
+ByVal [ADR_EML] As String, 
+ByVal [ADR_URL] As String, 
+ByVal [PCOMPTA] As Integer)</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) This will update a row In the table.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) This will update a row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    ''' &lt;param name="NUM_CLI"&gt;(Set|Get) The NUM_CLI as String.&lt;/param&gt;
+    ''' &lt;param name="TRI_NUM"&gt;(Set|Get) The TRI_NUM as Integer.&lt;/param&gt;
+    ''' &lt;param name="NOM_1ER"&gt;(Set|Get) The NOM_1ER as String.&lt;/param&gt;
+    ''' &lt;param name="NOM_2EM"&gt;(Set|Get) The NOM_2EM as String.&lt;/param&gt;
+    ''' &lt;param name="RUE_1ER"&gt;(Set|Get) The RUE_1ER as String.&lt;/param&gt;
+    ''' &lt;param name="RUE_2EM"&gt;(Set|Get) The RUE_2EM as String.&lt;/param&gt;
+    ''' &lt;param name="NPA_LOC"&gt;(Set|Get) The NPA_LOC as String.&lt;/param&gt;
+    ''' &lt;param name="LOC_GEO"&gt;(Set|Get) The LOC_GEO as String.&lt;/param&gt;
+    ''' &lt;param name="NUM_TEL"&gt;(Set|Get) The NUM_TEL as String.&lt;/param&gt;
+    ''' &lt;param name="NUM_FAX"&gt;(Set|Get) The NUM_FAX as String.&lt;/param&gt;
+    ''' &lt;param name="RMQ"&gt;(Set|Get) The RMQ as String.&lt;/param&gt;
+    ''' &lt;param name="ADR_EML"&gt;(Set|Get) The ADR_EML as String.&lt;/param&gt;
+    ''' &lt;param name="ADR_URL"&gt;(Set|Get) The ADR_URL as String.&lt;/param&gt;
+    ''' &lt;param name="PCOMPTA"&gt;(Set|Get) The PCOMPTA as Integer.&lt;/param&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) This will update a row In the table.") &gt;
+   Public Sub SaveFull(ByVal [NUM_CLI] As String, 
+ByVal [TRI_NUM] As Integer, 
+ByVal [NOM_1ER] As String, 
+ByVal [NOM_2EM] As String, 
+ByVal [RUE_1ER] As String, 
+ByVal [RUE_2EM] As String, 
+ByVal [NPA_LOC] As String, 
+ByVal [LOC_GEO] As String, 
+ByVal [NUM_TEL] As String, 
+ByVal [NUM_FAX] As String, 
+ByVal [RMQ] As String, 
+ByVal [ADR_EML] As String, 
+ByVal [ADR_URL] As String, 
+ByVal [PCOMPTA] As Integer)
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   End Sub
+#End Region '(Set|Get) This will update a row In the table.
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</string>
+    <string>   Public void SaveFull(ByVal [NUM_CLI] As String, 
+ByVal [TRI_NUM] As Integer, 
+ByVal [NOM_1ER] As String, 
+ByVal [NOM_2EM] As String, 
+ByVal [RUE_1ER] As String, 
+ByVal [RUE_2EM] As String, 
+ByVal [NPA_LOC] As String, 
+ByVal [LOC_GEO] As String, 
+ByVal [NUM_TEL] As String, 
+ByVal [NUM_FAX] As String, 
+ByVal [RMQ] As String, 
+ByVal [ADR_EML] As String, 
+ByVal [ADR_URL] As String, 
+ByVal [PCOMPTA] As Integer)   {</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will update a row In the table.</string>
+    <string>   Public final void SaveFull(ByVal [NUM_CLI] As String, 
+ByVal [TRI_NUM] As Integer, 
+ByVal [NOM_1ER] As String, 
+ByVal [NOM_2EM] As String, 
+ByVal [RUE_1ER] As String, 
+ByVal [RUE_2EM] As String, 
+ByVal [NPA_LOC] As String, 
+ByVal [LOC_GEO] As String, 
+ByVal [NUM_TEL] As String, 
+ByVal [NUM_FAX] As String, 
+ByVal [RMQ] As String, 
+ByVal [ADR_EML] As String, 
+ByVal [ADR_URL] As String, 
+ByVal [PCOMPTA] As Integer)   {</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]
+   Public void SaveFull(ByVal [NUM_CLI] As String, 
+ByVal [TRI_NUM] As Integer, 
+ByVal [NOM_1ER] As String, 
+ByVal [NOM_2EM] As String, 
+ByVal [RUE_1ER] As String, 
+ByVal [RUE_2EM] As String, 
+ByVal [NPA_LOC] As String, 
+ByVal [LOC_GEO] As String, 
+ByVal [NUM_TEL] As String, 
+ByVal [NUM_FAX] As String, 
+ByVal [RMQ] As String, 
+ByVal [ADR_EML] As String, 
+ByVal [ADR_URL] As String, 
+ByVal [PCOMPTA] As Integer)   {
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   };
+#endregion (Set|Get) This will update a row In the table.
+   Public final void SaveFull(ByVal [NUM_CLI] As String, 
+ByVal [TRI_NUM] As Integer, 
+ByVal [NOM_1ER] As String, 
+ByVal [NOM_2EM] As String, 
+ByVal [RUE_1ER] As String, 
+ByVal [RUE_2EM] As String, 
+ByVal [NPA_LOC] As String, 
+ByVal [LOC_GEO] As String, 
+ByVal [NUM_TEL] As String, 
+ByVal [NUM_FAX] As String, 
+ByVal [RMQ] As String, 
+ByVal [ADR_EML] As String, 
+ByVal [ADR_URL] As String, 
+ByVal [PCOMPTA] As Integer)   {
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</string>
+    <string>    Let SaveFull = </string>
+    <string>        Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>#endregion (Set|Get) This will update a row In the table.</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]
+    Let SaveFull = 
+        Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+#endregion (Set|Get) This will update a row In the table.
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</string>
+    <string>    SaveFull ::= "SaveFull"</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>#endregion /(Set|Get) This will update a row In the table.</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]
+    SaveFull ::= "SaveFull"
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+#endregion /(Set|Get) This will update a row In the table.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will update a row In the table.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:968| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SaveFull()|Sub}|"' (Set|Get) This will update a row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       With Me
+          .NUM_CLI = [NUM_CLI]
+          .TRI_NUM = [TRI_NUM]
+          .NOM_1ER = [NOM_1ER]
+          .NOM_2EM = [NOM_2EM]
+          .RUE_1ER = [RUE_1ER]
+          .RUE_2EM = [RUE_2EM]
+          .NPA_LOC = [NPA_LOC]
+          .LOC_GEO = [LOC_GEO]
+          .NUM_TEL = [NUM_TEL]
+          .NUM_FAX = [NUM_FAX]
+          .RMQ = [RMQ]
+          .ADR_EML = [ADR_EML]
+          .ADR_URL = [ADR_URL]
+          .PCOMPTA = [PCOMPTA]
+       End With' Me
+       Dim Str As String = ""
+       Str = "UPDATE [MDT_CLIENT] SET TRI_NUM = @TRI_NUM, NOM_1ER = @NOM_1ER, NOM_2EM = @NOM_2EM, RUE_1ER = @RUE_1ER, RUE_2EM = @RUE_2EM, NPA_LOC = @NPA_LOC, LOC_GEO = @LOC_GEO, NUM_TEL = @NUM_TEL, NUM_FAX = @NUM_FAX, RMQ = @RMQ, ADR_EML = @ADR_EML, ADR_URL = @ADR_URL, PCOMPTA = @PCOMPTA WHERE NUM_CLI = @NUM_CLI"
+       If (Me.UseSql = True) Then
+          If (Open(Str).Result = True) Then
+              With Sql_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'Sql_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+          If (Open(Str).Result = True) Then
+              With OleDb_Cmd
+                   .Parameters.AddWithValue("@NUM_CLI", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@TRI_NUM", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@NOM_1ER", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@NOM_2EM", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@RUE_1ER", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@RUE_2EM", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@NPA_LOC", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@LOC_GEO", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@NUM_TEL", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@NUM_FAX", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@RMQ", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@ADR_EML", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@ADR_URL", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@PCOMPTA", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                      Try
+                          If (.ExecuteNonQuery &gt;= 0) Then
+                              Test = True
+                          Else'(.ExecuteNonQuery &lt; 0) Then
+                              Test = False
+                          End If '(.ExecuteNonQuery) Then
+                      Catch ex As Exception
+                          Result += ex.Message &amp; vbNewLine
+                      End Try
+              End With 'OleDb_Cmd
+              Close()
+          ElseIf (Open(Str).Result = False) Then
+               Test = False
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+          End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else 'If (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   };
+#endregion (Set|Get) This will update a row In the table.
+</JavaScript>
+  <ID>6</ID>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.06</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     This will update a row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:968 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params>
+    <Param>
+      <Name>NUM_CLI</Name>
+      <Definition>(Set|Get) The NUM_CLI as String.</Definition>
+    </Param>
+    <Param>
+      <Name>TRI_NUM</Name>
+      <Definition>(Set|Get) The TRI_NUM as Integer.</Definition>
+    </Param>
+    <Param>
+      <Name>NOM_1ER</Name>
+      <Definition>(Set|Get) The NOM_1ER as String.</Definition>
+    </Param>
+    <Param>
+      <Name>NOM_2EM</Name>
+      <Definition>(Set|Get) The NOM_2EM as String.</Definition>
+    </Param>
+    <Param>
+      <Name>RUE_1ER</Name>
+      <Definition>(Set|Get) The RUE_1ER as String.</Definition>
+    </Param>
+    <Param>
+      <Name>RUE_2EM</Name>
+      <Definition>(Set|Get) The RUE_2EM as String.</Definition>
+    </Param>
+    <Param>
+      <Name>NPA_LOC</Name>
+      <Definition>(Set|Get) The NPA_LOC as String.</Definition>
+    </Param>
+    <Param>
+      <Name>LOC_GEO</Name>
+      <Definition>(Set|Get) The LOC_GEO as String.</Definition>
+    </Param>
+    <Param>
+      <Name>NUM_TEL</Name>
+      <Definition>(Set|Get) The NUM_TEL as String.</Definition>
+    </Param>
+    <Param>
+      <Name>NUM_FAX</Name>
+      <Definition>(Set|Get) The NUM_FAX as String.</Definition>
+    </Param>
+    <Param>
+      <Name>RMQ</Name>
+      <Definition>(Set|Get) The RMQ as String.</Definition>
+    </Param>
+    <Param>
+      <Name>ADR_EML</Name>
+      <Definition>(Set|Get) The ADR_EML as String.</Definition>
+    </Param>
+    <Param>
+      <Name>ADR_URL</Name>
+      <Definition>(Set|Get) The ADR_URL as String.</Definition>
+    </Param>
+    <Param>
+      <Name>PCOMPTA</Name>
+      <Definition>(Set|Get) The PCOMPTA as Integer.</Definition>
+    </Param>
+  </Params>
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) This will update a row In the table.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) This will update a row In the table.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) This will update a row In the table.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) This will update a row In the table.") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) This will update a row In the table.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>SaveFull</SubName>
+  <ParameterList>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>NUM_CLI</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [NUM_CLI] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The NUM_CLI as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>NUM_CLI</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>TRI_NUM</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [TRI_NUM] As Integer = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The TRI_NUM as Integer.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>TRI_NUM</ParameterName>
+      <ParameterType>Integer</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>NOM_1ER</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [NOM_1ER] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The NOM_1ER as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>NOM_1ER</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>NOM_2EM</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [NOM_2EM] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The NOM_2EM as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>NOM_2EM</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>RUE_1ER</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [RUE_1ER] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The RUE_1ER as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>RUE_1ER</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>RUE_2EM</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [RUE_2EM] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The RUE_2EM as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>RUE_2EM</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>NPA_LOC</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [NPA_LOC] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The NPA_LOC as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>NPA_LOC</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>LOC_GEO</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [LOC_GEO] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The LOC_GEO as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>LOC_GEO</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>NUM_TEL</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [NUM_TEL] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The NUM_TEL as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>NUM_TEL</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>NUM_FAX</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [NUM_FAX] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The NUM_FAX as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>NUM_FAX</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>RMQ</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [RMQ] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The RMQ as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>RMQ</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>ADR_EML</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [ADR_EML] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The ADR_EML as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>ADR_EML</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>ADR_URL</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [ADR_URL] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The ADR_URL as String.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>ADR_URL</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>PCOMPTA</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [PCOMPTA] As Integer = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>(Set|Get) The PCOMPTA as Integer.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>PCOMPTA</ParameterName>
+      <ParameterType>Integer</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+  </ParameterList>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) This will update a row In the table.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) This will update a row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will update a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:969 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>8.2</Production_Cost>
+  <Quantity_Parameters>14</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

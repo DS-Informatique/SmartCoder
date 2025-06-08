@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Function xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>5</ImageIndex>
+  <Name>CheckConnection</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>IsNothing</Status>
+  <Variables />
+  <Statements />
+  <Statement> ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+</Statement>
+  <XmlFile />
+  <VB_OpenStatement>Function </VB_OpenStatement>
+  <VB_CloseStatement>End Function</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) Evaluate the connection to the DataBase</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Function&gt; &lt;&gt; |.CheckConnection()|Boolean}|"' (Set|Get) Evaluate the connection to the DataBase</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) Evaluate the connection to the DataBase
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) Evaluate the connection to the DataBase") &gt;</string>
+    <string>   Public Function CheckConnection() As Boolean</string>
+    <string> ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+</string>
+    <string>   End Function</string>
+    <string>#End Region '(Set|Get) Evaluate the connection to the DataBase</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Function&gt; &lt;&gt; |.CheckConnection()|Boolean}|"' (Set|Get) Evaluate the connection to the DataBase
+    '''    &lt;Summary&gt;
+'''     (Set|Get) Evaluate the connection to the DataBase
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) Evaluate the connection to the DataBase") &gt;
+   Public Function CheckConnection() As Boolean
+ ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+
+   End Function
+#End Region '(Set|Get) Evaluate the connection to the DataBase
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Function&gt; &lt;&gt; |.CheckConnection()|Function}|"' (Set|Get) Evaluate the connection to the DataBase</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</string>
+    <string>   Public Boolean void CheckConnection()   {</string>
+    <string> ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Evaluate the connection to the DataBase</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Function&gt; &lt;&gt; |.CheckConnection()|Function}|"' (Set|Get) Evaluate the connection to the DataBase
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]
+   Public Boolean void CheckConnection()   {
+ ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+
+   };
+#endregion (Set|Get) Evaluate the connection to the DataBase
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.CheckConnection()|Sub}|"' (Set|Get) Evaluate the connection to the DataBase</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</string>
+    <string>    Let CheckConnection = </string>
+    <string>     ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+</string>
+    <string>#endregion (Set|Get) Evaluate the connection to the DataBase</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.CheckConnection()|Sub}|"' (Set|Get) Evaluate the connection to the DataBase
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]
+    Let CheckConnection = 
+     ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+
+#endregion (Set|Get) Evaluate the connection to the DataBase
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.CheckConnection()|Sub}|"' (Set|Get) Evaluate the connection to the DataBase</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</string>
+    <string>    CheckConnection ::= "CheckConnection"</string>
+    <string> ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+</string>
+    <string>#endregion /(Set|Get) Evaluate the connection to the DataBase</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.CheckConnection()|Sub}|"' (Set|Get) Evaluate the connection to the DataBase
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]
+    CheckConnection ::= "CheckConnection"
+ ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+
+#endregion /(Set|Get) Evaluate the connection to the DataBase
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.CheckConnection()|Sub}|"' (Set|Get) Evaluate the connection to the DataBase</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</string>
+    <string>   Public Boolean void CheckConnection()   {</string>
+    <string> ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Evaluate the connection to the DataBase</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:092| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.CheckConnection()|Sub}|"' (Set|Get) Evaluate the connection to the DataBase
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]
+   Public Boolean void CheckConnection()   {
+ ' Prepare Variables 
+ #Region "Prepare Variables"
+    Dim Test_1 As Boolean = False ' Evaluate if the FilePath is Empty.
+    Dim Test_2 As Boolean = False ' Evaluate if the File Exist.
+    Dim Test_3 As Boolean = False ' Evaluate if the Directory Exist.
+    Dim Test_4 As Boolean = False ' Evaluate if the Drive is Connected.
+    Dim Test_5 As Boolean = False ' Evaluate if there is a Password.
+    Dim Test_6 As Boolean = False ' Evaluate if Connector is nothing.
+    Dim Test_7 As Boolean = False ' Evaluate if Connector Line is not empty.
+    Dim Test_8 As Boolean = False ' Evaluate if the Connection is valid.
+    Dim General_Status As Boolean = False ' Return the General result.
+    Dim Message As String = Nothing' Stores the process logic.
+ #End Region 
+ #Region "Test 1 | Evaluate if the FilePath is Empty."
+    If Not IsNothing(FilePath) Then 
+            Test_1 = True
+        Message += "Test 1 &lt;Result&gt; |OK| The variable FilePath is not nothing."
+    Else
+            Test_1 = False
+        Message += "Test 1 &lt;Result&gt; |PB| The variable FilePath is nothing."
+        FilePath = Nothing
+    End If
+ #End Region 
+ #Region "Test 2 | Evaluate if the File Exist."
+    If IO.File.Exists(FilePath) Then
+            Test_2 = True 
+        Message += "Test 2 &lt;Result&gt; |OK| The FilePath is a recognize as a File."
+    Else
+            Test_2 = False
+        Message += "Test 2 &lt;Result&gt; |PB| The FilePath is a recognize as a File."
+    End If
+ #End Region 
+ #Region "Test 3 | Evaluate if the Directory Exist."
+        If IO.Directory.Exists(IO.Path.GetDirectoryName(FilePath)) Then
+            Test_3 = True
+        Message += "Test 3 &lt;Result&gt; |OK| The Directory Exist."
+        Else
+            Test_3 = False
+        Message += "Test 3 &lt;Result&gt; |PB| The Directory does not Exist."
+        End If
+ #End Region 
+ #Region "Test 4 | Evaluate if the Drive is Connected."
+        Dim D As New DriveInfo(IO.Path.GetPathRoot(FilePath))
+        If D.IsReady  Then
+            Test_4 = True
+        Message += "Test 4 &lt;Result&gt; |OK| The Drive is Online."
+        Else
+            Test_4 = False
+        Message += "Test 4 &lt;Result&gt; |PB| The Drive is Offline or Disconnected."
+        End If
+ #End Region 
+ #Region "Test 5 | Evaluate if there is a Password."
+        If Not IsDbNull(Password) Then
+            Test_5 = True
+        Message += "Test 5 &lt;Result&gt; |OK| The password has been Recorded."
+        Else
+            Test_5 = False
+        Message += "Test 5 &lt;Result&gt; |PB| No password has been stored."
+        End If
+ #End Region 
+ #Region "Test 6 | Evaluate if Connector is nothing."
+        If Not IsNothing(Connector) Then
+            Me.Line = Me.Connector.Line
+            Test_6 = True
+        Message += "Test 6 &lt;Result&gt; |OK| The Connector has been initialized before."
+        Else
+            Test_6 = False
+        Message += "Test 6 &lt;Result&gt; |PB| The Connector has not been initialized before."
+                If Test_2 = True Then
+                    Me.Connector = New LineInfo(FilePath,Password)
+                    Me.Line = Me.Connector.Line
+        Message += "Test 6 &lt;Result&gt; |Initialize Connector|"
+                End If
+        End If
+ #End Region 
+ #Region "Test 7 | Evaluate if Connector Line is not empty."
+        If Not IsDbNull(Me.Connector.Line) Then
+            Test_7 = True
+        Else 
+            Test_7 = False
+        End If
+ #End Region 
+ #Region "Test 8 | Evaluate if the Connection is valid."
+        If Test_7 =True Then
+                       Dim Con As New OleDb.OleDbConnection(Me.Line)
+                   Try
+                       Con.Open()
+                       Test_8 = True
+        Message += "Test 8 &lt;Result&gt; |OK| The Connection is valid."
+                   Catch ex As Exception
+                       Test_8 = False
+        Message += "Test 8 &lt;Result&gt; |PB| The Connection is not valid. Check Password."
+                   Finally
+                       Con.Close()
+                       Con.Dispose()
+                   End Try
+  End If
+ #End Region 
+ If Test_7=True And Test_8 = True Then
+    General_Status=True
+ Else 
+    General_Status=False
+ End If
+ Return General_Status
+
+   };
+#endregion (Set|Get) Evaluate the connection to the DataBase
+</JavaScript>
+  <ID>6</ID>
+  <StatementFormat>Function</StatementFormat>
+  <RegionCode>05.00.06</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     Evaluate the connection to the DataBase
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:092 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) Evaluate the connection to the DataBase</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) Evaluate the connection to the DataBase</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) Evaluate the connection to the DataBase") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) Evaluate the connection to the DataBase") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) Evaluate the connection to the DataBase") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <FunctionName>CheckConnection</FunctionName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) Evaluate the connection to the DataBase</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) Evaluate the connection to the DataBase
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) Evaluate the connection to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:093 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <ReturnType>Boolean</ReturnType>
+  <Partial>False</Partial>
+  <Handle />
+  <Implements />
+  <Production_Cost>1.6</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Function>1.6</Unit_Cost_Function>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Function>

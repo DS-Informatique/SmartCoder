@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Runtime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>15</ImageIndex>
+  <Name>File</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement />
+  <XmlFile />
+  <VB_OpenStatement>Const </VB_OpenStatement>
+  <VB_CloseStatement />
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement />
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement />
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category>Input</Category>
+  <Description>(Set|Get) Variable File as IO.FileInfo.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|IO.FileInfo"' (Set|Get) Variable File as IO.FileInfo.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) Variable File as IO.FileInfo.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</string>
+    <string>    &lt;Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") &gt;</string>
+    <string>   Private  File As IO.FileInfo</string>
+    <string>#End Region '(Set|Get) Variable File as IO.FileInfo.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|IO.FileInfo"' (Set|Get) Variable File as IO.FileInfo.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) Variable File as IO.FileInfo.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    &lt;Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") &gt;
+   Private  File As IO.FileInfo
+#End Region '(Set|Get) Variable File as IO.FileInfo.
+</VB>
+  <Print_C>
+    <string>#region |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|Runtime|  (Set|Get) Variable File as IO.FileInfo.</string>
+    <string> ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</string>
+    <string>   Private IO.FileInfo File;</string>
+    <string>#endregion (Set|Get) Variable File as IO.FileInfo.</string>
+  </Print_C>
+  <C>#region |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|Runtime|  (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]
+   Private IO.FileInfo File;
+#endregion (Set|Get) Variable File as IO.FileInfo.
+</C>
+  <Print_F>
+    <string>#region |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|Runtime|  (Set|Get) Variable File as IO.FileInfo.</string>
+    <string> ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</string>
+    <string>   Private IO.FileInfo File;</string>
+    <string>#endregion (Set|Get) Variable File as IO.FileInfo.</string>
+  </Print_F>
+  <F>#region |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|Runtime|  (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]
+   Private IO.FileInfo File;
+#endregion (Set|Get) Variable File as IO.FileInfo.
+</F>
+  <Print_Python>
+    <string>#region |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|Runtime|  (Set|Get) Variable File as IO.FileInfo.</string>
+    <string> ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</string>
+    <string>   member Private IO.FileInfo File</string>
+    <string>#endregion (Set|Get) Variable File as IO.FileInfo.</string>
+  </Print_Python>
+  <Python>#region |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|Runtime|  (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]
+   member Private IO.FileInfo File
+#endregion (Set|Get) Variable File as IO.FileInfo.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|Runtime|  (Set|Get) Variable File as IO.FileInfo.</string>
+    <string> ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</string>
+    <string>   Private IO.FileInfo File;</string>
+    <string>#endregion (Set|Get) Variable File as IO.FileInfo.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2019/08/27 22h32:514| &lt;15.00.00&gt; &lt;Runtime&gt; &lt;Input&gt; |.File()|Runtime|  (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]
+   Private IO.FileInfo File;
+#endregion (Set|Get) Variable File as IO.FileInfo.
+</JavaScript>
+  <StatementFormat>Runtime</StatementFormat>
+  <RegionCode>15.00.00</RegionCode>
+  <AuthorEmail />
+  <AuthorName />
+  <AuthorUri />
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights>Copyright on SmartOffice programming tools.
+All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+training materials may not be reproduced in any form, used for academic purposes, or used for public
+without the prior written permission of David Shaw Informatique Sàrl.
+The software, components and data used in the course are protected by copyright and should not be copied on any media or
+taken out of the classroom.</Rights>
+  <Summary />
+  <Title />
+  <Usage> </Usage>
+  <Remarks> </Remarks>
+  <Example> </Example>
+  <Note> </Note>
+  <See />
+  <SeeAlso />
+  <Params />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category>Input</Category>
+    <Description>(Set|Get) Variable File as IO.FileInfo.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>CategoryAttribute</AttributeName>
+        <AttributeValue>Input</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) Variable File as IO.FileInfo.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") &gt;</VB>
+    <C>[Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</C>
+    <F>[Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</F>
+    <Python>[Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</Python>
+    <JavaScript>[Browsable(True) , CategoryAttribute("Input") , Description("(Set|Get) Variable File as IO.FileInfo.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Private</AccessModifier>
+  <Shadows>false</Shadows>
+  <Shared>false</Shared>
+  <RuntimeName>File</RuntimeName>
+  <ReturnType>IO.FileInfo</ReturnType>
+  <Initializer />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights>Copyright on SmartOffice programming tools.
+All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+training materials may not be reproduced in any form, used for academic purposes, or used for public
+without the prior written permission of David Shaw Informatique Sàrl.
+The software, components and data used in the course are protected by copyright and should not be copied on any media or
+taken out of the classroom.</Rights>
+    <Summary>(Set|Get) Variable File as IO.FileInfo.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage> </Usage>
+    <Remarks> </Remarks>
+    <Example> </Example>
+    <Note> </Note>
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) Variable File as IO.FileInfo.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) Variable File as IO.FileInfo.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/27 22h32:526 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Dim>false</Dim>
+  <ParentName>Fichier</ParentName>
+  <Production_Cost>0.4</Production_Cost>
+  <Unit_Cost_Runtime>0.4</Unit_Cost_Runtime>
+</Runtime>

@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>0</ImageIndex>
+  <Name>Delete</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</Statement>
+  <XmlFile />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) This will Delete a row In the table.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) This will Delete a row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) This will Delete a row In the table.") &gt;</string>
+    <string>   Public Sub Delete()</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) This will Delete a row In the table.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) This will Delete a row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) This will Delete a row In the table.") &gt;
+   Public Sub Delete()
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   End Sub
+#End Region '(Set|Get) This will Delete a row In the table.
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</string>
+    <string>   Public void Delete()   {</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will Delete a row In the table.</string>
+    <string>   Public final void Delete()   {</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]
+   Public void Delete()   {
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   };
+#endregion (Set|Get) This will Delete a row In the table.
+   Public final void Delete()   {
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</string>
+    <string>    Let Delete = </string>
+    <string>        Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>#endregion (Set|Get) This will Delete a row In the table.</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]
+    Let Delete = 
+        Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+#endregion (Set|Get) This will Delete a row In the table.
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</string>
+    <string>    Delete ::= "Delete"</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>#endregion /(Set|Get) This will Delete a row In the table.</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]
+    Delete ::= "Delete"
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+#endregion /(Set|Get) This will Delete a row In the table.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will Delete a row In the table.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:975| &lt;04.00.07&gt; &lt;Sub&gt; &lt;&gt; |.Delete()|Sub}|"' (Set|Get) This will Delete a row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "DELETE FROM [MDT_CLIENT] WHERE NUM_CLI = @NUM_CLI"
+       If (Open(Str).Result = True) Then
+            If (Me.UseSql = True) Then
+                Sql_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (Sql_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (Sql_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(Sql_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            ElseIf (Me.UseSql = False) Then
+                OleDb_Cmd.Parameters.AddWithValue("@NUM_CLI", NUM_CLI)
+                Try
+                    If (OleDb_Cmd.ExecuteNonQuery() &gt;= 0) Then
+                        Test = True
+                    Else 'If (OleDb_Cmd.ExecuteNonQuery() &lt; 0) Then
+                        Test = False
+                    End If '(OleDb_Cmd.ExecuteNonQuery)
+                Catch ex As Exception
+                    Result += ex.Message &amp; vbNewLine
+                End Try
+                Close()
+            End If '(Me.UseSql)
+       ElseIf (Open(Str).Result = False) Then
+            Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+            Test = False
+       End If '(Open(Str).Result)
+    ElseIf (Me.HasSettings = False) Then
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings)
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   };
+#endregion (Set|Get) This will Delete a row In the table.
+</JavaScript>
+  <ID>7</ID>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.07</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     This will Delete a row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) This will Delete a row In the table.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) This will Delete a row In the table.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) This will Delete a row In the table.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) This will Delete a row In the table.") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) This will Delete a row In the table.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>Delete</SubName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) This will Delete a row In the table.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) This will Delete a row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will Delete a row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:975 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>1.2</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

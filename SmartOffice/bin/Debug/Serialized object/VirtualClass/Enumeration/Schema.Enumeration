@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Enumeration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>2</ImageIndex>
+  <Name>Schema</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>Running</Status>
+  <Variables />
+  <Statements />
+  <Statement />
+  <XmlFile />
+  <VB_OpenStatement>Enum </VB_OpenStatement>
+  <VB_CloseStatement>End Enum</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) The enumeration of Schema.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Enumeration&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) The enumeration of Schema.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) The enumeration of Schema.") &gt;</string>
+    <string>   Public Enum Schema</string>
+    <string>''' &lt;summary&gt;(Set|Get) The NUM_CLI as String.&lt;/summary&gt;</string>
+    <string>   [NUM_CLI] = 0</string>
+    <string>''' &lt;summary&gt;(Set|Get) The TRI_NUM as Integer.&lt;/summary&gt;</string>
+    <string>   [TRI_NUM] = 1</string>
+    <string>''' &lt;summary&gt;(Set|Get) The NOM_1ER as String.&lt;/summary&gt;</string>
+    <string>   [NOM_1ER] = 2</string>
+    <string>''' &lt;summary&gt;(Set|Get) The NOM_2EM as String.&lt;/summary&gt;</string>
+    <string>   [NOM_2EM] = 3</string>
+    <string>''' &lt;summary&gt;(Set|Get) The RUE_1ER as String.&lt;/summary&gt;</string>
+    <string>   [RUE_1ER] = 4</string>
+    <string>''' &lt;summary&gt;(Set|Get) The RUE_2EM as String.&lt;/summary&gt;</string>
+    <string>   [RUE_2EM] = 5</string>
+    <string>''' &lt;summary&gt;(Set|Get) The NPA_LOC as String.&lt;/summary&gt;</string>
+    <string>   [NPA_LOC] = 6</string>
+    <string>''' &lt;summary&gt;(Set|Get) The LOC_GEO as String.&lt;/summary&gt;</string>
+    <string>   [LOC_GEO] = 7</string>
+    <string>''' &lt;summary&gt;(Set|Get) The NUM_TEL as String.&lt;/summary&gt;</string>
+    <string>   [NUM_TEL] = 8</string>
+    <string>''' &lt;summary&gt;(Set|Get) The NUM_FAX as String.&lt;/summary&gt;</string>
+    <string>   [NUM_FAX] = 9</string>
+    <string>''' &lt;summary&gt;(Set|Get) The RMQ as String.&lt;/summary&gt;</string>
+    <string>   [RMQ] = 10</string>
+    <string>''' &lt;summary&gt;(Set|Get) The ADR_EML as String.&lt;/summary&gt;</string>
+    <string>   [ADR_EML] = 11</string>
+    <string>''' &lt;summary&gt;(Set|Get) The ADR_URL as String.&lt;/summary&gt;</string>
+    <string>   [ADR_URL] = 12</string>
+    <string>''' &lt;summary&gt;(Set|Get) The PCOMPTA as Integer.&lt;/summary&gt;</string>
+    <string>   [PCOMPTA] = 13</string>
+    <string>   End Enum</string>
+    <string>#End Region '(Set|Get) The enumeration of Schema.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Enumeration&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) The enumeration of Schema.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) The enumeration of Schema.") &gt;
+   Public Enum Schema
+''' &lt;summary&gt;(Set|Get) The NUM_CLI as String.&lt;/summary&gt;
+   [NUM_CLI] = 0
+''' &lt;summary&gt;(Set|Get) The TRI_NUM as Integer.&lt;/summary&gt;
+   [TRI_NUM] = 1
+''' &lt;summary&gt;(Set|Get) The NOM_1ER as String.&lt;/summary&gt;
+   [NOM_1ER] = 2
+''' &lt;summary&gt;(Set|Get) The NOM_2EM as String.&lt;/summary&gt;
+   [NOM_2EM] = 3
+''' &lt;summary&gt;(Set|Get) The RUE_1ER as String.&lt;/summary&gt;
+   [RUE_1ER] = 4
+''' &lt;summary&gt;(Set|Get) The RUE_2EM as String.&lt;/summary&gt;
+   [RUE_2EM] = 5
+''' &lt;summary&gt;(Set|Get) The NPA_LOC as String.&lt;/summary&gt;
+   [NPA_LOC] = 6
+''' &lt;summary&gt;(Set|Get) The LOC_GEO as String.&lt;/summary&gt;
+   [LOC_GEO] = 7
+''' &lt;summary&gt;(Set|Get) The NUM_TEL as String.&lt;/summary&gt;
+   [NUM_TEL] = 8
+''' &lt;summary&gt;(Set|Get) The NUM_FAX as String.&lt;/summary&gt;
+   [NUM_FAX] = 9
+''' &lt;summary&gt;(Set|Get) The RMQ as String.&lt;/summary&gt;
+   [RMQ] = 10
+''' &lt;summary&gt;(Set|Get) The ADR_EML as String.&lt;/summary&gt;
+   [ADR_EML] = 11
+''' &lt;summary&gt;(Set|Get) The ADR_URL as String.&lt;/summary&gt;
+   [ADR_URL] = 12
+''' &lt;summary&gt;(Set|Get) The PCOMPTA as Integer.&lt;/summary&gt;
+   [PCOMPTA] = 13
+   End Enum
+#End Region '(Set|Get) The enumeration of Schema.
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Enumeration&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</string>
+    <string>    public enum Schema</string>
+    <string>   {</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The NUM_CLI as String.&lt;/summary&gt;</string>
+    <string>        [NUM_CLI] = 0</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The TRI_NUM as Integer.&lt;/summary&gt;</string>
+    <string>        [TRI_NUM] = 1</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The NOM_1ER as String.&lt;/summary&gt;</string>
+    <string>        [NOM_1ER] = 2</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The NOM_2EM as String.&lt;/summary&gt;</string>
+    <string>        [NOM_2EM] = 3</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The RUE_1ER as String.&lt;/summary&gt;</string>
+    <string>        [RUE_1ER] = 4</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The RUE_2EM as String.&lt;/summary&gt;</string>
+    <string>        [RUE_2EM] = 5</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The NPA_LOC as String.&lt;/summary&gt;</string>
+    <string>        [NPA_LOC] = 6</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The LOC_GEO as String.&lt;/summary&gt;</string>
+    <string>        [LOC_GEO] = 7</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The NUM_TEL as String.&lt;/summary&gt;</string>
+    <string>        [NUM_TEL] = 8</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The NUM_FAX as String.&lt;/summary&gt;</string>
+    <string>        [NUM_FAX] = 9</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The RMQ as String.&lt;/summary&gt;</string>
+    <string>        [RMQ] = 10</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The ADR_EML as String.&lt;/summary&gt;</string>
+    <string>        [ADR_EML] = 11</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The ADR_URL as String.&lt;/summary&gt;</string>
+    <string>        [ADR_URL] = 12</string>
+    <string>        /// &lt;summary&gt;(Set|Get) The PCOMPTA as Integer.&lt;/summary&gt;</string>
+    <string>        [PCOMPTA] = 13</string>
+    <string>   }</string>
+    <string>#endregion (Set|Get) The enumeration of Schema.</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Enumeration&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]
+    public enum Schema
+   {
+        /// &lt;summary&gt;(Set|Get) The NUM_CLI as String.&lt;/summary&gt;
+        [NUM_CLI] = 0
+        /// &lt;summary&gt;(Set|Get) The TRI_NUM as Integer.&lt;/summary&gt;
+        [TRI_NUM] = 1
+        /// &lt;summary&gt;(Set|Get) The NOM_1ER as String.&lt;/summary&gt;
+        [NOM_1ER] = 2
+        /// &lt;summary&gt;(Set|Get) The NOM_2EM as String.&lt;/summary&gt;
+        [NOM_2EM] = 3
+        /// &lt;summary&gt;(Set|Get) The RUE_1ER as String.&lt;/summary&gt;
+        [RUE_1ER] = 4
+        /// &lt;summary&gt;(Set|Get) The RUE_2EM as String.&lt;/summary&gt;
+        [RUE_2EM] = 5
+        /// &lt;summary&gt;(Set|Get) The NPA_LOC as String.&lt;/summary&gt;
+        [NPA_LOC] = 6
+        /// &lt;summary&gt;(Set|Get) The LOC_GEO as String.&lt;/summary&gt;
+        [LOC_GEO] = 7
+        /// &lt;summary&gt;(Set|Get) The NUM_TEL as String.&lt;/summary&gt;
+        [NUM_TEL] = 8
+        /// &lt;summary&gt;(Set|Get) The NUM_FAX as String.&lt;/summary&gt;
+        [NUM_FAX] = 9
+        /// &lt;summary&gt;(Set|Get) The RMQ as String.&lt;/summary&gt;
+        [RMQ] = 10
+        /// &lt;summary&gt;(Set|Get) The ADR_EML as String.&lt;/summary&gt;
+        [ADR_EML] = 11
+        /// &lt;summary&gt;(Set|Get) The ADR_URL as String.&lt;/summary&gt;
+        [ADR_URL] = 12
+        /// &lt;summary&gt;(Set|Get) The PCOMPTA as Integer.&lt;/summary&gt;
+        [PCOMPTA] = 13
+   }
+#endregion (Set|Get) The enumeration of Schema.
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Property&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</string>
+    <string>    Type Schema = </string>
+    <string>/// &lt;summary&gt;(Set|Get) The NUM_CLI as String.&lt;/summary&gt;</string>
+    <string>|   [NUM_CLI] = 0</string>
+    <string>/// &lt;summary&gt;(Set|Get) The TRI_NUM as Integer.&lt;/summary&gt;</string>
+    <string>|   [TRI_NUM] = 1</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NOM_1ER as String.&lt;/summary&gt;</string>
+    <string>|   [NOM_1ER] = 2</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NOM_2EM as String.&lt;/summary&gt;</string>
+    <string>|   [NOM_2EM] = 3</string>
+    <string>/// &lt;summary&gt;(Set|Get) The RUE_1ER as String.&lt;/summary&gt;</string>
+    <string>|   [RUE_1ER] = 4</string>
+    <string>/// &lt;summary&gt;(Set|Get) The RUE_2EM as String.&lt;/summary&gt;</string>
+    <string>|   [RUE_2EM] = 5</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NPA_LOC as String.&lt;/summary&gt;</string>
+    <string>|   [NPA_LOC] = 6</string>
+    <string>/// &lt;summary&gt;(Set|Get) The LOC_GEO as String.&lt;/summary&gt;</string>
+    <string>|   [LOC_GEO] = 7</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NUM_TEL as String.&lt;/summary&gt;</string>
+    <string>|   [NUM_TEL] = 8</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NUM_FAX as String.&lt;/summary&gt;</string>
+    <string>|   [NUM_FAX] = 9</string>
+    <string>/// &lt;summary&gt;(Set|Get) The RMQ as String.&lt;/summary&gt;</string>
+    <string>|   [RMQ] = 10</string>
+    <string>/// &lt;summary&gt;(Set|Get) The ADR_EML as String.&lt;/summary&gt;</string>
+    <string>|   [ADR_EML] = 11</string>
+    <string>/// &lt;summary&gt;(Set|Get) The ADR_URL as String.&lt;/summary&gt;</string>
+    <string>|   [ADR_URL] = 12</string>
+    <string>/// &lt;summary&gt;(Set|Get) The PCOMPTA as Integer.&lt;/summary&gt;</string>
+    <string>|   [PCOMPTA] = 13</string>
+    <string>#endregion (Set|Get) The enumeration of Schema.</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Property&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]
+    Type Schema = 
+/// &lt;summary&gt;(Set|Get) The NUM_CLI as String.&lt;/summary&gt;
+|   [NUM_CLI] = 0
+/// &lt;summary&gt;(Set|Get) The TRI_NUM as Integer.&lt;/summary&gt;
+|   [TRI_NUM] = 1
+/// &lt;summary&gt;(Set|Get) The NOM_1ER as String.&lt;/summary&gt;
+|   [NOM_1ER] = 2
+/// &lt;summary&gt;(Set|Get) The NOM_2EM as String.&lt;/summary&gt;
+|   [NOM_2EM] = 3
+/// &lt;summary&gt;(Set|Get) The RUE_1ER as String.&lt;/summary&gt;
+|   [RUE_1ER] = 4
+/// &lt;summary&gt;(Set|Get) The RUE_2EM as String.&lt;/summary&gt;
+|   [RUE_2EM] = 5
+/// &lt;summary&gt;(Set|Get) The NPA_LOC as String.&lt;/summary&gt;
+|   [NPA_LOC] = 6
+/// &lt;summary&gt;(Set|Get) The LOC_GEO as String.&lt;/summary&gt;
+|   [LOC_GEO] = 7
+/// &lt;summary&gt;(Set|Get) The NUM_TEL as String.&lt;/summary&gt;
+|   [NUM_TEL] = 8
+/// &lt;summary&gt;(Set|Get) The NUM_FAX as String.&lt;/summary&gt;
+|   [NUM_FAX] = 9
+/// &lt;summary&gt;(Set|Get) The RMQ as String.&lt;/summary&gt;
+|   [RMQ] = 10
+/// &lt;summary&gt;(Set|Get) The ADR_EML as String.&lt;/summary&gt;
+|   [ADR_EML] = 11
+/// &lt;summary&gt;(Set|Get) The ADR_URL as String.&lt;/summary&gt;
+|   [ADR_URL] = 12
+/// &lt;summary&gt;(Set|Get) The PCOMPTA as Integer.&lt;/summary&gt;
+|   [PCOMPTA] = 13
+#endregion (Set|Get) The enumeration of Schema.
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Property&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</string>
+    <string>    F_ Schema = [    "NUM_CLI",    "TRI_NUM",    "NOM_1ER",    "NOM_2EM",    "RUE_1ER",    "RUE_2EM",    "NPA_LOC",    "LOC_GEO",    "NUM_TEL",    "NUM_FAX",    "RMQ",    "ADR_EML",    "ADR_URL","PCOMPTA"]</string>
+    <string>    Schema = enumerate(F_Schema)</string>
+    <string>#endregion /(Set|Get) The enumeration of Schema.</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Property&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]
+    F_ Schema = [    "NUM_CLI",    "TRI_NUM",    "NOM_1ER",    "NOM_2EM",    "RUE_1ER",    "RUE_2EM",    "NPA_LOC",    "LOC_GEO",    "NUM_TEL",    "NUM_FAX",    "RMQ",    "ADR_EML",    "ADR_URL","PCOMPTA"]
+    Schema = enumerate(F_Schema)
+#endregion /(Set|Get) The enumeration of Schema.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Enumeration&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</string>
+    <string>    public Enum Schema   {</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NUM_CLI as String.&lt;/summary&gt;</string>
+    <string>   [NUM_CLI] = 0</string>
+    <string>/// &lt;summary&gt;(Set|Get) The TRI_NUM as Integer.&lt;/summary&gt;</string>
+    <string>   [TRI_NUM] = 1</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NOM_1ER as String.&lt;/summary&gt;</string>
+    <string>   [NOM_1ER] = 2</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NOM_2EM as String.&lt;/summary&gt;</string>
+    <string>   [NOM_2EM] = 3</string>
+    <string>/// &lt;summary&gt;(Set|Get) The RUE_1ER as String.&lt;/summary&gt;</string>
+    <string>   [RUE_1ER] = 4</string>
+    <string>/// &lt;summary&gt;(Set|Get) The RUE_2EM as String.&lt;/summary&gt;</string>
+    <string>   [RUE_2EM] = 5</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NPA_LOC as String.&lt;/summary&gt;</string>
+    <string>   [NPA_LOC] = 6</string>
+    <string>/// &lt;summary&gt;(Set|Get) The LOC_GEO as String.&lt;/summary&gt;</string>
+    <string>   [LOC_GEO] = 7</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NUM_TEL as String.&lt;/summary&gt;</string>
+    <string>   [NUM_TEL] = 8</string>
+    <string>/// &lt;summary&gt;(Set|Get) The NUM_FAX as String.&lt;/summary&gt;</string>
+    <string>   [NUM_FAX] = 9</string>
+    <string>/// &lt;summary&gt;(Set|Get) The RMQ as String.&lt;/summary&gt;</string>
+    <string>   [RMQ] = 10</string>
+    <string>/// &lt;summary&gt;(Set|Get) The ADR_EML as String.&lt;/summary&gt;</string>
+    <string>   [ADR_EML] = 11</string>
+    <string>/// &lt;summary&gt;(Set|Get) The ADR_URL as String.&lt;/summary&gt;</string>
+    <string>   [ADR_URL] = 12</string>
+    <string>/// &lt;summary&gt;(Set|Get) The PCOMPTA as Integer.&lt;/summary&gt;</string>
+    <string>   [PCOMPTA] = 13</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) The enumeration of Schema.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:726| &lt;02.00.00&gt; &lt;Enumeration&gt; &lt;&gt; |.Schema()|Enumeration{13}|"' (Set|Get) The enumeration of Schema.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]
+    public Enum Schema   {
+/// &lt;summary&gt;(Set|Get) The NUM_CLI as String.&lt;/summary&gt;
+   [NUM_CLI] = 0
+/// &lt;summary&gt;(Set|Get) The TRI_NUM as Integer.&lt;/summary&gt;
+   [TRI_NUM] = 1
+/// &lt;summary&gt;(Set|Get) The NOM_1ER as String.&lt;/summary&gt;
+   [NOM_1ER] = 2
+/// &lt;summary&gt;(Set|Get) The NOM_2EM as String.&lt;/summary&gt;
+   [NOM_2EM] = 3
+/// &lt;summary&gt;(Set|Get) The RUE_1ER as String.&lt;/summary&gt;
+   [RUE_1ER] = 4
+/// &lt;summary&gt;(Set|Get) The RUE_2EM as String.&lt;/summary&gt;
+   [RUE_2EM] = 5
+/// &lt;summary&gt;(Set|Get) The NPA_LOC as String.&lt;/summary&gt;
+   [NPA_LOC] = 6
+/// &lt;summary&gt;(Set|Get) The LOC_GEO as String.&lt;/summary&gt;
+   [LOC_GEO] = 7
+/// &lt;summary&gt;(Set|Get) The NUM_TEL as String.&lt;/summary&gt;
+   [NUM_TEL] = 8
+/// &lt;summary&gt;(Set|Get) The NUM_FAX as String.&lt;/summary&gt;
+   [NUM_FAX] = 9
+/// &lt;summary&gt;(Set|Get) The RMQ as String.&lt;/summary&gt;
+   [RMQ] = 10
+/// &lt;summary&gt;(Set|Get) The ADR_EML as String.&lt;/summary&gt;
+   [ADR_EML] = 11
+/// &lt;summary&gt;(Set|Get) The ADR_URL as String.&lt;/summary&gt;
+   [ADR_URL] = 12
+/// &lt;summary&gt;(Set|Get) The PCOMPTA as Integer.&lt;/summary&gt;
+   [PCOMPTA] = 13
+   };
+#endregion (Set|Get) The enumeration of Schema.
+</JavaScript>
+  <StatementFormat>Enumeration</StatementFormat>
+  <RegionCode>02.00.00</RegionCode>
+  <AuthorEmail />
+  <AuthorName />
+  <AuthorUri />
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary />
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) The enumeration of Schema.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) The enumeration of Schema.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) The enumeration of Schema.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) The enumeration of Schema.") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) The enumeration of Schema.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <Members>
+    <Member>
+      <MemberName>NUM_CLI</MemberName>
+      <Description>(Set|Get) The NUM_CLI as String.</Description>
+      <MemberValue>0</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>TRI_NUM</MemberName>
+      <Description>(Set|Get) The TRI_NUM as Integer.</Description>
+      <MemberValue>1</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>NOM_1ER</MemberName>
+      <Description>(Set|Get) The NOM_1ER as String.</Description>
+      <MemberValue>2</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>NOM_2EM</MemberName>
+      <Description>(Set|Get) The NOM_2EM as String.</Description>
+      <MemberValue>3</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>RUE_1ER</MemberName>
+      <Description>(Set|Get) The RUE_1ER as String.</Description>
+      <MemberValue>4</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>RUE_2EM</MemberName>
+      <Description>(Set|Get) The RUE_2EM as String.</Description>
+      <MemberValue>5</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>NPA_LOC</MemberName>
+      <Description>(Set|Get) The NPA_LOC as String.</Description>
+      <MemberValue>6</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>LOC_GEO</MemberName>
+      <Description>(Set|Get) The LOC_GEO as String.</Description>
+      <MemberValue>7</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>NUM_TEL</MemberName>
+      <Description>(Set|Get) The NUM_TEL as String.</Description>
+      <MemberValue>8</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>NUM_FAX</MemberName>
+      <Description>(Set|Get) The NUM_FAX as String.</Description>
+      <MemberValue>9</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>RMQ</MemberName>
+      <Description>(Set|Get) The RMQ as String.</Description>
+      <MemberValue>10</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>ADR_EML</MemberName>
+      <Description>(Set|Get) The ADR_EML as String.</Description>
+      <MemberValue>11</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>ADR_URL</MemberName>
+      <Description>(Set|Get) The ADR_URL as String.</Description>
+      <MemberValue>12</MemberValue>
+    </Member>
+    <Member>
+      <MemberName>PCOMPTA</MemberName>
+      <Description>(Set|Get) The PCOMPTA as Integer.</Description>
+      <MemberValue>13</MemberValue>
+    </Member>
+  </Members>
+  <EnumerationName>Schema</EnumerationName>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) The enumeration of Schema.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) The enumeration of Schema.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) The enumeration of Schema.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:736 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>7.4</Production_Cost>
+  <Quantity_Parameters>14</Quantity_Parameters>
+  <Unit_Cost_Enumeration>0.4</Unit_Cost_Enumeration>
+  <Unit_Cost_Members>0.5</Unit_Cost_Members>
+</Enumeration>

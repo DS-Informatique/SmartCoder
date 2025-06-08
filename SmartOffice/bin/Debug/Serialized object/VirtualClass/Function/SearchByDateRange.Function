@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Function xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>5</ImageIndex>
+  <Name>SearchByDateRange</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>IsNothing</Status>
+  <Variables />
+  <Statements />
+  <Statement>Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result</Statement>
+  <XmlFile />
+  <VB_OpenStatement>Function </VB_OpenStatement>
+  <VB_CloseStatement>End Function</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) Search For Each Property that match the Search Id.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Function&gt; &lt;&gt; |.SearchByDateRange()|List(Of [MDT_BUDGET])}|"' (Set|Get) Search For Each Property that match the Search Id.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) Search For Each Property that match the Search Id.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    ''' &lt;param name="From_Date"&gt;All element from this Date And this Date included.&lt;/param&gt;
+    ''' &lt;param name="Until_Date"&gt;All element before And including this Date.&lt;/param&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) Search For Each Property that match the Search Id.") &gt;</string>
+    <string>   Public Shared Function SearchByDateRange(ByVal [From_Date] As DateTime, 
+ByVal [Until_Date] As DateTime) As List(Of [MDT_BUDGET])</string>
+    <string>Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result</string>
+    <string>   End Function</string>
+    <string>#End Region '(Set|Get) Search For Each Property that match the Search Id.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Function&gt; &lt;&gt; |.SearchByDateRange()|List(Of [MDT_BUDGET])}|"' (Set|Get) Search For Each Property that match the Search Id.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) Search For Each Property that match the Search Id.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    ''' &lt;param name="From_Date"&gt;All element from this Date And this Date included.&lt;/param&gt;
+    ''' &lt;param name="Until_Date"&gt;All element before And including this Date.&lt;/param&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) Search For Each Property that match the Search Id.") &gt;
+   Public Shared Function SearchByDateRange(ByVal [From_Date] As DateTime, 
+ByVal [Until_Date] As DateTime) As List(Of [MDT_BUDGET])
+Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result
+   End Function
+#End Region '(Set|Get) Search For Each Property that match the Search Id.
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Function&gt; &lt;&gt; |.SearchByDateRange()|Function}|"' (Set|Get) Search For Each Property that match the Search Id.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</string>
+    <string>   Public static List(Of [MDT_BUDGET]) void SearchByDateRange(ByVal [From_Date] As DateTime, 
+ByVal [Until_Date] As DateTime)   {</string>
+    <string>Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Search For Each Property that match the Search Id.</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Function&gt; &lt;&gt; |.SearchByDateRange()|Function}|"' (Set|Get) Search For Each Property that match the Search Id.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]
+   Public static List(Of [MDT_BUDGET]) void SearchByDateRange(ByVal [From_Date] As DateTime, 
+ByVal [Until_Date] As DateTime)   {
+Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result
+   };
+#endregion (Set|Get) Search For Each Property that match the Search Id.
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SearchByDateRange()|Sub}|"' (Set|Get) Search For Each Property that match the Search Id.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</string>
+    <string>    Let SearchByDateRange = </string>
+    <string>    Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result</string>
+    <string>#endregion (Set|Get) Search For Each Property that match the Search Id.</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SearchByDateRange()|Sub}|"' (Set|Get) Search For Each Property that match the Search Id.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]
+    Let SearchByDateRange = 
+    Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result
+#endregion (Set|Get) Search For Each Property that match the Search Id.
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SearchByDateRange()|Sub}|"' (Set|Get) Search For Each Property that match the Search Id.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</string>
+    <string>    SearchByDateRange ::= "SearchByDateRange"</string>
+    <string>Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result</string>
+    <string>#endregion /(Set|Get) Search For Each Property that match the Search Id.</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SearchByDateRange()|Sub}|"' (Set|Get) Search For Each Property that match the Search Id.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]
+    SearchByDateRange ::= "SearchByDateRange"
+Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result
+#endregion /(Set|Get) Search For Each Property that match the Search Id.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SearchByDateRange()|Sub}|"' (Set|Get) Search For Each Property that match the Search Id.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</string>
+    <string>   Public static List(Of [MDT_BUDGET]) void SearchByDateRange(ByVal [From_Date] As DateTime, 
+ByVal [Until_Date] As DateTime)   {</string>
+    <string>Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Search For Each Property that match the Search Id.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h33:216| &lt;05.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SearchByDateRange()|Sub}|"' (Set|Get) Search For Each Property that match the Search Id.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]
+   Public static List(Of [MDT_BUDGET]) void SearchByDateRange(ByVal [From_Date] As DateTime, 
+ByVal [Until_Date] As DateTime)   {
+Dim Result As New List(Of [MDT_BUDGET])
+ Dim C As New [MDT_BUDGET]
+ For Each Element As [MDT_BUDGET] In C.List
+ If (Element.DAT_COM) &gt;= From_Date And (Element.DAT_COM) &lt;= Until_Date Then
+      Result.Add(Element)
+ End If
+ Next
+ Return Result
+   };
+#endregion (Set|Get) Search For Each Property that match the Search Id.
+</JavaScript>
+  <ID>6</ID>
+  <StatementFormat>Function</StatementFormat>
+  <RegionCode>05.00.06</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     Search For Each Property that match the Search Id.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params>
+    <Param>
+      <Name>From_Date</Name>
+      <Definition>All element from this Date And this Date included.</Definition>
+    </Param>
+    <Param>
+      <Name>Until_Date</Name>
+      <Definition>All element before And including this Date.</Definition>
+    </Param>
+  </Params>
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) Search For Each Property that match the Search Id.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) Search For Each Property that match the Search Id.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) Search For Each Property that match the Search Id.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) Search For Each Property that match the Search Id.") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) Search For Each Property that match the Search Id.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Shared>true</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <FunctionName>SearchByDateRange</FunctionName>
+  <ParameterList>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>From_Date</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [From_Date] As DateTime = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>All element from this Date And this Date included.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>From_Date</ParameterName>
+      <ParameterType>DateTime</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>Until_Date</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [Until_Date] As DateTime = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>All element before And including this Date.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>Until_Date</ParameterName>
+      <ParameterType>DateTime</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+  </ParameterList>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) Search For Each Property that match the Search Id.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) Search For Each Property that match the Search Id.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) Search For Each Property that match the Search Id.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h33:216 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <ReturnType>List(Of [MDT_BUDGET])</ReturnType>
+  <Partial>False</Partial>
+  <Handle />
+  <Implements />
+  <Production_Cost>2.6</Production_Cost>
+  <Quantity_Parameters>2</Quantity_Parameters>
+  <Unit_Cost_Function>1.6</Unit_Cost_Function>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Function>

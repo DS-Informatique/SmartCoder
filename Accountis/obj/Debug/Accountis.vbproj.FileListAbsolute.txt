@@ -1,0 +1,143 @@
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\Accountis.exe.config
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\Accountis.exe
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\Accountis.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\Accountis.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\FastColoredTextBox.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.Form1.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.Login.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.Resources.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.vbproj.CopyComplete
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.exe
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.ComptaBoard.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.Saisie.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Accountis\obj\Debug\Accountis.PL.resources
+F:\SmartOffice\Accountis\bin\Debug\Accountis.exe.config
+F:\SmartOffice\Accountis\bin\Debug\Accountis.exe
+F:\SmartOffice\Accountis\bin\Debug\Accountis.pdb
+F:\SmartOffice\Accountis\bin\Debug\Accountis.xml
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.Charts.Design.dll
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Design.dll
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar2.dll
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.Instrumentation.dll
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.TreeGX.dll
+F:\SmartOffice\Accountis\bin\Debug\SmartCoder.dll
+F:\SmartOffice\Accountis\bin\Debug\FastColoredTextBox.dll
+F:\SmartOffice\Accountis\bin\Debug\AxInterop.AXVLC.dll
+F:\SmartOffice\Accountis\bin\Debug\YoutubeExtractor.dll
+F:\SmartOffice\Accountis\bin\Debug\AxInterop.WMPLib.dll
+F:\SmartOffice\Accountis\bin\Debug\AxInterop.SHDocVw.dll
+F:\SmartOffice\Accountis\bin\Debug\AxInterop.MSTSCLib.dll
+F:\SmartOffice\Accountis\bin\Debug\Interop.MSTSCLib.dll
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Charts.dll
+F:\SmartOffice\Accountis\bin\Debug\Interop.AXVLC.dll
+F:\SmartOffice\Accountis\bin\Debug\Interop.WMPLib.dll
+F:\SmartOffice\Accountis\bin\Debug\Interop.SHDocVw.dll
+F:\SmartOffice\Accountis\bin\Debug\SmartCoder.pdb
+F:\SmartOffice\Accountis\bin\Debug\SmartCoder.xml
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Layout.xml
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.DotNetBar2.xml
+F:\SmartOffice\Accountis\bin\Debug\DevComponents.Instrumentation.xml
+F:\SmartOffice\Accountis\bin\Debug\YoutubeExtractor.xml
+F:\SmartOffice\Accountis\obj\Debug\Accountis.vbprojResolveAssemblyReference.cache
+F:\SmartOffice\Accountis\obj\Debug\Accountis.Form1.resources
+F:\SmartOffice\Accountis\obj\Debug\Accountis.Login.resources
+F:\SmartOffice\Accountis\obj\Debug\Accountis.Resources.resources
+F:\SmartOffice\Accountis\obj\Debug\Accountis.ComptaBoard.resources
+F:\SmartOffice\Accountis\obj\Debug\Accountis.PL.resources
+F:\SmartOffice\Accountis\obj\Debug\Accountis.Saisie.resources
+F:\SmartOffice\Accountis\obj\Debug\Accountis.vbproj.GenerateResource.Cache
+F:\SmartOffice\Accountis\obj\Debug\Accountis.exe
+F:\SmartOffice\Accountis\obj\Debug\Accountis.xml
+F:\SmartOffice\Accountis\obj\Debug\Accountis.pdb
+D:\SmartOffice The one\Accountis\bin\Debug\Accountis.exe.config
+D:\SmartOffice The one\Accountis\bin\Debug\Accountis.exe
+D:\SmartOffice The one\Accountis\bin\Debug\Accountis.pdb
+D:\SmartOffice The one\Accountis\bin\Debug\Accountis.xml
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.Charts.Design.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Design.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Layout.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar2.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.Instrumentation.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.SuperGrid.Design.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.TreeGX.dll
+D:\SmartOffice The one\Accountis\bin\Debug\SmartCoder.dll
+D:\SmartOffice The one\Accountis\bin\Debug\FastColoredTextBox.dll
+D:\SmartOffice The one\Accountis\bin\Debug\AxInterop.AXVLC.dll
+D:\SmartOffice The one\Accountis\bin\Debug\YoutubeExtractor.dll
+D:\SmartOffice The one\Accountis\bin\Debug\AxInterop.WMPLib.dll
+D:\SmartOffice The one\Accountis\bin\Debug\AxInterop.SHDocVw.dll
+D:\SmartOffice The one\Accountis\bin\Debug\AxInterop.MSTSCLib.dll
+D:\SmartOffice The one\Accountis\bin\Debug\Interop.AXVLC.dll
+D:\SmartOffice The one\Accountis\bin\Debug\Interop.MSTSCLib.dll
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Charts.dll
+D:\SmartOffice The one\Accountis\bin\Debug\Interop.WMPLib.dll
+D:\SmartOffice The one\Accountis\bin\Debug\Interop.SHDocVw.dll
+D:\SmartOffice The one\Accountis\bin\Debug\SmartCoder.pdb
+D:\SmartOffice The one\Accountis\bin\Debug\SmartCoder.xml
+D:\SmartOffice The one\Accountis\bin\Debug\SmartCoder.dll.config
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Layout.xml
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.DotNetBar2.xml
+D:\SmartOffice The one\Accountis\bin\Debug\DevComponents.Instrumentation.xml
+D:\SmartOffice The one\Accountis\bin\Debug\YoutubeExtractor.xml
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.vbprojAssemblyReference.cache
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.Form1.resources
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.Login.resources
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.Resources.resources
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.ComptaBoard.resources
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.PL.resources
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.Saisie.resources
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.vbproj.GenerateResource.cache
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.vbproj.CoreCompileInputs.cache
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.vbproj.CopyComplete
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.exe
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.xml
+D:\SmartOffice The one\Accountis\obj\Debug\Accountis.pdb

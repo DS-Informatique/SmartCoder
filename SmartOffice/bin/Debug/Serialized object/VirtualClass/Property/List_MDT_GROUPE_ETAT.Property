@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>1</ImageIndex>
+  <Name>List_MDT_GROUPE_ETAT</Name>
+  <Text>List_MDT_GROUPE_ETAT | List(Of MDT_GROUPE_ETAT)</Text>
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement />
+  <XmlFile />
+  <VB_OpenStatement>Property </VB_OpenStatement>
+  <VB_CloseStatement>End Property</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category>List</Category>
+  <Description>(Set|Get) </Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB />
+  <VB />
+  <Print_C />
+  <C />
+  <Print_F />
+  <F />
+  <Print_Python />
+  <Python />
+  <Print_JavaScript />
+  <JavaScript />
+  <ID>25</ID>
+  <StatementFormat>Property</StatementFormat>
+  <RegionCode>01.00.25</RegionCode>
+  <AuthorEmail />
+  <AuthorName />
+  <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary />
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params />
+  <Rules />
+  <Syntax />
+  <Production_Cost>0</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Property>0</Unit_Cost_Property>
+  <Unit_Cost_Parameters>0</Unit_Cost_Parameters>
+  <SummaryStatement>
+    <AuthorEmail />
+    <AuthorName />
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published>2020/09/27 15h38:173</Published>
+    <Rights />
+    <Summary />
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category>List</Category>
+    <Description>(Set|Get) </Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>CategoryAttribute</AttributeName>
+        <AttributeValue>List</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) </AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , CategoryAttribute("List") , Description("(Set|Get) ") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , CategoryAttribute("List") , Description("(Set|Get) ") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , CategoryAttribute("List") , Description("(Set|Get) ") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , CategoryAttribute("List") , Description("(Set|Get) ") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , CategoryAttribute("List") , Description("(Set|Get) ") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , CategoryAttribute("List") , Description("(Set|Get) ") &gt;</VB>
+    <C>[Browsable(true) , CategoryAttribute("List") , Description("(Set|Get) ") ]</C>
+    <F>[Browsable(true) , CategoryAttribute("List") , Description("(Set|Get) ") ]</F>
+    <Python>[Browsable(true) , CategoryAttribute("List") , Description("(Set|Get) ") ]</Python>
+    <JavaScript>[Browsable(true) , CategoryAttribute("List") , Description("(Set|Get) ") ]</JavaScript>
+  </Attribute>
+  <Default>false</Default>
+  <AccessModifier>Public</AccessModifier>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <WriteOnly>false</WriteOnly>
+  <ReturnType>List(Of MDT_GROUPE_ETAT)</ReturnType>
+  <Required>false</Required>
+  <Variable_Name>_List_MDT_GROUPE_ETAT</Variable_Name>
+  <Variable_AccessModifier>Private</Variable_AccessModifier>
+  <Variable_ReturnType>List(Of MDT_GROUPE_ETAT)</Variable_ReturnType>
+  <SetStatement />
+  <GetStatement />
+  <ParentName>Initializor_mdtdata</ParentName>
+</Property>

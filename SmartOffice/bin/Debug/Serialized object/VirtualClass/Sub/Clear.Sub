@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>0</ImageIndex>
+  <Name>Clear</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement>  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With</Statement>
+  <XmlFile />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) This will reinitialize the class properties element.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) This will reinitialize the class properties element.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) This will reinitialize the class properties element.") &gt;</string>
+    <string>   Public Sub Clear()</string>
+    <string>  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) This will reinitialize the class properties element.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) This will reinitialize the class properties element.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) This will reinitialize the class properties element.") &gt;
+   Public Sub Clear()
+  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With
+   End Sub
+#End Region '(Set|Get) This will reinitialize the class properties element.
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</string>
+    <string>   Public void Clear()   {</string>
+    <string>  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will reinitialize the class properties element.</string>
+    <string>   Public final void Clear()   {</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]
+   Public void Clear()   {
+  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With
+   };
+#endregion (Set|Get) This will reinitialize the class properties element.
+   Public final void Clear()   {
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</string>
+    <string>    Let Clear = </string>
+    <string>      With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With</string>
+    <string>#endregion (Set|Get) This will reinitialize the class properties element.</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]
+    Let Clear = 
+      With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With
+#endregion (Set|Get) This will reinitialize the class properties element.
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</string>
+    <string>    Clear ::= "Clear"</string>
+    <string>  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With</string>
+    <string>#endregion /(Set|Get) This will reinitialize the class properties element.</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]
+    Clear ::= "Clear"
+  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With
+#endregion /(Set|Get) This will reinitialize the class properties element.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</string>
+    <string>  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will reinitialize the class properties element.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:078| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Clear()|Sub}|"' (Set|Get) This will reinitialize the class properties element.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]
+  With Me
+         .MDT_ARTICLE = New MDT_ARTICLE
+        .List_MDT_ARTICLE = New List(Of MDT_ARTICLE)
+         .MDT_BUDGET = New MDT_BUDGET
+        .List_MDT_BUDGET = New List(Of MDT_BUDGET)
+         .MDT_BUDGET_ETAPE = New MDT_BUDGET_ETAPE
+        .List_MDT_BUDGET_ETAPE = New List(Of MDT_BUDGET_ETAPE)
+         .MDT_BUREAU = New MDT_BUREAU
+        .List_MDT_BUREAU = New List(Of MDT_BUREAU)
+         .MDT_CATEGORIE = New MDT_CATEGORIE
+        .List_MDT_CATEGORIE = New List(Of MDT_CATEGORIE)
+         .MDT_CLIENT = New MDT_CLIENT
+        .List_MDT_CLIENT = New List(Of MDT_CLIENT)
+         .MDT_CODE = New MDT_CODE
+        .List_MDT_CODE = New List(Of MDT_CODE)
+         .MDT_COLLABO_ANNEE = New MDT_COLLABO_ANNEE
+        .List_MDT_COLLABO_ANNEE = New List(Of MDT_COLLABO_ANNEE)
+         .MDT_COLLABO_PERIODE = New MDT_COLLABO_PERIODE
+        .List_MDT_COLLABO_PERIODE = New List(Of MDT_COLLABO_PERIODE)
+         .MDT_COLLABO_SALAIRE = New MDT_COLLABO_SALAIRE
+        .List_MDT_COLLABO_SALAIRE = New List(Of MDT_COLLABO_SALAIRE)
+         .MDT_COLLABORATEUR = New MDT_COLLABORATEUR
+        .List_MDT_COLLABORATEUR = New List(Of MDT_COLLABORATEUR)
+         .MDT_COMPTE_CG = New MDT_COMPTE_CG
+        .List_MDT_COMPTE_CG = New List(Of MDT_COMPTE_CG)
+         .MDT_CONGE = New MDT_CONGE
+        .List_MDT_CONGE = New List(Of MDT_CONGE)
+         .MDT_DOCUMENT = New MDT_DOCUMENT
+        .List_MDT_DOCUMENT = New List(Of MDT_DOCUMENT)
+         .MDT_DOCUMENT_FACTURE = New MDT_DOCUMENT_FACTURE
+        .List_MDT_DOCUMENT_FACTURE = New List(Of MDT_DOCUMENT_FACTURE)
+         .MDT_DOCUMENT_FACTURE_LIGNE = New MDT_DOCUMENT_FACTURE_LIGNE
+        .List_MDT_DOCUMENT_FACTURE_LIGNE = New List(Of MDT_DOCUMENT_FACTURE_LIGNE)
+         .MDT_DOCUMENT_UTILISATEUR = New MDT_DOCUMENT_UTILISATEUR
+        .List_MDT_DOCUMENT_UTILISATEUR = New List(Of MDT_DOCUMENT_UTILISATEUR)
+         .MDT_ENREGISTREMENT_FACTURES = New MDT_ENREGISTREMENT_FACTURES
+        .List_MDT_ENREGISTREMENT_FACTURES = New List(Of MDT_ENREGISTREMENT_FACTURES)
+         .MDT_ETAPE = New MDT_ETAPE
+        .List_MDT_ETAPE = New List(Of MDT_ETAPE)
+         .MDT_ETAT = New MDT_ETAT
+        .List_MDT_ETAT = New List(Of MDT_ETAT)
+         .MDT_GEFI_TRANSFERT_ETA = New MDT_GEFI_TRANSFERT_ETA
+        .List_MDT_GEFI_TRANSFERT_ETA = New List(Of MDT_GEFI_TRANSFERT_ETA)
+         .MDT_GENRE_PRESTATION = New MDT_GENRE_PRESTATION
+        .List_MDT_GENRE_PRESTATION = New List(Of MDT_GENRE_PRESTATION)
+         .MDT_GROUPE = New MDT_GROUPE
+        .List_MDT_GROUPE = New List(Of MDT_GROUPE)
+         .MDT_GROUPE_ACCES = New MDT_GROUPE_ACCES
+        .List_MDT_GROUPE_ACCES = New List(Of MDT_GROUPE_ACCES)
+         .MDT_GROUPE_ETAT = New MDT_GROUPE_ETAT
+        .List_MDT_GROUPE_ETAT = New List(Of MDT_GROUPE_ETAT)
+         .MDT_HISTORIQUE_OPERATION = New MDT_HISTORIQUE_OPERATION
+        .List_MDT_HISTORIQUE_OPERATION = New List(Of MDT_HISTORIQUE_OPERATION)
+         .MDT_HORAIRE = New MDT_HORAIRE
+        .List_MDT_HORAIRE = New List(Of MDT_HORAIRE)
+         .MDT_IMPORT = New MDT_IMPORT
+        .List_MDT_IMPORT = New List(Of MDT_IMPORT)
+         .MDT_MAJORATION = New MDT_MAJORATION
+        .List_MDT_MAJORATION = New List(Of MDT_MAJORATION)
+         .MDT_MANDAT = New MDT_MANDAT
+        .List_MDT_MANDAT = New List(Of MDT_MANDAT)
+         .MDT_MOD_FTA = New MDT_MOD_FTA
+        .List_MDT_MOD_FTA = New List(Of MDT_MOD_FTA)
+         .MDT_MODELE_ETAPE = New MDT_MODELE_ETAPE
+        .List_MDT_MODELE_ETAPE = New List(Of MDT_MODELE_ETAPE)
+         .MDT_MODELE_SEMAINE = New MDT_MODELE_SEMAINE
+        .List_MDT_MODELE_SEMAINE = New List(Of MDT_MODELE_SEMAINE)
+         .MDT_NOM_MODELE_ETAPE = New MDT_NOM_MODELE_ETAPE
+        .List_MDT_NOM_MODELE_ETAPE = New List(Of MDT_NOM_MODELE_ETAPE)
+         .MDT_NUMERO_UTILISATEUR = New MDT_NUMERO_UTILISATEUR
+        .List_MDT_NUMERO_UTILISATEUR = New List(Of MDT_NUMERO_UTILISATEUR)
+         .MDT_OPERATION = New MDT_OPERATION
+        .List_MDT_OPERATION = New List(Of MDT_OPERATION)
+         .MDT_ORTHOGRAPHE = New MDT_ORTHOGRAPHE
+        .List_MDT_ORTHOGRAPHE = New List(Of MDT_ORTHOGRAPHE)
+         .MDT_RECAPITULATION = New MDT_RECAPITULATION
+        .List_MDT_RECAPITULATION = New List(Of MDT_RECAPITULATION)
+         .MDT_SELECTION_MDT = New MDT_SELECTION_MDT
+        .List_MDT_SELECTION_MDT = New List(Of MDT_SELECTION_MDT)
+         .MDT_SEQ_SESAM = New MDT_SEQ_SESAM
+        .List_MDT_SEQ_SESAM = New List(Of MDT_SEQ_SESAM)
+         .MDT_TACHE = New MDT_TACHE
+        .List_MDT_TACHE = New List(Of MDT_TACHE)
+         .MDT_TACHE_COLLABO = New MDT_TACHE_COLLABO
+        .List_MDT_TACHE_COLLABO = New List(Of MDT_TACHE_COLLABO)
+         .MDT_TACHE_REP_COLLABO = New MDT_TACHE_REP_COLLABO
+        .List_MDT_TACHE_REP_COLLABO = New List(Of MDT_TACHE_REP_COLLABO)
+         .MDT_TACHE_REPETITIVE = New MDT_TACHE_REPETITIVE
+        .List_MDT_TACHE_REPETITIVE = New List(Of MDT_TACHE_REPETITIVE)
+         .MDT_TARIF_HORAIRE = New MDT_TARIF_HORAIRE
+        .List_MDT_TARIF_HORAIRE = New List(Of MDT_TARIF_HORAIRE)
+         .MDT_TAUX_TVA = New MDT_TAUX_TVA
+        .List_MDT_TAUX_TVA = New List(Of MDT_TAUX_TVA)
+         .MDT_TRAJET = New MDT_TRAJET
+        .List_MDT_TRAJET = New List(Of MDT_TRAJET)
+         .MDT_TYPE_HORAIRE = New MDT_TYPE_HORAIRE
+        .List_MDT_TYPE_HORAIRE = New List(Of MDT_TYPE_HORAIRE)
+         .MDT_TYPE_TARIF = New MDT_TYPE_TARIF
+        .List_MDT_TYPE_TARIF = New List(Of MDT_TYPE_TARIF)
+         .MDT_TYPE_TVA = New MDT_TYPE_TVA
+        .List_MDT_TYPE_TVA = New List(Of MDT_TYPE_TVA)
+         .MDT_UTILISATEUR = New MDT_UTILISATEUR
+        .List_MDT_UTILISATEUR = New List(Of MDT_UTILISATEUR)
+         .MDT_VERSION_DONNEES = New MDT_VERSION_DONNEES
+        .List_MDT_VERSION_DONNEES = New List(Of MDT_VERSION_DONNEES)
+         .Paste Errors = New Paste Errors
+        .List_Paste Errors = New List(Of Paste Errors)
+         .Pcompta = New Pcompta
+        .List_Pcompta = New List(Of Pcompta)
+         .QRY_CODE = New QRY_CODE
+        .List_QRY_CODE = New List(Of QRY_CODE)
+         .QRY_USR_COLQUERY = New QRY_USR_COLQUERY
+        .List_QRY_USR_COLQUERY = New List(Of QRY_USR_COLQUERY)
+         .QRY_USR_COLQUERY_ORDERBY = New QRY_USR_COLQUERY_ORDERBY
+        .List_QRY_USR_COLQUERY_ORDERBY = New List(Of QRY_USR_COLQUERY_ORDERBY)
+         .QRY_USR_COLQUERY_WHERE = New QRY_USR_COLQUERY_WHERE
+        .List_QRY_USR_COLQUERY_WHERE = New List(Of QRY_USR_COLQUERY_WHERE)
+         .QRY_USR_NOMQUERY = New QRY_USR_NOMQUERY
+        .List_QRY_USR_NOMQUERY = New List(Of QRY_USR_NOMQUERY)
+        Portfolio = New List(Of Object)
+         DataBase = New SmartCoder.M_FileManager.DataBase
+ End With
+   };
+#endregion (Set|Get) This will reinitialize the class properties element.
+</JavaScript>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.00</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     This will reinitialize the class properties element.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) This will reinitialize the class properties element.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) This will reinitialize the class properties element.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) This will reinitialize the class properties element.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) This will reinitialize the class properties element.") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) This will reinitialize the class properties element.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>Clear</SubName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) This will reinitialize the class properties element.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) This will reinitialize the class properties element.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the class properties element.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:078 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>1.2</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

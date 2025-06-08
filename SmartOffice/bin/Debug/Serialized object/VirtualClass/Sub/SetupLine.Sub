@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>0</ImageIndex>
+  <Name>SetupLine</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement>' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+</Statement>
+  <XmlFile />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) This will prepare the Connection Line to the DataBase</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) This will prepare the Connection Line to the DataBase
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") &gt;</string>
+    <string>   Public Sub SetupLine()</string>
+    <string>' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) This will prepare the Connection Line to the DataBase</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase
+    '''    &lt;Summary&gt;
+'''     (Set|Get) This will prepare the Connection Line to the DataBase
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    &lt;Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") &gt;
+   Public Sub SetupLine()
+' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+
+   End Sub
+#End Region '(Set|Get) This will prepare the Connection Line to the DataBase
+</VB>
+  <Print_C>
+    <string>#region |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</string>
+    <string>   Public void SetupLine()   {</string>
+    <string>' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will prepare the Connection Line to the DataBase</string>
+    <string>   Public final void SetupLine()   {</string>
+  </Print_C>
+  <C>#region |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]
+   Public void SetupLine()   {
+' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+
+   };
+#endregion (Set|Get) This will prepare the Connection Line to the DataBase
+   Public final void SetupLine()   {
+</C>
+  <Print_F>
+    <string>#region |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</string>
+    <string>    Let SetupLine = </string>
+    <string>    ' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+</string>
+    <string>#endregion (Set|Get) This will prepare the Connection Line to the DataBase</string>
+  </Print_F>
+  <F>#region |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]
+    Let SetupLine = 
+    ' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+
+#endregion (Set|Get) This will prepare the Connection Line to the DataBase
+</F>
+  <Print_Python>
+    <string>#region |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</string>
+    <string>    SetupLine ::= "SetupLine"</string>
+    <string>' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+</string>
+    <string>#endregion /(Set|Get) This will prepare the Connection Line to the DataBase</string>
+  </Print_Python>
+  <Python>#region |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]
+    SetupLine ::= "SetupLine"
+' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+
+#endregion /(Set|Get) This will prepare the Connection Line to the DataBase
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</string>
+    <string>' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will prepare the Connection Line to the DataBase</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/06/12 13h27:648| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupLine()|Sub}|"' (Set|Get) This will prepare the Connection Line to the DataBase
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]
+' Testing Parameters
+Dim Test_TableName As Boolean = False
+Dim Test_FilePath As Boolean = False
+' Testing
+  If (IsNothing(Me.TableName)) Then
+      Test_TableName = False
+  Else
+      If (Me.TableName.Length&gt;0) Then 
+          Test_TableName = True
+      Else
+          Test_TableName = False
+      End If
+  End If
+  If (IsNothing(Me.FilePath)) Then
+      Test_FilePath= False
+  Else
+      If (Me.FilePath.Length&gt;0) Then 
+          If (IO.File.Exists(Me.FilePath)) Then 
+              Test_FilePath = True
+          Else
+              Test_FilePath = False
+          End If
+      Else
+          Test_FilePath = False
+      End If
+  End If
+ If (Test_TableName = True And Test_FilePath = True ) Then
+     Dim LineBuilder As ToolBoxDLL.LineBuilder = Nothing
+     LineBuilder = New ToolBoxDLL.LineBuilder(Me.FilePath, Me.Password)
+     If (Not IsNothing(LineBuilder)) Then
+         If (Not IsNothing(LineBuilder.Provider)) Then
+             Me.ProviderName = LineBuilder.Provider.Name
+             Me.ProviderType = LineBuilder.Provider
+             Me.Line= LineBuilder.ConnectionLine
+             Me.UseSql = LineBuilder.UseSql
+         End If
+     End If
+     If (LineBuilder.ConnectionLine.Length &gt; 0) Then
+         Me.HasSettings = True
+     Else
+         Me.HasSettings = False
+     End If
+ Else 
+     Me.HasSettings = False
+ End If 
+
+   };
+#endregion (Set|Get) This will prepare the Connection Line to the DataBase
+</JavaScript>
+  <ID>6</ID>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.06</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     This will prepare the Connection Line to the DataBase
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:648 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) This will prepare the Connection Line to the DataBase</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) This will prepare the Connection Line to the DataBase</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") &gt;</VB>
+    <C>[Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</C>
+    <F>[Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</F>
+    <Python>[Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</Python>
+    <JavaScript>[Browsable(True) , Description("(Set|Get) This will prepare the Connection Line to the DataBase") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>SetupLine</SubName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) This will prepare the Connection Line to the DataBase</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) This will prepare the Connection Line to the DataBase
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will prepare the Connection Line to the DataBase
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:649 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>1.2</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

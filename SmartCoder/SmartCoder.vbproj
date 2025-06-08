@@ -1,0 +1,1910 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12E82212-DB9E-478E-9B0C-C0405C052424}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SmartCoder</RootNamespace>
+    <AssemblyName>SmartCoder</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SmartCoder.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SmartCoder.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>SmartCoder.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>SmartCoder.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.Charts.Design, Version=14.0.0.19, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Charts, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Design, Version=14.0.0.19, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=14.0.0.19, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation.Design, Version=14.0.0.19, Culture=neutral, PublicKeyToken=76cb4c6eb576bca5, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.SuperGrid.Design, Version=14.0.0.19, Culture=neutral, PublicKeyToken=26d81176cfa2b486, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.TreeGX, Version=14.0.0.19, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL" />
+    <Reference Include="FastColoredTextBox, Version=2.16.16.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Graph, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.InfoPath, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.OneNote, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Diagnostics.Tracing" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="YoutubeExtractor, Version=0.10.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YoutubeExtractor.0.10.11\lib\net35\YoutubeExtractor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.vb" />
+    <Compile Include="ComputerInfo\FileManager\Fichier.Designer.vb">
+      <DependentUpon>Fichier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerInfo\FileManager\Fichier.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComputerInfo\FileManager\FolderView.Designer.vb">
+      <DependentUpon>FolderView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerInfo\FileManager\FolderView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComputerInfo\FileManager\M_FileManager.vb" />
+    <Compile Include="ComputerInfo\MyComputerInfo.Designer.vb">
+      <DependentUpon>MyComputerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerInfo\MyComputerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComputerInfo\M_Computer.vb" />
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Informative\Serializer.designer.vb">
+      <DependentUpon>Serializer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Informative\Serializer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Informative\ShowProperty.designer.vb">
+      <DependentUpon>ShowProperty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Informative\ShowProperty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Object\MediaPanel.designer.vb">
+      <DependentUpon>MediaPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\MediaPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\M_Info.vb" />
+    <Compile Include="Object\M_Langue.vb" />
+    <Compile Include="Object\M_Math.vb" />
+    <Compile Include="Object\M_Microsoft.vb" />
+    <Compile Include="Object\M_Reflexion.vb" />
+    <Compile Include="Object\M_Runtime.vb" />
+    <Compile Include="Object\M_StringFormat.vb" />
+    <Compile Include="Object\M_TestItem.vb" />
+    <Compile Include="Object\M_Voice.vb" />
+    <Compile Include="Object\U_DataBase.designer.vb">
+      <DependentUpon>U_DataBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\U_DataBase.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\M_Ffmpeg.vb" />
+    <Compile Include="Object\VbNET\M_Referencing.vb" />
+    <Compile Include="Object\VbNET\M_Web.vb" />
+    <Compile Include="Object\VbNET\U_VbNET.Designer.vb">
+      <DependentUpon>U_VbNET.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\U_VbNET.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET.vb" />
+    <Compile Include="Object\VbNET\VbNET_Class.Designer.vb">
+      <DependentUpon>VbNET_Class.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Class.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Enumeration.Designer.vb">
+      <DependentUpon>VbNET_Enumeration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Enumeration.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Function.Designer.vb">
+      <DependentUpon>VbNET_Function.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Function.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Loader.Designer.vb">
+      <DependentUpon>VbNET_Loader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Loader.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Module.Designer.vb">
+      <DependentUpon>VbNET_Module.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Module.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Property.Designer.vb">
+      <DependentUpon>VbNET_Property.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Property.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Runtime.Designer.vb">
+      <DependentUpon>VbNET_Runtime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Runtime.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Structure.Designer.vb">
+      <DependentUpon>VbNET_Structure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Structure.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Sub.Designer.vb">
+      <DependentUpon>VbNET_Sub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VbNET_Sub.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\VbNET\VCRControl.designer.vb">
+      <DependentUpon>VCRControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\VbNET\VCRControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Object\WebPage.designer.vb">
+      <DependentUpon>WebPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Object\WebPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\PrintException.designer.vb">
+      <DependentUpon>PrintException.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\PrintException.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Print_ResultItem.designer.vb">
+      <DependentUpon>Print_ResultItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Print_ResultItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\RemoteDesktopConnection.Designer.vb">
+      <DependentUpon>RemoteDesktopConnection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\RemoteDesktopConnection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Test_Item.designer.vb">
+      <DependentUpon>Test_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Test_Item.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\TV.designer.vb">
+      <DependentUpon>TV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TV.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\U_MusicPlayer.designer.vb">
+      <DependentUpon>U_MusicPlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\U_MusicPlayer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\YoutubePlayer.designer.vb">
+      <DependentUpon>YoutubePlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\YoutubePlayer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComputerInfo\FileManager\Fichier.resx">
+      <DependentUpon>Fichier.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComputerInfo\FileManager\FolderView.resx">
+      <DependentUpon>FolderView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComputerInfo\MyComputerInfo.resx">
+      <DependentUpon>MyComputerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Informative\Serializer.resx">
+      <DependentUpon>Serializer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Informative\ShowProperty.resx">
+      <DependentUpon>ShowProperty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\MediaPanel.resx">
+      <DependentUpon>MediaPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\U_DataBase.resx">
+      <DependentUpon>U_DataBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\U_VbNET.resx">
+      <DependentUpon>U_VbNET.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Class.resx">
+      <DependentUpon>VbNET_Class.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Enumeration.resx">
+      <DependentUpon>VbNET_Enumeration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Function.resx">
+      <DependentUpon>VbNET_Function.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Loader.resx">
+      <DependentUpon>VbNET_Loader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Module.resx">
+      <DependentUpon>VbNET_Module.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Property.resx">
+      <DependentUpon>VbNET_Property.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Runtime.resx">
+      <DependentUpon>VbNET_Runtime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Structure.resx">
+      <DependentUpon>VbNET_Structure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VbNET_Sub.resx">
+      <DependentUpon>VbNET_Sub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\VbNET\VCRControl.resx">
+      <DependentUpon>VCRControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Object\WebPage.resx">
+      <DependentUpon>WebPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\PrintException.resx">
+      <DependentUpon>PrintException.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Print_ResultItem.resx">
+      <DependentUpon>Print_ResultItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\RemoteDesktopConnection.resx">
+      <DependentUpon>RemoteDesktopConnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Test_Item.resx">
+      <DependentUpon>Test_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TV.resx">
+      <DependentUpon>TV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\U_MusicPlayer.resx">
+      <DependentUpon>U_MusicPlayer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\YoutubePlayer.resx">
+      <DependentUpon>YoutubePlayer.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\access.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archive_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atribute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio Disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio Disk_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio Disk_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio Disk_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio Disk_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio Disk_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server_close %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server_help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server_info %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batch_process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binary_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boolean_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burn Disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burn Disk_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burn Disk_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burn Disk_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burn Disk_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burn Disk_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cold_fusion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compact Disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compact Disk_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compact Disk_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compact Disk_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compact Disk_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compact Disk_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect_to_database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy v2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy v2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy v2_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy v2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy v2_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy v2_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_transport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desktop_computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desktop_computer_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desktop_computer_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive Full.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive OK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive Warning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVD Disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVD Disk_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVD Disk_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVD Disk_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVD Disk_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVD Disk_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_disc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_disc_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_disc_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_disc_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_disc_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd_rom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entity_relationship_model.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase_database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase_registry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flash Disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flash Disk_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flash Disk_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flash Disk_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flash Disk_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flash Disk_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foreign_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard Disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard Disk_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard Disk_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard Disk_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard Disk_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard Disk_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inkjet_printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inkjet_printer_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inkjet_printer_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inkjet_printer_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert_column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert_row.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert_table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intelligent_stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_primary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge_cells.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microsoft_sql_server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mysql.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Negative.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Negative_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Negative_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Negative_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Negative_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Negative_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numeric_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\objects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oracle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Positive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Positive_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Positive_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Positive_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Positive_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Positive_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentation_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentation_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentation_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentation_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentation_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\primary_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\privilege.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_check %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relationship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\row.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\split_cells.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\split_columns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql_query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Down_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Down_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Down_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Down_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Down_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Up_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Up_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Up_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Up_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stock Index Up_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage_1_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage_1_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage_1_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage_1_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sybase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Synchronize.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Synchronize_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Synchronize_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Synchronize_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Synchronize_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Synchronize_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_footer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Document_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Document_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Document_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Document_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Document_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom In.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom In_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom In_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom In_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom In_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom In_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom Out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom Out_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom Out_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom Out_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom Out_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom Out_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxAXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxMSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxSHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_mark2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_image_message.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallpaper_Welome.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallpaper1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Walpaper2.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

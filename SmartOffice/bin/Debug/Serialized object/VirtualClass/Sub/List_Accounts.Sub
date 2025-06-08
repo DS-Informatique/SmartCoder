@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>4</ImageIndex>
+  <Name>List_Accounts</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement>Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+</Statement>
+  <XmlFile />
+  <VB_OpenStatement>Sub </VB_OpenStatement>
+  <VB_CloseStatement>End Sub</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) The sub List_Accounts.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) The sub List_Accounts.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) The sub List_Accounts.") &gt;</string>
+    <string>   Public Sub List_Accounts()</string>
+    <string>Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) The sub List_Accounts.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) The sub List_Accounts.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    &lt;Browsable(True) , Description("(Set|Get) The sub List_Accounts.") &gt;
+   Public Sub List_Accounts()
+Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+
+   End Sub
+#End Region '(Set|Get) The sub List_Accounts.
+</VB>
+  <Print_C>
+    <string>#region |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</string>
+    <string>   Public void List_Accounts()   {</string>
+    <string>Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) The sub List_Accounts.</string>
+    <string>   Public final void List_Accounts()   {</string>
+  </Print_C>
+  <C>#region |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]
+   Public void List_Accounts()   {
+Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+
+   };
+#endregion (Set|Get) The sub List_Accounts.
+   Public final void List_Accounts()   {
+</C>
+  <Print_F>
+    <string>#region |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</string>
+    <string>    Let List_Accounts = </string>
+    <string>    Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+</string>
+    <string>#endregion (Set|Get) The sub List_Accounts.</string>
+  </Print_F>
+  <F>#region |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]
+    Let List_Accounts = 
+    Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+
+#endregion (Set|Get) The sub List_Accounts.
+</F>
+  <Print_Python>
+    <string>#region |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</string>
+    <string>    List_Accounts ::= "List_Accounts"</string>
+    <string>Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+</string>
+    <string>#endregion /(Set|Get) The sub List_Accounts.</string>
+  </Print_Python>
+  <Python>#region |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]
+    List_Accounts ::= "List_Accounts"
+Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+
+#endregion /(Set|Get) The sub List_Accounts.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</string>
+    <string>Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) The sub List_Accounts.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2019/07/08 19h44:836| &lt;04.00.05&gt; &lt;Sub&gt; &lt;&gt; |.List_Accounts()|Sub}|"' (Set|Get) The sub List_Accounts.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]
+Dim M As New Tbl_Plan_Comptable
+M.Reset()
+    With Me
+        .Opening       = 0
+        .Debit         = 0
+        .Credit        = 0
+        .Balance       = 0
+        .Closing       = 0     
+        .List_Accounts = New List(Of Tbl_Plan_Comptable)
+    End With
+For Each Account As Tbl_Plan_Comptable In M.List()
+    If Account.Group_Négatif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Credit+=Account.Credit
+        Me.List_Accounts.Add(Account)
+    ElseIf Account.Group_Positif = Me.N Then
+        Me.Opening+= Account.Opening
+        Me.Debit +=Account.Debit   
+        Me.List_Accounts.Add(Account)
+   End If
+   Me.Balance = Me.Credit + Me.Debit
+Next
+Me.Closing = Me.Opening+Me.Balance
+
+   };
+#endregion (Set|Get) The sub List_Accounts.
+</JavaScript>
+  <ID>5</ID>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.05</RegionCode>
+  <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+  <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+  <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights>Copyright on SmartOffice programming tools.
+All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+training materials may not be reproduced in any form, used for academic purposes, or used for public
+without the prior written permission of David Shaw Informatique Sàrl.
+The software, components and data used in the course are protected by copyright and should not be copied on any media or
+taken out of the classroom.</Rights>
+  <Title />
+  <Usage> </Usage>
+  <Remarks> </Remarks>
+  <Example> </Example>
+  <Note> </Note>
+  <See />
+  <SeeAlso />
+  <Params />
+  <Rules> </Rules>
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) The sub List_Accounts.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) The sub List_Accounts.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) The sub List_Accounts.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) The sub List_Accounts.") &gt;</VB>
+    <C>[Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</C>
+    <F>[Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</F>
+    <Python>[Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</Python>
+    <JavaScript>[Browsable(True) , Description("(Set|Get) The sub List_Accounts.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>List_Accounts</SubName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights>Copyright on SmartOffice programming tools.
+All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+training materials may not be reproduced in any form, used for academic purposes, or used for public
+without the prior written permission of David Shaw Informatique Sàrl.
+The software, components and data used in the course are protected by copyright and should not be copied on any media or
+taken out of the classroom.</Rights>
+    <Summary>(Set|Get) The sub List_Accounts.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage> </Usage>
+    <Remarks> </Remarks>
+    <Example> </Example>
+    <Note> </Note>
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) The sub List_Accounts.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) The sub List_Accounts.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/08 19h59:456 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.
+'''    All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.
+'''    The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Handles />
+  <Implements />
+  <ParentName>VirtualClass</ParentName>
+  <Production_Cost>1.2</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Function xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>5</ImageIndex>
+  <Name>Index</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>IsNothing</Status>
+  <Variables />
+  <Statements />
+  <Statement> Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result</Statement>
+  <XmlFile />
+  <VB_OpenStatement>Function </VB_OpenStatement>
+  <VB_CloseStatement>End Function</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>The Index as List(Of TimeSheet).</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>The Index as List(Of TimeSheet).</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("The Index as List(Of TimeSheet).") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , Description("The Index as List(Of TimeSheet).") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , Description("The Index as List(Of TimeSheet).") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , Description("The Index as List(Of TimeSheet).") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , Description("The Index as List(Of TimeSheet).") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("The Index as List(Of TimeSheet).") &gt;</VB>
+    <C>[Browsable(True) , Description("The Index as List(Of TimeSheet).") ]</C>
+    <F>[Browsable(True) , Description("The Index as List(Of TimeSheet).") ]</F>
+    <Python>[Browsable(True) , Description("The Index as List(Of TimeSheet).") ]</Python>
+    <JavaScript>[Browsable(True) , Description("The Index as List(Of TimeSheet).") ]</JavaScript>
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) The Index as List(Of TimeSheet).</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Function&gt; &lt;&gt; |.Index()|List(Of TimeSheet)}|"' (Set|Get) The Index as List(Of TimeSheet).</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) The Index as List(Of TimeSheet).
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") &gt;</string>
+    <string>   Public Function Index() As List(Of TimeSheet)</string>
+    <string> Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result</string>
+    <string>   End Function</string>
+    <string>#End Region '(Set|Get) The Index as List(Of TimeSheet).</string>
+  </Print_VB>
+  <VB>#Region"[On] |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Function&gt; &lt;&gt; |.Index()|List(Of TimeSheet)}|"' (Set|Get) The Index as List(Of TimeSheet).
+    '''    &lt;Summary&gt;
+'''     (Set|Get) The Index as List(Of TimeSheet).
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    &lt;Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") &gt;
+   Public Function Index() As List(Of TimeSheet)
+ Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result
+   End Function
+#End Region '(Set|Get) The Index as List(Of TimeSheet).
+</VB>
+  <Print_C>
+    <string>#region |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Function&gt; &lt;&gt; |.Index()|Function}|"' (Set|Get) The Index as List(Of TimeSheet).</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</string>
+    <string>   Public List(Of TimeSheet) void Index()   {</string>
+    <string> Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) The Index as List(Of TimeSheet).</string>
+  </Print_C>
+  <C>#region |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Function&gt; &lt;&gt; |.Index()|Function}|"' (Set|Get) The Index as List(Of TimeSheet).
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]
+   Public List(Of TimeSheet) void Index()   {
+ Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result
+   };
+#endregion (Set|Get) The Index as List(Of TimeSheet).
+</C>
+  <Print_F>
+    <string>#region |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Sub&gt; &lt;&gt; |.Index()|Sub}|"' (Set|Get) The Index as List(Of TimeSheet).</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</string>
+    <string>    Let Index = </string>
+    <string>     Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result</string>
+    <string>#endregion (Set|Get) The Index as List(Of TimeSheet).</string>
+  </Print_F>
+  <F>#region |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Sub&gt; &lt;&gt; |.Index()|Sub}|"' (Set|Get) The Index as List(Of TimeSheet).
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]
+    Let Index = 
+     Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result
+#endregion (Set|Get) The Index as List(Of TimeSheet).
+</F>
+  <Print_Python>
+    <string>#region |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Sub&gt; &lt;&gt; |.Index()|Sub}|"' (Set|Get) The Index as List(Of TimeSheet).</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</string>
+    <string>    Index ::= "Index"</string>
+    <string> Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result</string>
+    <string>#endregion /(Set|Get) The Index as List(Of TimeSheet).</string>
+  </Print_Python>
+  <Python>#region |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Sub&gt; &lt;&gt; |.Index()|Sub}|"' (Set|Get) The Index as List(Of TimeSheet).
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]
+    Index ::= "Index"
+ Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result
+#endregion /(Set|Get) The Index as List(Of TimeSheet).
+</Python>
+  <Print_JavaScript>
+    <string>#region |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Sub&gt; &lt;&gt; |.Index()|Sub}|"' (Set|Get) The Index as List(Of TimeSheet).</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</string>
+    <string>   Public List(Of TimeSheet) void Index()   {</string>
+    <string> Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) The Index as List(Of TimeSheet).</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2019/07/17 00h08:138| &lt;05.00.08&gt; &lt;Sub&gt; &lt;&gt; |.Index()|Sub}|"' (Set|Get) The Index as List(Of TimeSheet).
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]
+   Public List(Of TimeSheet) void Index()   {
+ Dim Result As New List(Of TimeSheet)
+            Dim I As New TimeSheet
+            I.Reset(New SmartCoder.M_FileManager.LineInfo(My.Settings.Db_TimeSheet_FilePath, My.Settings.Db_TimeSheet_Password))
+            For Each T As TimeSheet In I.List()
+                If T.TimeIn &gt; From And T.TimeIn &lt;= EndDate Then
+                    If T.Mandat = Mandat Then
+                        Result.Add(T)
+
+                    End If
+                End If
+            Next
+
+            Return Result
+   };
+#endregion (Set|Get) The Index as List(Of TimeSheet).
+</JavaScript>
+  <ID>8</ID>
+  <StatementFormat>Function</StatementFormat>
+  <RegionCode>05.00.08</RegionCode>
+  <AuthorEmail />
+  <AuthorName />
+  <AuthorUri />
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     The Index as List(Of TimeSheet).
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:138 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example> </Example>
+  <Note> </Note>
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) The Index as List(Of TimeSheet).</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) The Index as List(Of TimeSheet).</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") &gt;</VB>
+    <C>[Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</C>
+    <F>[Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</F>
+    <Python>[Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</Python>
+    <JavaScript>[Browsable(True) , Description("(Set|Get) The Index as List(Of TimeSheet).") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <FunctionName>Index</FunctionName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) The Index as List(Of TimeSheet).</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example> </Example>
+    <Note> </Note>
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) The Index as List(Of TimeSheet).
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) The Index as List(Of TimeSheet).
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2019/07/17 00h08:144 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <ReturnType>List(Of TimeSheet)</ReturnType>
+  <Partial>False</Partial>
+  <Handle />
+  <Implements />
+  <ParentName>TimeSheet</ParentName>
+  <Production_Cost>1.6</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Function>1.6</Unit_Cost_Function>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Function>

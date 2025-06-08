@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>0</ImageIndex>
+  <Name>Import</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement>    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+</Statement>
+  <XmlFile />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) This will initialise the importation of the data.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) This will initialise the importation of the data.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) This will initialise the importation of the data.") &gt;</string>
+    <string>   Public Sub Import()</string>
+    <string>    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) This will initialise the importation of the data.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) This will initialise the importation of the data.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) This will initialise the importation of the data.") &gt;
+   Public Sub Import()
+    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+
+   End Sub
+#End Region '(Set|Get) This will initialise the importation of the data.
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</string>
+    <string>   Public void Import()   {</string>
+    <string>    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will initialise the importation of the data.</string>
+    <string>   Public final void Import()   {</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]
+   Public void Import()   {
+    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+
+   };
+#endregion (Set|Get) This will initialise the importation of the data.
+   Public final void Import()   {
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</string>
+    <string>    Let Import = </string>
+    <string>        Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+</string>
+    <string>#endregion (Set|Get) This will initialise the importation of the data.</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]
+    Let Import = 
+        Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+
+#endregion (Set|Get) This will initialise the importation of the data.
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</string>
+    <string>    Import ::= "Import"</string>
+    <string>    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+</string>
+    <string>#endregion /(Set|Get) This will initialise the importation of the data.</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]
+    Import ::= "Import"
+    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+
+#endregion /(Set|Get) This will initialise the importation of the data.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</string>
+    <string>    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will initialise the importation of the data.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:982| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Import()|Sub}|"' (Set|Get) This will initialise the importation of the data.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]
+    Dim Result As New TestCommand(0,"Import","MDT_CLIENT","Table","Import()","04.05.00","Start the importation of the data table from the database.")
+    Me.Data = New DataTable
+    Dim T0 As New TestParameter("Me.Line","String",Me.Line)
+    Result.AddParameter(T0)
+    If (Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed) Then
+        Dim Test0 As New Test(0, Translate(My.Settings.Statement, Sentences.Importation), Translate(My.Settings.Statement, Sentences.Test_if_the_command_has_executed_correctly))
+        If (Me.UseSql = True) Then
+            If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                Me.Data.Load(Sql_Cmd.ExecuteReader)
+                Close()
+            Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+            End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+        Else '(Me.UseSql = False)
+            If (Me.Connector.Provider.Name = "Dbf") Then
+                If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.DataBase) &amp; "]").Result = True) Then
+                    Me.Data.Load(OleDb_Cmd.ExecuteReader)
+                    Close()
+                Else 'If (Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+                End If '(Open("SELECT * FROM [" &amp; IO.Path.GetFileNameWithoutExtension(Me.FilePath) &amp; "]")
+            Else 'If (Me.Connector.Provider.Name = "Dbf")
+                If (Open("SELECT * FROM [MDT_CLIENT]").Result = True) Then
+                    Me.Data.Load(Sql_Cmd.ExecuteReader)
+                    Close()
+                Else '(Open("SELECT * FROM [MDT_CLIENT]").Result = False)
+                End If '(Open("SELECT * FROM [MDT_CLIENT]").Result)
+            End If '(Me.Connector.Provider.Name = "Dbf")
+        End If '(Me.UseSql)
+        If (Me.Data.Columns.Count -1 &lt; 0) Then
+            Test0.Status = TestStatus.Failed
+        Else 'If (Me.Data.Columns.Count -1 &lt; 0)
+            Test0.Status = TestStatus.Passed
+        End If '(Me.Data.Columns.Count -1 &lt; 0)
+        Result.AddTest(Test0)
+        If (Test0.Status = TestStatus.Passed) Then
+            Result.Status = TestCommandStatus.Passed
+        Else' If (Test0.Status = TestStatus.Passed)
+            Result.Status = TestCommandStatus.Failed
+        End If '(Test0.Status = TestStatus.Passed)
+    End If '(Result.Status &lt;&gt; TestCommandStatus.Parameter_Failed)
+
+   };
+#endregion (Set|Get) This will initialise the importation of the data.
+</JavaScript>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.00</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     This will initialise the importation of the data.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) This will initialise the importation of the data.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) This will initialise the importation of the data.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) This will initialise the importation of the data.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) This will initialise the importation of the data.") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) This will initialise the importation of the data.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>Import</SubName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) This will initialise the importation of the data.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) This will initialise the importation of the data.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will initialise the importation of the data.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:982 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>1.2</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

@@ -1,0 +1,425 @@
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\SmartOffice.exe.config
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\SmartOffice.exe
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\SmartOffice.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\SmartOffice.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.CopyComplete
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.exe
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\FastColoredTextBox.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Test.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Television.resources
+F:\SmartOffice\SmartOffice\bin\Debug\SmartOffice.exe.config
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.exe
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.xml
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.pdb
+F:\SmartOffice\SmartOffice\bin\Debug\SmartOffice.exe
+F:\SmartOffice\SmartOffice\bin\Debug\SmartOffice.pdb
+F:\SmartOffice\SmartOffice\bin\Debug\SmartOffice.xml
+F:\SmartOffice\SmartOffice\bin\Debug\DocumentFormat.OpenXml.dll
+F:\SmartOffice\SmartOffice\bin\Debug\SmartCoder.dll
+F:\SmartOffice\SmartOffice\bin\Debug\FastColoredTextBox.dll
+F:\SmartOffice\SmartOffice\bin\Debug\AxInterop.AXVLC.dll
+F:\SmartOffice\SmartOffice\bin\Debug\YoutubeExtractor.dll
+F:\SmartOffice\SmartOffice\bin\Debug\AxInterop.WMPLib.dll
+F:\SmartOffice\SmartOffice\bin\Debug\AxInterop.SHDocVw.dll
+F:\SmartOffice\SmartOffice\bin\Debug\AxInterop.MSTSCLib.dll
+F:\SmartOffice\SmartOffice\bin\Debug\Interop.MSTSCLib.dll
+F:\SmartOffice\SmartOffice\bin\Debug\Interop.AXVLC.dll
+F:\SmartOffice\SmartOffice\bin\Debug\Newtonsoft.Json.dll
+F:\SmartOffice\SmartOffice\bin\Debug\Interop.WMPLib.dll
+F:\SmartOffice\SmartOffice\bin\Debug\Interop.SHDocVw.dll
+F:\SmartOffice\SmartOffice\bin\Debug\SmartCoder.pdb
+F:\SmartOffice\SmartOffice\bin\Debug\SmartCoder.xml
+F:\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+F:\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.xml
+F:\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+F:\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+F:\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar2.xml
+F:\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.xml
+F:\SmartOffice\SmartOffice\bin\Debug\DocumentFormat.OpenXml.xml
+F:\SmartOffice\SmartOffice\bin\Debug\YoutubeExtractor.xml
+F:\SmartOffice\SmartOffice\bin\Debug\Newtonsoft.Json.xml
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbprojResolveAssemblyReference.cache
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Television.resources
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Test.resources
+F:\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.Cache
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartOffice.exe.config
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartOffice.exe
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartOffice.pdb
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartOffice.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\FastColoredTextBox.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Television.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Test.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.CopyComplete
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.exe
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.pdb
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartOffice.exe.config
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartOffice.exe
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartOffice.pdb
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartOffice.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.Charts.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Charts.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar2.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.SuperGrid.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.TreeGX.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DocumentFormat.OpenXml.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartCoder.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\FastColoredTextBox.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\AxInterop.AXVLC.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\YoutubeExtractor.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\AxInterop.WMPLib.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\AxInterop.SHDocVw.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\AxInterop.MSTSCLib.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Interop.MSTSCLib.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Interop.AXVLC.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Newtonsoft.Json.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Interop.WMPLib.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Interop.SHDocVw.dll
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartCoder.pdb
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartCoder.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\SmartCoder.dll.config
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.DotNetBar2.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DevComponents.Instrumentation.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\DocumentFormat.OpenXml.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\YoutubeExtractor.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\bin\Debug\Newtonsoft.Json.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbprojAssemblyReference.cache
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Television.resources
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Test.resources
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.cache
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.CoreCompileInputs.cache
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.CopyComplete
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.exe
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.xml
+I:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.pdb
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbprojAssemblyReference.cache
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Television.resources
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.Test.resources
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.cache
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.exe
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.xml
+Z:\Saadry\Documents\SmartOffice\SmartOffice\obj\Debug\SmartOffice.pdb
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.exe.config
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.exe
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\FastColoredTextBox.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Television.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Test.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.CopyComplete
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.exe
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.pdb
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.pdb
+C:\Users\Saadry\Documents\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.exe.config
+D:\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.exe
+D:\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.pdb
+D:\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Charts.Design.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Charts.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Design.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar2.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.Design.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.SuperGrid.Design.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.TreeGX.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\DocumentFormat.OpenXml.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\FastColoredTextBox.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.AXVLC.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\YoutubeExtractor.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.WMPLib.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.SHDocVw.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.MSTSCLib.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\Interop.AXVLC.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\Interop.MSTSCLib.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\Newtonsoft.Json.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\Interop.WMPLib.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\Interop.SHDocVw.dll
+D:\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.pdb
+D:\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.dll.config
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar2.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\DocumentFormat.OpenXml.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\YoutubeExtractor.xml
+D:\SmartOffice The one\SmartOffice\bin\Debug\Newtonsoft.Json.xml
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbprojAssemblyReference.cache
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Television.resources
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Test.resources
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.cache
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.CoreCompileInputs.cache
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.CopyComplete
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.exe
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.xml
+D:\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.pdb
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Charts.Design.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Charts.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Design.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar2.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.Design.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.SuperGrid.Design.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.TreeGX.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DocumentFormat.OpenXml.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\FastColoredTextBox.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.AXVLC.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\YoutubeExtractor.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.WMPLib.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.SHDocVw.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.MSTSCLib.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\Interop.AXVLC.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\Interop.MSTSCLib.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\Newtonsoft.Json.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\Interop.WMPLib.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\Interop.SHDocVw.dll
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.pdb
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.dll.config
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar2.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\DocumentFormat.OpenXml.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\YoutubeExtractor.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\Newtonsoft.Json.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbprojAssemblyReference.cache
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Television.resources
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Test.resources
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.cache
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.exe
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.pdb
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.exe.config
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.exe
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.pdb
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.xml
+P:\Modèles\SmartOffice\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.CopyComplete
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.exe.config
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.exe
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.pdb
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\SmartOffice.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Charts.Design.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Charts.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Design.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar2.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.Design.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.SuperGrid.Design.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.TreeGX.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DocumentFormat.OpenXml.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\FastColoredTextBox.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.AXVLC.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\YoutubeExtractor.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.WMPLib.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.SHDocVw.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\AxInterop.MSTSCLib.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\Interop.AXVLC.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\Interop.MSTSCLib.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\Newtonsoft.Json.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\Interop.WMPLib.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\Interop.SHDocVw.dll
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.pdb
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\SmartCoder.dll.config
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Layout.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.DotNetBar2.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DevComponents.Instrumentation.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\DocumentFormat.OpenXml.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\YoutubeExtractor.xml
+F:\Previous work\SmartOffice The one\SmartOffice\bin\Debug\Newtonsoft.Json.xml
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbprojAssemblyReference.cache
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Form1.resources
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Resources.resources
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.RemoteDesktop.resources
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Television.resources
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.Test.resources
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.GenerateResource.cache
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.CoreCompileInputs.cache
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.vbproj.CopyComplete
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.exe
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.xml
+F:\Previous work\SmartOffice The one\SmartOffice\obj\Debug\SmartOffice.pdb

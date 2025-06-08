@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>1</ImageIndex>
+  <Name>SelectedIndex</Name>
+  <Text>SelectedIndex | Integer</Text>
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement />
+  <XmlFile />
+  <VB_OpenStatement>Property </VB_OpenStatement>
+  <VB_CloseStatement>End Property</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category>Index</Category>
+  <Description>(Set|Get) The SelectedIndex as Integer.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB />
+  <VB />
+  <Print_C />
+  <C />
+  <Print_F />
+  <F />
+  <Print_Python />
+  <Python />
+  <Print_JavaScript />
+  <JavaScript />
+  <StatementFormat>Property</StatementFormat>
+  <RegionCode>01.00.00</RegionCode>
+  <AuthorEmail />
+  <AuthorName />
+  <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary />
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params />
+  <Rules />
+  <Syntax />
+  <Production_Cost>0</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Property>0</Unit_Cost_Property>
+  <Unit_Cost_Parameters>0</Unit_Cost_Parameters>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published>2020/06/12 13h27:351</Published>
+    <Rights />
+    <Summary>(Get) The SelectedIndex as Integer.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Get) The SelectedIndex as Integer.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:351 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Get) The SelectedIndex as Integer.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:351 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Get) The SelectedIndex as Integer.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:351 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Get) The SelectedIndex as Integer.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:351 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category>Index</Category>
+    <Description>(Set|Get) The SelectedIndex as Integer.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>CategoryAttribute</AttributeName>
+        <AttributeValue>Index</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) The SelectedIndex as Integer.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") &gt;</VB>
+    <C>[Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") ]</C>
+    <F>[Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") ]</F>
+    <Python>[Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") ]</Python>
+    <JavaScript>[Browsable(True) , CategoryAttribute("Index") , Description("(Set|Get) The SelectedIndex as Integer.") ]</JavaScript>
+  </Attribute>
+  <Default>false</Default>
+  <AccessModifier>Public</AccessModifier>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <WriteOnly>false</WriteOnly>
+  <ReturnType>Integer</ReturnType>
+  <Variable_Name>_SelectedIndex</Variable_Name>
+  <Variable_AccessModifier>Private</Variable_AccessModifier>
+  <Variable_ReturnType>Integer</Variable_ReturnType>
+  <SetStatement> If (RowCount &gt;=0) Then
+     Dim Cmd As New SqlClient.SqlCommandBuilder(Me.Sql_Adaptor)
+     Cmd.QuotePrefix = "["
+     Cmd.QuotePrefix = "]"
+       If (AddingModeEnable = True) Then
+           Value = RowCount + 1
+       ElseIf (AddingModeEnable = False) Then
+           If (Value &gt; RowCount) Then
+               Value = 0
+           ElseIf (Value &lt; 0) Then
+               Value = RowCount
+           End If 
+       End If 
+       If (HasBeenFormated = True) Then
+           If (AddingModeEnable = True) Then
+               ' Populating Oledb Parameters
+               For Each P as OleDb.OleDbParameter In Me.OleDb_Parameters
+                   P.Value = "?"
+               Next
+               ' Populating Sql Parameters
+               For Each P As SqlClient.SqlParameter In Me.Sql_Parameters
+                   P.Value = "?"
+               Next
+               For Each Item As VirtualItem In Me.Items(Value).SubItems
+                   Item.Value = "?"
+               Next
+           ElseIf (AddingModeEnable = False) Then 
+               Dim Row As DataRow = Rows(Value)
+                   If (Not IsNothing(Row)) Then
+                       ' Populating Oledb Parameters
+                       For i As Integer = 0 To Me.OleDb_Parameters.Count - 1
+                           Dim P As OleDb.OleDbParameter = Me.OleDb_Parameters(i)
+                           P.Value = Row(i)
+                       Next
+                       ' Populating Sql Parameters
+                       For j As Integer = 0 To Me.Sql_Parameters.Count - 1
+                           Dim P As SqlClient.SqlParameter = Me.Sql_Parameters(j)
+                           P.Value = Row(j)
+                       Next
+                       ' Filling Item
+                       Dim Element As VirtualItem = Items(Value)
+                       For k As Integer = 0 To Element.SubItems.Count - 1
+                           Dim Item As VirtualItem = Element.SubItems(k)
+                           If (Not IsNothing(Item)) Then
+                               Item.Value = Row(k)
+                           End If
+                       Next
+                   End If
+           End If 
+           Sql_Adaptor = New SqlClient.SqlDataAdapter
+           Sql_DeleteCommand = New SqlClient.SqlCommand
+           Sql_UpdateCommand = New SqlClient.SqlCommand
+           Sql_InsertCommand = New SqlClient.SqlCommand
+           Sql_SelectCommand = New SqlClient.SqlCommand
+           With Sql_DeleteCommand
+               .Connection = Sql_Con
+               .CommandText = "DELETE FROM `" &amp; Me.TableName &amp; "` WHERE `" &amp; Me.Columns(0).Caption &amp; "` =" &amp; Me.Sql_Parameters(0).Value
+               .Parameters.AddWithValue(Sql_Parameters(0).ParameterName, Sql_Parameters(0).Value)
+           End With
+           With Sql_UpdateCommand
+               .Connection = Sql_Con
+               .CommandText = "UPDATE `" &amp; Me.TableName &amp; "` SET "
+               For i As Integer = 0 To Columns.Count-2
+                   .CommandText +="`" &amp; Columns(i).Caption &amp; "`"
+               Next
+               .CommandText +="`" &amp; Columns(Columns.Count - 1).Caption &amp; "` = ? WHERE `" &amp; Columns(0).Caption &amp; "` =" &amp; Me.Sql_Parameters(0).Value
+               For Each P As SqlClient.SqlParameter In Sql_Parameters
+                   .Parameters.AddWithValue(P.ParameterName, P.Value)
+               Next
+           End With
+           With Sql_InsertCommand
+               .Connection = Sql_Con
+               .CommandText = "INSERT INTO `" &amp; Me.TableName &amp; "` ( " &amp; Me.Columns(0).Caption &amp; "` ="
+               For i As Integer = 0 To Columns.Count-2
+                   .CommandText += "`" &amp; Columns(i).Caption &amp; "`, "
+               Next
+               .CommandText += "`" &amp; Columns(Columns.Count-1).Caption &amp; "`) VALUES ("
+               For i As Integer = 0 To Columns.Count-2
+                   .CommandText += "?, "
+               Next
+               .CommandText += "?)"
+               For Each P As SqlClient.SqlParameter In Sql_Parameters
+                   .Parameters.AddWithValue(P.ParameterName, P.Value)
+               Next
+           End With
+           With Sql_SelectCommand
+               .Connection = Sql_Con
+               .CommandText = "SELECT * FROM " &amp; Me.TableName
+           End With
+           With Sql_Adaptor
+               .SelectCommand = Sql_SelectCommand
+               .UpdateCommand = Sql_UpdateCommand
+               .DeleteCommand = Sql_DeleteCommand
+               .InsertCommand = Sql_InsertCommand
+           End With
+           OleDb_Adaptor = New OleDb.OleDbDataAdapter
+           OleDb_DeleteCommand = New OleDb.OleDbCommand
+           OleDb_UpdateCommand = New OleDb.OleDbCommand
+           OleDb_InsertCommand = New OleDb.OleDbCommand
+           OleDb_SelectCommand = New OleDb.OleDbCommand
+           With OleDb_DeleteCommand
+               .Connection = OleDb_Con
+               .CommandText = "DELETE FROM `" &amp; Me.TableName &amp; "` WHERE `" &amp; Me.Columns(0).Caption &amp; "` =" &amp; Me.OleDb_Parameters(0).Value
+               .Parameters.AddWithValue(OleDb_Parameters(0).ParameterName, OleDb_Parameters(0).Value)
+           End With
+           With OleDb_UpdateCommand
+               .Connection = OleDb_Con
+               .CommandText = "UPDATE `" &amp; Me.TableName &amp; "` SET "
+               For i As Integer = 0 To Columns.Count-2
+                   .CommandText +="`" &amp; Columns(i).Caption &amp; "`"
+               Next
+               .CommandText +="`" &amp; Columns(Columns.Count - 1).Caption &amp; "` = ? WHERE `" &amp; Columns(0).Caption &amp; "` =" &amp; Me.OleDb_Parameters(0).Value
+               For Each P As OleDb.OleDbParameter In OleDb_Parameters
+                   .Parameters.AddWithValue(P.ParameterName, P.Value)
+               Next
+           End With
+           With OleDb_InsertCommand
+               .Connection = OleDb_Con
+               .CommandText = "INSERT INTO `" &amp; Me.TableName &amp; "` ( " &amp; Me.Columns(0).Caption &amp; "` ="
+               For i As Integer = 0 To Columns.Count-2
+                   .CommandText += "`" &amp; Columns(i).Caption &amp; "`, "
+               Next
+               .CommandText += "`" &amp; Columns(Columns.Count-1).Caption &amp; "`) VALUES ("
+               For i As Integer = 0 To Columns.Count-2
+                   .CommandText += "?, "
+               Next
+               .CommandText += "?)"
+               For Each P As OleDb.OleDbParameter In OleDb_Parameters
+                   .Parameters.AddWithValue(P.ParameterName, P.Value)
+               Next
+           End With
+           With OleDb_SelectCommand
+               .Connection = OleDb_Con
+               .CommandText = "SELECT * FROM " &amp; Me.TableName
+           End With
+           With OleDb_Adaptor
+               .SelectCommand = OleDb_SelectCommand
+               .UpdateCommand = OleDb_UpdateCommand
+               .DeleteCommand = OleDb_DeleteCommand
+               .InsertCommand = OleDb_InsertCommand
+           End With
+       End If 
+ End If 
+</SetStatement>
+  <GetStatement />
+  <ParentName />
+</Property>

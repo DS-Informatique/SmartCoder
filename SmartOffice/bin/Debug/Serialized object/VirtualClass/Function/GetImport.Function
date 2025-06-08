@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Function xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>5</ImageIndex>
+  <Name>GetImport</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>IsNothing</Status>
+  <Variables />
+  <Statements />
+  <Statement>   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</Statement>
+  <XmlFile />
+  <VB_OpenStatement>Function </VB_OpenStatement>
+  <VB_CloseStatement>End Function</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) Return the entire table listed</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.GetImport()|List(Of [Import])}|"' (Set|Get) Return the entire table listed</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</string>
+    <string>   Public Shared Function GetImport(ByVal [Connector] As ToolBoxDLL.LineBuilder) As List(Of [Import])</string>
+    <string>   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>   End Function</string>
+    <string>#End Region '(Set|Get) Return the entire table listed</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.GetImport()|List(Of [Import])}|"' (Set|Get) Return the entire table listed
+    '''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;
+   Public Shared Function GetImport(ByVal [Connector] As ToolBoxDLL.LineBuilder) As List(Of [Import])
+   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+   End Function
+#End Region '(Set|Get) Return the entire table listed
+</VB>
+  <Print_C>
+    <string>#region |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.GetImport()|Function}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>   Public static List(Of [Import]) void GetImport(ByVal [Connector] As ToolBoxDLL.LineBuilder)   {</string>
+    <string>   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_C>
+  <C>#region |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.GetImport()|Function}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(True) , Description("(Set|Get) Return the entire table listed") ]
+   Public static List(Of [Import]) void GetImport(ByVal [Connector] As ToolBoxDLL.LineBuilder)   {
+   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+   };
+#endregion (Set|Get) Return the entire table listed
+</C>
+  <Print_F>
+    <string>#region |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetImport()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>    Let GetImport = </string>
+    <string>       Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_F>
+  <F>#region |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetImport()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(True) , Description("(Set|Get) Return the entire table listed") ]
+    Let GetImport = 
+       Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+#endregion (Set|Get) Return the entire table listed
+</F>
+  <Print_Python>
+    <string>#region |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetImport()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>    GetImport ::= "GetImport"</string>
+    <string>   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>#endregion /(Set|Get) Return the entire table listed</string>
+  </Print_Python>
+  <Python>#region |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetImport()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(True) , Description("(Set|Get) Return the entire table listed") ]
+    GetImport ::= "GetImport"
+   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+#endregion /(Set|Get) Return the entire table listed
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetImport()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>   Public static List(Of [Import]) void GetImport(ByVal [Connector] As ToolBoxDLL.LineBuilder)   {</string>
+    <string>   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/07/18 09h48:685| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetImport()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(True) , Description("(Set|Get) Return the entire table listed") ]
+   Public static List(Of [Import]) void GetImport(ByVal [Connector] As ToolBoxDLL.LineBuilder)   {
+   Dim Result As New List(Of [Import])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Import]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Import](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),0, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)))
+       Element.Reset("Import", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+   };
+#endregion (Set|Get) Return the entire table listed
+</JavaScript>
+  <ID>3</ID>
+  <StatementFormat>Function</StatementFormat>
+  <RegionCode>05.00.03</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params>
+    <Param>
+      <Name>Connector</Name>
+      <Definition />
+    </Param>
+  </Params>
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) Return the entire table listed</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) Return the entire table listed</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</VB>
+    <C>[Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</C>
+    <F>[Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</F>
+    <Python>[Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</Python>
+    <JavaScript>[Browsable(True) , Description("(Set|Get) Return the entire table listed") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Shared>true</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <FunctionName>GetImport</FunctionName>
+  <ParameterList>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>Connector</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [Connector] As ToolBoxDLL.LineBuilder = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition />
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>Connector</ParameterName>
+      <ParameterType>ToolBoxDLL.LineBuilder</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+  </ParameterList>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) Return the entire table listed</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/18 09h48:685 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <ReturnType>List(Of [Import])</ReturnType>
+  <Partial>False</Partial>
+  <Handle />
+  <Implements />
+  <Production_Cost>2.1</Production_Cost>
+  <Quantity_Parameters>1</Quantity_Parameters>
+  <Unit_Cost_Function>1.6</Unit_Cost_Function>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Function>

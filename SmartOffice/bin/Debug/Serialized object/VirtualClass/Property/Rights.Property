@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>1</ImageIndex>
+  <Name>Rights</Name>
+  <Text>Rights | String</Text>
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement />
+  <XmlFile />
+  <VB_OpenStatement>Property </VB_OpenStatement>
+  <VB_CloseStatement>End Property</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category>Documentation</Category>
+  <Description>(Set|Get) The Rights as String.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|"' (Set|Get) The Rights as String.</string>
+    <string>   Private _Rights As String</string>
+    <string>    '''    &lt;Summary&gt;</string>
+    <string>'''     (Set|Get) The Rights as String.</string>
+    <string>'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;</string>
+    <string>'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;</string>
+    <string>'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;</string>
+    <string>'''    &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;</string>
+    <string>'''      &lt;Rights&gt;</string>
+    <string>'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The</string>
+    <string>'''    training materials may not be reproduced in any form, used for academic purposes, or used for public</string>
+    <string>'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or</string>
+    <string>'''    taken out of the classroom.</string>
+    <string>'''       &lt;/Rights&gt;</string>
+    <string>''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;</string>
+    <string>'''    &lt;/Summary&gt;</string>
+    <string>    &lt;Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") &gt;</string>
+    <string>   Public Property Rights()As String</string>
+    <string>       Get</string>
+    <string>       Return _Rights</string>
+    <string>       End Get</string>
+    <string>       Set(ByVal Value As String)</string>
+    <string>       _Rights = Value</string>
+    <string>       End Set</string>
+    <string>   End Property</string>
+    <string>#End Region '(Set|Get) The Rights as String.</string>
+    <string />
+  </Print_VB>
+  <VB>#Region"[On] |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|"' (Set|Get) The Rights as String.
+   Private _Rights As String
+    '''    &lt;Summary&gt;
+'''     (Set|Get) The Rights as String.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    &lt;Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") &gt;
+   Public Property Rights()As String
+       Get
+       Return _Rights
+       End Get
+       Set(ByVal Value As String)
+       _Rights = Value
+       End Set
+   End Property
+#End Region '(Set|Get) The Rights as String.
+</VB>
+  <Print_C>
+    <string>#region |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|  (Set|Get) The Rights as String.</string>
+    <string>   private String _Rights ;</string>
+    <string> ///     &lt;Summary&gt;</string>
+    <string> ///    (Set|Get) The Rights as String.</string>
+    <string> ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;</string>
+    <string> ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;</string>
+    <string> ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;</string>
+    <string> ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;</string>
+    <string>'''      &lt;Rights&gt;</string>
+    <string>'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The</string>
+    <string>'''    training materials may not be reproduced in any form, used for academic purposes, or used for public</string>
+    <string>'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or</string>
+    <string>'''    taken out of the classroom.</string>
+    <string>'''       &lt;/Rights&gt;</string>
+    <string>'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;</string>
+    <string> ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</string>
+    <string>    public String Rights()   {</string>
+    <string>       get{</string>
+    <string>       return _Rights;</string>
+    <string>       }</string>
+    <string>       set{</string>
+    <string>       _Rights = value;</string>
+    <string>       }</string>
+    <string>   }</string>
+    <string>#endregion (Set|Get) The Rights as String.</string>
+    <string />
+  </Print_C>
+  <C>#region |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|  (Set|Get) The Rights as String.
+   private String _Rights ;
+ ///     &lt;Summary&gt;
+ ///    (Set|Get) The Rights as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]
+    public String Rights()   {
+       get{
+       return _Rights;
+       }
+       set{
+       _Rights = value;
+       }
+   }
+#endregion (Set|Get) The Rights as String.
+</C>
+  <Print_F>
+    <string>#region |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|  (Set|Get) The Rights as String.</string>
+    <string> ///     &lt;Summary&gt;</string>
+    <string> ///    (Set|Get) The Rights as String.</string>
+    <string> ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;</string>
+    <string> ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;</string>
+    <string> ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;</string>
+    <string> ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;</string>
+    <string>'''      &lt;Rights&gt;</string>
+    <string>'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The</string>
+    <string>'''    training materials may not be reproduced in any form, used for academic purposes, or used for public</string>
+    <string>'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or</string>
+    <string>'''    taken out of the classroom.</string>
+    <string>'''       &lt;/Rights&gt;</string>
+    <string>'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;</string>
+    <string> ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</string>
+    <string>    member this.Rights()</string>
+    <string>       with get() = _Rights</string>
+    <string>       and set(value) = _Rights &lt;- value</string>
+    <string>#endregion (Set|Get) The Rights as String.</string>
+    <string />
+  </Print_F>
+  <F>#region |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|  (Set|Get) The Rights as String.
+ ///     &lt;Summary&gt;
+ ///    (Set|Get) The Rights as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]
+    member this.Rights()
+       with get() = _Rights
+       and set(value) = _Rights &lt;- value
+#endregion (Set|Get) The Rights as String.
+</F>
+  <Print_Python>
+    <string>#region |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|  (Set|Get) The Rights as String.</string>
+    <string> ///     &lt;Summary&gt;</string>
+    <string> ///    (Set|Get) The Rights as String.</string>
+    <string> ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;</string>
+    <string> ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;</string>
+    <string> ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;</string>
+    <string> ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;</string>
+    <string>'''      &lt;Rights&gt;</string>
+    <string>'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The</string>
+    <string>'''    training materials may not be reproduced in any form, used for academic purposes, or used for public</string>
+    <string>'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or</string>
+    <string>'''    taken out of the classroom.</string>
+    <string>'''       &lt;/Rights&gt;</string>
+    <string>'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;</string>
+    <string> ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</string>
+    <string>    def Rights(self):</string>
+    <string>       return self._Rights</string>
+    <string>#endregion /(Set|Get) The Rights as String.</string>
+    <string />
+  </Print_Python>
+  <Python>#region |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|  (Set|Get) The Rights as String.
+ ///     &lt;Summary&gt;
+ ///    (Set|Get) The Rights as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]
+    def Rights(self):
+       return self._Rights
+#endregion /(Set|Get) The Rights as String.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|  (Set|Get) The Rights as String.</string>
+    <string>   String _Rights ;</string>
+    <string> ///     &lt;Summary&gt;</string>
+    <string> ///    (Set|Get) The Rights as String.</string>
+    <string> ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;</string>
+    <string> ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;</string>
+    <string> ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;</string>
+    <string> ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;</string>
+    <string>'''      &lt;Rights&gt;</string>
+    <string>'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The</string>
+    <string>'''    training materials may not be reproduced in any form, used for academic purposes, or used for public</string>
+    <string>'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or</string>
+    <string>'''    taken out of the classroom.</string>
+    <string>'''       &lt;/Rights&gt;</string>
+    <string>'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;</string>
+    <string> ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</string>
+    <string>    public String Rights()   {</string>
+    <string>       get{</string>
+    <string>       return _Rights;</string>
+    <string>       }</string>
+    <string>       set{</string>
+    <string>       _Rights = value;</string>
+    <string>       }</string>
+    <string>   }</string>
+    <string>#endregion (Set|Get) The Rights as String.</string>
+    <string />
+  </Print_JavaScript>
+  <JavaScript>#region |2019/08/31 13h09:642| &lt;01.00.03&gt; &lt;Property&gt; &lt;Documentation&gt; |.Rights()|String|  (Set|Get) The Rights as String.
+   String _Rights ;
+ ///     &lt;Summary&gt;
+ ///    (Set|Get) The Rights as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]
+    public String Rights()   {
+       get{
+       return _Rights;
+       }
+       set{
+       _Rights = value;
+       }
+   }
+#endregion (Set|Get) The Rights as String.
+</JavaScript>
+  <ID>4</ID>
+  <StatementFormat>Property</StatementFormat>
+  <RegionCode>01.00.03</RegionCode>
+  <AuthorEmail />
+  <AuthorName />
+  <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights>Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+training materials may not be reproduced in any form, used for academic purposes, or used for public
+without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+taken out of the classroom.</Rights>
+  <Summary>'''    &lt;Summary&gt;
+'''     (Set|Get) The Rights as String.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example> </Example>
+  <Note> </Note>
+  <See />
+  <SeeAlso />
+  <Params />
+  <Rules />
+  <Syntax />
+  <Production_Cost>0</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Property>0.8</Unit_Cost_Property>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights>Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+training materials may not be reproduced in any form, used for academic purposes, or used for public
+without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+taken out of the classroom.</Rights>
+    <Summary>(Set|Get) The Rights as String.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example> </Example>
+    <Note> </Note>
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) The Rights as String.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+''' '''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) The Rights as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) The Rights as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) The Rights as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry Dunkel | Time : 2019/08/31 13h09:647 &lt;/Published&gt;
+'''      &lt;Rights&gt;
+'''         Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+'''    training materials may not be reproduced in any form, used for academic purposes, or used for public
+'''    without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+'''    taken out of the classroom.
+'''       &lt;/Rights&gt;
+'''  ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category>Documentation</Category>
+    <Description>(Set|Get) The Rights as String.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>CategoryAttribute</AttributeName>
+        <AttributeValue>Documentation</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) The Rights as String.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") &gt;</VB>
+    <C>[Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</C>
+    <F>[Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</F>
+    <Python>[Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</Python>
+    <JavaScript>[Browsable(True) , CategoryAttribute("Documentation") , Description("(Set|Get) The Rights as String.") ]</JavaScript>
+  </Attribute>
+  <Default>false</Default>
+  <AccessModifier>Public</AccessModifier>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <WriteOnly>false</WriteOnly>
+  <ReturnType>String</ReturnType>
+  <ParameterList />
+  <Variable_Name>_Rights</Variable_Name>
+  <Variable_AccessModifier>Private</Variable_AccessModifier>
+  <Variable_ReturnType>String</Variable_ReturnType>
+  <SetStatement />
+  <GetStatement />
+  <ParentName>VirtualClass</ParentName>
+</Property>

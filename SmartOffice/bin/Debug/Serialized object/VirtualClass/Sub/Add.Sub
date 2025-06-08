@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>0</ImageIndex>
+  <Name>Add</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</Statement>
+  <XmlFile />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) This will add a New row In the table.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) This will add a New row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) This will add a New row In the table.") &gt;</string>
+    <string>   Public Sub Add()</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) This will add a New row In the table.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) This will add a New row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) This will add a New row In the table.") &gt;
+   Public Sub Add()
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   End Sub
+#End Region '(Set|Get) This will add a New row In the table.
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</string>
+    <string>   Public void Add()   {</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will add a New row In the table.</string>
+    <string>   Public final void Add()   {</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]
+   Public void Add()   {
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   };
+#endregion (Set|Get) This will add a New row In the table.
+   Public final void Add()   {
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</string>
+    <string>    Let Add = </string>
+    <string>        Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>#endregion (Set|Get) This will add a New row In the table.</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]
+    Let Add = 
+        Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+#endregion (Set|Get) This will add a New row In the table.
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</string>
+    <string>    Add ::= "Add"</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>#endregion /(Set|Get) This will add a New row In the table.</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]
+    Add ::= "Add"
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+#endregion /(Set|Get) This will add a New row In the table.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</string>
+    <string>    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will add a New row In the table.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:949| &lt;04.00.03&gt; &lt;Sub&gt; &lt;&gt; |.Add()|Sub}|"' (Set|Get) This will add a New row In the table.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]
+    Dim Result As String = ""
+    Dim Test As Boolean = False
+    If (Me.HasSettings = True) Then
+       Dim Str As String = ""
+       Str = "INSERT INTO [MDT_CLIENT] (`NUM_CLI`, `TRI_NUM`, `NOM_1ER`, `NOM_2EM`, `RUE_1ER`, `RUE_2EM`, `NPA_LOC`, `LOC_GEO`, `NUM_TEL`, `NUM_FAX`, `RMQ`, `ADR_EML`, `ADR_URL`, `PCOMPTA`) Values (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13)"
+       If (Me.UseSql = True) Then
+           If (Open(Str).Result = True) Then
+               With Sql_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'Sql_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       ElseIf (Me.UseSql = False) Then
+           If (Open(Str).Result = True) Then
+               With OleDb_Cmd
+                   .Parameters.AddWithValue("@0", IIf(IsNothing(Me.NUM_CLI),"", Me.NUM_CLI))
+                   .Parameters.AddWithValue("@1", IIf(IsNothing(Me.TRI_NUM), 0 , Me.TRI_NUM))
+                   .Parameters.AddWithValue("@2", IIf(IsNothing(Me.NOM_1ER),"", Me.NOM_1ER))
+                   .Parameters.AddWithValue("@3", IIf(IsNothing(Me.NOM_2EM),"", Me.NOM_2EM))
+                   .Parameters.AddWithValue("@4", IIf(IsNothing(Me.RUE_1ER),"", Me.RUE_1ER))
+                   .Parameters.AddWithValue("@5", IIf(IsNothing(Me.RUE_2EM),"", Me.RUE_2EM))
+                   .Parameters.AddWithValue("@6", IIf(IsNothing(Me.NPA_LOC),"", Me.NPA_LOC))
+                   .Parameters.AddWithValue("@7", IIf(IsNothing(Me.LOC_GEO),"", Me.LOC_GEO))
+                   .Parameters.AddWithValue("@8", IIf(IsNothing(Me.NUM_TEL),"", Me.NUM_TEL))
+                   .Parameters.AddWithValue("@9", IIf(IsNothing(Me.NUM_FAX),"", Me.NUM_FAX))
+                   .Parameters.AddWithValue("@10", IIf(IsNothing(Me.RMQ),"", Me.RMQ))
+                   .Parameters.AddWithValue("@11", IIf(IsNothing(Me.ADR_EML),"", Me.ADR_EML))
+                   .Parameters.AddWithValue("@12", IIf(IsNothing(Me.ADR_URL),"", Me.ADR_URL))
+                   .Parameters.AddWithValue("@13", IIf(IsNothing(Me.PCOMPTA), 0 , Me.PCOMPTA))
+                   Try
+                       If (.ExecuteNonQuery() &gt;=0) Then
+                           Test = True
+                       Else'(.ExecuteNonQuery&lt;0)
+                           Test = False
+                       End If '(.ExecuteNonQuery)
+                   Catch ex As Exception
+                       Result += ex.Message &amp; vbNewLine
+                   End Try
+               End With 'OleDb_Cmd
+               Close()
+               
+           ElseIf (Open(Str).Result = False) Then
+               Result += "There is a problem establishing the connection with the DataBase. Check if you have the correct password" &amp; VbNewLine 
+               Test = False
+           End If '(Open(Str).Result)
+       End If '(Me.UseSql)
+    Else '(Me.HasSettings = False) 
+       Result += "The connection settings are not properly set. Please use the Reset method to initialise the connector first." &amp; VbNewLine 
+       Test = False
+    End If '(Me.HasSettings = True) Then
+    If (Test = False) Then
+       Msgbox(Result)
+    End If '(Test = False)
+
+   };
+#endregion (Set|Get) This will add a New row In the table.
+</JavaScript>
+  <ID>3</ID>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.03</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     This will add a New row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) This will add a New row In the table.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) This will add a New row In the table.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) This will add a New row In the table.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) This will add a New row In the table.") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) This will add a New row In the table.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>Add</SubName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) This will add a New row In the table.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) This will add a New row In the table.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will add a New row In the table.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:949 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>1.2</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

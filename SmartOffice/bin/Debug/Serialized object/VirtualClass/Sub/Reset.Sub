@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>0</ImageIndex>
+  <Name>Reset</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement> If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+</Statement>
+  <XmlFile />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) This will reinitialize the variables of this class.</Description>
+  <DefaultValue>Nothing</DefaultValue>
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) This will reinitialize the variables of this class.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    ''' &lt;param name="TableName"&gt;Please enter a valid table name.&lt;/param&gt;
+    ''' &lt;param name="FilePath"&gt;Please emter a valid filepath.&lt;/param&gt;
+    ''' &lt;param name="Password"&gt;Please use a valid password.&lt;/param&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) This will reinitialize the variables of this class.") &gt;</string>
+    <string>   Public Sub Reset(ByVal [TableName] As String, 
+ByVal [FilePath] As String, 
+Optional ByVal [Password] As String = Nothing)</string>
+    <string> If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) This will reinitialize the variables of this class.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) This will reinitialize the variables of this class.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    ''' &lt;param name="TableName"&gt;Please enter a valid table name.&lt;/param&gt;
+    ''' &lt;param name="FilePath"&gt;Please emter a valid filepath.&lt;/param&gt;
+    ''' &lt;param name="Password"&gt;Please use a valid password.&lt;/param&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) This will reinitialize the variables of this class.") &gt;
+   Public Sub Reset(ByVal [TableName] As String, 
+ByVal [FilePath] As String, 
+Optional ByVal [Password] As String = Nothing)
+ If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+
+   End Sub
+#End Region '(Set|Get) This will reinitialize the variables of this class.
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</string>
+    <string>   Public void Reset(ByVal [TableName] As String, 
+ByVal [FilePath] As String, 
+Optional ByVal [Password] As String = Nothing)   {</string>
+    <string> If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will reinitialize the variables of this class.</string>
+    <string>   Public final void Reset(ByVal [TableName] As String, 
+ByVal [FilePath] As String, 
+Optional ByVal [Password] As String = Nothing)   {</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]
+   Public void Reset(ByVal [TableName] As String, 
+ByVal [FilePath] As String, 
+Optional ByVal [Password] As String = Nothing)   {
+ If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+
+   };
+#endregion (Set|Get) This will reinitialize the variables of this class.
+   Public final void Reset(ByVal [TableName] As String, 
+ByVal [FilePath] As String, 
+Optional ByVal [Password] As String = Nothing)   {
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</string>
+    <string>    Let Reset = </string>
+    <string>     If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+</string>
+    <string>#endregion (Set|Get) This will reinitialize the variables of this class.</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]
+    Let Reset = 
+     If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+
+#endregion (Set|Get) This will reinitialize the variables of this class.
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</string>
+    <string>    Reset ::= "Reset"</string>
+    <string> If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+</string>
+    <string>#endregion /(Set|Get) This will reinitialize the variables of this class.</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]
+    Reset ::= "Reset"
+ If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+
+#endregion /(Set|Get) This will reinitialize the variables of this class.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</string>
+    <string> If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will reinitialize the variables of this class.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:928| &lt;04.00.00&gt; &lt;Sub&gt; &lt;&gt; |.Reset()|Sub}|"' (Set|Get) This will reinitialize the variables of this class.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]
+ If (Not IsNothing(TableName)) Then
+     If (TableName.Length &gt; 1) Then
+         Me.TableName = TableName 
+     End If '(TableName.Length &gt; 1) 
+ End If '(Not IsNothing(TableName)) 
+ 
+ If (Not IsNothing(FilePath)) Then
+     If (FilePath.Length &gt; 1) Then
+         If (IO.File.Exists(FilePath) = True) Then
+             Me.DataBase = FilePath
+         End If '(IO.File.Exists(FilePath) = True) Then
+     End If '(FilePath.Length &gt; 1) 
+ End If '(Not IsNothing(FilePath)) 
+ 
+ If (Not IsNothing(Password)) Then
+     If (Password.Length &gt; 1) Then
+         Me.Password = Password
+     End If '(Password.Length &gt; 1) 
+ End If '(Not IsNothing(Password)) 
+ 
+ 
+ Me.Connector = New ToolBoxDLL.LineBuilder(Me.DataBase,Me.Password)
+ With Me
+     .Line = Me.Connector.ConnectionLine
+     .UseSql = Me.Connector.UseSql
+ End With
+
+   };
+#endregion (Set|Get) This will reinitialize the variables of this class.
+</JavaScript>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.00</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     This will reinitialize the variables of this class.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:928 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params>
+    <Param>
+      <Name>TableName</Name>
+      <Definition>Please enter a valid table name.</Definition>
+    </Param>
+    <Param>
+      <Name>FilePath</Name>
+      <Definition>Please emter a valid filepath.</Definition>
+    </Param>
+    <Param>
+      <Name>Password</Name>
+      <Definition>Please use a valid password.</Definition>
+    </Param>
+  </Params>
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) This will reinitialize the variables of this class.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) This will reinitialize the variables of this class.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) This will reinitialize the variables of this class.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) This will reinitialize the variables of this class.") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) This will reinitialize the variables of this class.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>Reset</SubName>
+  <ParameterList>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>TableName</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [TableName] As String = [MDT_CLIENT]</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>Please enter a valid table name.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>TableName</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue>[MDT_CLIENT]</DefaultValue>
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>FilePath</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [FilePath] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>Please emter a valid filepath.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>FilePath</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue>Nothing</DefaultValue>
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>Password</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>Optional ByVal [Password] As String = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>Please use a valid password.</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>true</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>Password</ParameterName>
+      <ParameterType>String</ParameterType>
+      <DefaultValue>Nothing</DefaultValue>
+      <Modifier>Optional ByVal </Modifier>
+    </ParameterList_Statement>
+  </ParameterList>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) This will reinitialize the variables of this class.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) This will reinitialize the variables of this class.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will reinitialize the variables of this class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:930 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>2.7</Production_Cost>
+  <Quantity_Parameters>3</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

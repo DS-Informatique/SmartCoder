@@ -1,0 +1,3010 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Archivis
+</name>
+</assembly>
+<members>
+<member name="T:Archivis.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources._next">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources._stop">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources.back">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources.book">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources.briefcase">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources.clock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources.play">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Archivis.My.Resources.Resources.refresh">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Archivis.Archivor.Archives">
+    <Summary>
+     '''    Object Name :             Public  Class Archives
+    Author Information :      David Shaw Informatique Sàrl|saadry.dunkel@ds-informatique.ch|https://www.ds-informatique.ch
+    Contributor Information : ||
+    Creation Date :           2019/07/11 23h25:910
+    |Schema|
+    |ID| |ObjectType |{Quantity}||UnitPrice||Total
+    |00| |Importation|{0}||1| |0
+    |01| |Properties |{88}||0.8| |70.4
+    |02| |Enumeration|{5}||0.4| |2
+    |03| |Structure  |{0}||0.4| |0
+    |04| |Sub        |{26}||1.2| |31.2
+    |05| |Function   |{38}||1.6| |60.8
+    |06| |Runtime    |{64}||0.4| |25.6
+    |07| |Loader     |{12}||0.8| |9.6
+    |08| |Class      |{6}||2| |12
+    |09| |Constante  |{0}||0.4| |0
+    |10| |Event      |{0}||1.2| |0
+    |11| |Members    |{76}||0.5| |38
+    |12| |Parameter  |{106}||0.5| |53
+    |Production Cost             |302.6
+    |Selling Price without VAT   |756.5
+    |Total TVA                   |58.25
+    |Grand Total                 |814.75
+    |/Schema|
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:802 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="T:Archivis.Archivor.Archives.Archives_Data">
+    <Summary>
+     Class created automatically by SmartOffice (c)Copyright 2019.'''    Object Name :             Public  Class Archives_Data
+    Author Information :      David Shaw Informatique Sàrl|saadry.dunkel@ds-informatique.ch|https://www.ds-informatique.ch
+    Contributor Information : ||
+    Creation Date :           2019/07/11 23h30:274
+    |Schema|
+    |ID| |ObjectType |{Quantity}||UnitPrice||Total
+    |00| |Importation|{0}||1| |0
+    |01| |Properties |{6}||0.8| |4.8
+    |02| |Enumeration|{1}||0.4| |0.4
+    |03| |Structure  |{0}||0.4| |0
+    |04| |Sub        |{5}||1.2| |6
+    |05| |Function   |{7}||1.6| |11.2
+    |06| |Runtime    |{12}||0.4| |4.8
+    |07| |Loader     |{2}||0.8| |1.6
+    |08| |Class      |{0}||2| |0
+    |09| |Constante  |{0}||0.4| |0
+    |10| |Event      |{0}||1.2| |0
+    |11| |Members    |{6}||0.5| |3
+    |12| |Parameter  |{11}||0.5| |5.5
+    |Production Cost             |37.3
+    |Selling Price without VAT   |93.25
+    |Total TVA                   |7.18
+    |Grand Total                 |100.43
+    |/Schema|
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:802 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Archives_Data.ID">
+    <Summary>
+     (Set|Get) The ID as Integer.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:802 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Archives_Data.Save_Entry">
+    <Summary>
+     (Set|Get) The Save_Entry as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:804 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Archives_Data.Root">
+    <Summary>
+     (Set|Get) The Root as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:804 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Archives_Data.Origine">
+    <Summary>
+     (Set|Get) The Origine as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:804 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Archives_Data.Size">
+    <Summary>
+     (Set|Get) The Size as Double.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:805 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Archives_Data.Etat">
+    <Summary>
+     (Set|Get) The Etat as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:805 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="T:Archivis.Archivor.Archives.Archives_Data.Schema">
+    <Summary>
+     (Set|Get) The enumeration of Schema.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:805 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Schema.ID">
+ <summary>(Set|Get) The ID as Integer.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Schema.Save_Entry">
+ <summary>(Set|Get) The Save_Entry as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Schema.Root">
+ <summary>(Set|Get) The Root as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Schema.Origine">
+ <summary>(Set|Get) The Origine as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Schema.Size">
+ <summary>(Set|Get) The Size as Integer.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Schema.Etat">
+ <summary>(Set|Get) The Etat as String.</summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.Clear">
+    <Summary>
+     (Set|Get) This will reinitialize the class element.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:805 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.Reset(SmartCoder.M_FileManager.LineInfo)">
+    <Summary>
+     (Set|Get) This will reinitialize the variables of this class.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:805 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.Add">
+    <Summary>
+     (Set|Get) This will add a new row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:805 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.Save">
+    <Summary>
+     (Set|Get) This will update a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:805 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.Delete">
+    <Summary>
+     (Set|Get) This will Delete a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:806 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.Open(System.String)">
+    <Summary>
+     (Set|Get) This will initialise the connection and import the data.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:806 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.Close(System.Boolean)">
+    <Summary>
+     (Set|Get) This willClosing the connection
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:806 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.List">
+    <Summary>
+     (Set|Get) Return the entire table listed
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:806 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.SearchByName(System.String)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search String.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:806 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.SearchByID(System.Double)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search Id.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:806 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.ToString">
+    <Summary>
+     (Set|Get) The function ToString.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:806 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.CheckConnection">
+    <Summary>
+     (Set|Get) Evaluate the connection to the DataBase
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:806 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Table">
+    <Summary>
+     (Set|Get) The Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:807 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Line">
+    <Summary>
+     (Set|Get) The Connection String To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:807 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.FilePath">
+    <Summary>
+     (Set|Get) The FilePath To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:807 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Password">
+    <Summary>
+     (Set|Get) The Password To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:807 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.UseSQL">
+    <Summary>
+     (Set|Get) Determines if the Database Connection is of type SQL.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:807 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.TableName">
+    <Summary>
+     (Set|Get) The name of the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:807 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Con">
+    <Summary>
+     (Set|Get) The Con To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:807 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Cmd">
+    <Summary>
+     (Set|Get) The Cmd To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:807 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.DataReader">
+    <Summary>
+     (Set|Get) The DataReader To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:808 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.DataAdapter">
+    <Summary>
+     (Set|Get) The DataAdapter To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:808 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Connector">
+    <Summary>
+     (Set|Get) The Connector To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:808 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Archives_Data.Log">
+    <Summary>
+     (Set|Get) The Log To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:808 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.#ctor">
+    <Summary>
+     (Set|Get) The sub Empty.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:808 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Archives_Data.#ctor(System.Int32,System.String,System.String,System.String,System.Int32,System.String)">
+    <Summary>
+     (Set|Get) The sub Filled.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:812 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>    ''' <param name="ID">(Set|Get) The ID as Integer.</param>
+ <param name="Save_Entry">(Set|Get) The Save_Entry as String.</param>
+ <param name="Root">(Set|Get) The Root as String.</param>
+ <param name="Origine">(Set|Get) The Origine as String.</param>
+ <param name="Size">(Set|Get) The Size as Integer.</param>
+ <param name="Etat">(Set|Get) The Etat as String.</param>
+</member>
+<member name="T:Archivis.Archivor.Archives.Backup">
+    <Summary>
+     Class created automatically by SmartOffice (c)Copyright 2019.'''    Object Name :             Public  Class Backup
+    Author Information :      David Shaw Informatique Sàrl|saadry.dunkel@ds-informatique.ch|https://www.ds-informatique.ch
+    Contributor Information : ||
+    Creation Date :           2019/07/11 23h30:440
+    |Schema|
+    |ID| |ObjectType |{Quantity}||UnitPrice||Total
+    |00| |Importation|{0}||1| |0
+    |01| |Properties |{6}||0.8| |4.8
+    |02| |Enumeration|{1}||0.4| |0.4
+    |03| |Structure  |{0}||0.4| |0
+    |04| |Sub        |{5}||1.2| |6
+    |05| |Function   |{7}||1.6| |11.2
+    |06| |Runtime    |{12}||0.4| |4.8
+    |07| |Loader     |{2}||0.8| |1.6
+    |08| |Class      |{0}||2| |0
+    |09| |Constante  |{0}||0.4| |0
+    |10| |Event      |{0}||1.2| |0
+    |11| |Members    |{6}||0.5| |3
+    |12| |Parameter  |{11}||0.5| |5.5
+    |Production Cost             |37.3
+    |Selling Price without VAT   |93.25
+    |Total TVA                   |7.18
+    |Grand Total                 |100.43
+    |/Schema|
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:816 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Backup.ID">
+    <Summary>
+     (Set|Get) The ID as Integer.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:816 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Backup.File">
+    <Summary>
+     (Set|Get) The File as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:816 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Backup.DateSaved">
+    <Summary>
+     (Set|Get) The DateSaved as DateTime.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:816 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Backup.Size">
+    <Summary>
+     (Set|Get) The Size as Double.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:816 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Backup.Compressed">
+    <Summary>
+     (Set|Get) The Compressed as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:818 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Backup.Profile">
+    <Summary>
+     (Set|Get) The Profile as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:819 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="T:Archivis.Archivor.Archives.Backup.Schema">
+    <Summary>
+     (Set|Get) The enumeration of Schema.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:819 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Schema.ID">
+ <summary>(Set|Get) The ID as Integer.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Schema.File">
+ <summary>(Set|Get) The File as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Schema.DateSaved">
+ <summary>(Set|Get) The DateSaved as DateTime.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Schema.Size">
+ <summary>(Set|Get) The Size as Double.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Schema.Compressed">
+ <summary>(Set|Get) The Compressed as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Schema.Profile">
+ <summary>(Set|Get) The Profile as String.</summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.Clear">
+    <Summary>
+     (Set|Get) This will reinitialize the class element.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:819 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.Reset(SmartCoder.M_FileManager.LineInfo)">
+    <Summary>
+     (Set|Get) This will reinitialize the variables of this class.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:819 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.Add">
+    <Summary>
+     (Set|Get) This will add a new row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:819 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.Save">
+    <Summary>
+     (Set|Get) This will update a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:819 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.Delete">
+    <Summary>
+     (Set|Get) This will Delete a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:819 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.Open(System.String)">
+    <Summary>
+     (Set|Get) This will initialise the connection and import the data.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:820 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.Close(System.Boolean)">
+    <Summary>
+     (Set|Get) This willClosing the connection
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:820 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.List">
+    <Summary>
+     (Set|Get) Return the entire table listed
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:820 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.SearchByName(System.String)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search String.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:820 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.SearchByID(System.Double)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search Id.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:820 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.ToString">
+    <Summary>
+     (Set|Get) The function ToString.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:820 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.CheckConnection">
+    <Summary>
+     (Set|Get) Evaluate the connection to the DataBase
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:820 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Table">
+    <Summary>
+     (Set|Get) The Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Line">
+    <Summary>
+     (Set|Get) The Connection String To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.FilePath">
+    <Summary>
+     (Set|Get) The FilePath To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Password">
+    <Summary>
+     (Set|Get) The Password To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.UseSQL">
+    <Summary>
+     (Set|Get) Determines if the Database Connection is of type SQL.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.TableName">
+    <Summary>
+     (Set|Get) The name of the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Con">
+    <Summary>
+     (Set|Get) The Con To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Cmd">
+    <Summary>
+     (Set|Get) The Cmd To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.DataReader">
+    <Summary>
+     (Set|Get) The DataReader To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:821 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.DataAdapter">
+    <Summary>
+     (Set|Get) The DataAdapter To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:822 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Connector">
+    <Summary>
+     (Set|Get) The Connector To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:822 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Backup.Log">
+    <Summary>
+     (Set|Get) The Log To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:822 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.#ctor">
+    <Summary>
+     (Set|Get) The sub Empty.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:823 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Backup.#ctor(System.Int32,System.String,System.DateTime,System.Double,System.Boolean,System.String)">
+    <Summary>
+     (Set|Get) The sub Filled.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:823 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>    ''' <param name="ID">(Set|Get) The ID as Integer.</param>
+ <param name="File">(Set|Get) The File as String.</param>
+ <param name="DateSaved">(Set|Get) The DateSaved as DateTime.</param>
+ <param name="Size">(Set|Get) The Size as Double.</param>
+ <param name="Compressed">(Set|Get) The Compressed as Boolean.</param>
+ <param name="Profile">(Set|Get) The Profile as String.</param>
+</member>
+<member name="T:Archivis.Archivor.Archives.Profile">
+    <Summary>
+     Class created automatically by SmartOffice (c)Copyright 2019.'''    Object Name :             Public  Class Profile
+    Author Information :      David Shaw Informatique Sàrl|saadry.dunkel@ds-informatique.ch|https://www.ds-informatique.ch
+    Contributor Information : ||
+    Creation Date :           2019/07/11 23h30:802
+    |Schema|
+    |ID| |ObjectType |{Quantity}||UnitPrice||Total
+    |00| |Importation|{0}||1| |0
+    |01| |Properties |{49}||0.8| |39.2
+    |02| |Enumeration|{1}||0.4| |0.4
+    |03| |Structure  |{0}||0.4| |0
+    |04| |Sub        |{5}||1.2| |6
+    |05| |Function   |{7}||1.6| |11.2
+    |06| |Runtime    |{12}||0.4| |4.8
+    |07| |Loader     |{2}||0.8| |1.6
+    |08| |Class      |{0}||2| |0
+    |09| |Constante  |{0}||0.4| |0
+    |10| |Event      |{0}||1.2| |0
+    |11| |Members    |{49}||0.5| |24.5
+    |12| |Parameter  |{54}||0.5| |27
+    |Production Cost             |114.7
+    |Selling Price without VAT   |286.75
+    |Total TVA                   |22.08
+    |Grand Total                 |308.83
+    |/Schema|
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:828 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Name">
+    <Summary>
+     (Set|Get) The Name as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:828 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Source">
+    <Summary>
+     (Set|Get) The Source as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:829 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Destination">
+    <Summary>
+     (Set|Get) The Destination as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:829 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Hours">
+    <Summary>
+     (Set|Get) The Hours as Integer.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:829 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Minutes">
+    <Summary>
+     (Set|Get) The Minutes as Integer.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:829 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Monday">
+    <Summary>
+     (Set|Get) The Monday as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:829 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Tuesday">
+    <Summary>
+     (Set|Get) The Tuesday as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:830 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Wednesday">
+    <Summary>
+     (Set|Get) The Wednesday as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:830 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Thursday">
+    <Summary>
+     (Set|Get) The Thursday as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:830 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Friday">
+    <Summary>
+     (Set|Get) The Friday as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:830 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Saturday">
+    <Summary>
+     (Set|Get) The Saturday as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:830 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Sunday">
+    <Summary>
+     (Set|Get) The Sunday as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:831 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.EveryDay">
+    <Summary>
+     (Set|Get) The EveryDay as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:831 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.EveryWeek">
+    <Summary>
+     (Set|Get) The EveryWeek as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:831 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.EveryMonth">
+    <Summary>
+     (Set|Get) The EveryMonth as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:831 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_01">
+    <Summary>
+     (Set|Get) The Day_01 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:831 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_02">
+    <Summary>
+     (Set|Get) The Day_02 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:832 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_03">
+    <Summary>
+     (Set|Get) The Day_03 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:832 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_04">
+    <Summary>
+     (Set|Get) The Day_04 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:832 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_05">
+    <Summary>
+     (Set|Get) The Day_05 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:832 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_06">
+    <Summary>
+     (Set|Get) The Day_06 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:832 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_07">
+    <Summary>
+     (Set|Get) The Day_07 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:833 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_08">
+    <Summary>
+     (Set|Get) The Day_08 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:833 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_09">
+    <Summary>
+     (Set|Get) The Day_09 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:833 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_10">
+    <Summary>
+     (Set|Get) The Day_10 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:833 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_11">
+    <Summary>
+     (Set|Get) The Day_11 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:833 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_12">
+    <Summary>
+     (Set|Get) The Day_12 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:834 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_13">
+    <Summary>
+     (Set|Get) The Day_13 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:834 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_14">
+    <Summary>
+     (Set|Get) The Day_14 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:834 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_15">
+    <Summary>
+     (Set|Get) The Day_15 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:834 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_16">
+    <Summary>
+     (Set|Get) The Day_16 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:835 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_17">
+    <Summary>
+     (Set|Get) The Day_17 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:835 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_18">
+    <Summary>
+     (Set|Get) The Day_18 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:835 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_19">
+    <Summary>
+     (Set|Get) The Day_19 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:835 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_20">
+    <Summary>
+     (Set|Get) The Day_20 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:835 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_21">
+    <Summary>
+     (Set|Get) The Day_21 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:836 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_22">
+    <Summary>
+     (Set|Get) The Day_22 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:837 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_23">
+    <Summary>
+     (Set|Get) The Day_23 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:837 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_24">
+    <Summary>
+     (Set|Get) The Day_24 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:837 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_25">
+    <Summary>
+     (Set|Get) The Day_25 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:837 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_26">
+    <Summary>
+     (Set|Get) The Day_26 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:838 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_27">
+    <Summary>
+     (Set|Get) The Day_27 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:838 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_28">
+    <Summary>
+     (Set|Get) The Day_28 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:838 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_29">
+    <Summary>
+     (Set|Get) The Day_29 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:838 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_30">
+    <Summary>
+     (Set|Get) The Day_30 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:839 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Day_31">
+    <Summary>
+     (Set|Get) The Day_31 as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:839 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Encrypt">
+    <Summary>
+     (Set|Get) The Encrypt as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:839 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.Compress">
+    <Summary>
+     (Set|Get) The Compress as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:839 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Profile.NumberofOccurences">
+    <Summary>
+     (Set|Get) The NumberofOccurences as Integer.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:839 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="T:Archivis.Archivor.Archives.Profile.Schema">
+    <Summary>
+     (Set|Get) The enumeration of Schema.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:840 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Name">
+ <summary>(Set|Get) The Name as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Source">
+ <summary>(Set|Get) The Source as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Destination">
+ <summary>(Set|Get) The Destination as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Hours">
+ <summary>(Set|Get) The Hours as Integer.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Minutes">
+ <summary>(Set|Get) The Minutes as Integer.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Monday">
+ <summary>(Set|Get) The Monday as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Tuesday">
+ <summary>(Set|Get) The Tuesday as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Wednesday">
+ <summary>(Set|Get) The Wednesday as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Thursday">
+ <summary>(Set|Get) The Thursday as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Friday">
+ <summary>(Set|Get) The Friday as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Saturday">
+ <summary>(Set|Get) The Saturday as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Sunday">
+ <summary>(Set|Get) The Sunday as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.EveryDay">
+ <summary>(Set|Get) The EveryDay as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.EveryWeek">
+ <summary>(Set|Get) The EveryWeek as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.EveryMonth">
+ <summary>(Set|Get) The EveryMonth as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_01">
+ <summary>(Set|Get) The Day_01 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_02">
+ <summary>(Set|Get) The Day_02 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_03">
+ <summary>(Set|Get) The Day_03 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_04">
+ <summary>(Set|Get) The Day_04 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_05">
+ <summary>(Set|Get) The Day_05 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_06">
+ <summary>(Set|Get) The Day_06 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_07">
+ <summary>(Set|Get) The Day_07 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_08">
+ <summary>(Set|Get) The Day_08 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_09">
+ <summary>(Set|Get) The Day_09 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_10">
+ <summary>(Set|Get) The Day_10 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_11">
+ <summary>(Set|Get) The Day_11 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_12">
+ <summary>(Set|Get) The Day_12 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_13">
+ <summary>(Set|Get) The Day_13 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_14">
+ <summary>(Set|Get) The Day_14 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_15">
+ <summary>(Set|Get) The Day_15 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_16">
+ <summary>(Set|Get) The Day_16 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_17">
+ <summary>(Set|Get) The Day_17 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_18">
+ <summary>(Set|Get) The Day_18 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_19">
+ <summary>(Set|Get) The Day_19 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_20">
+ <summary>(Set|Get) The Day_20 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_21">
+ <summary>(Set|Get) The Day_21 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_22">
+ <summary>(Set|Get) The Day_22 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_23">
+ <summary>(Set|Get) The Day_23 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_24">
+ <summary>(Set|Get) The Day_24 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_25">
+ <summary>(Set|Get) The Day_25 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_26">
+ <summary>(Set|Get) The Day_26 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_27">
+ <summary>(Set|Get) The Day_27 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_28">
+ <summary>(Set|Get) The Day_28 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_29">
+ <summary>(Set|Get) The Day_29 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_30">
+ <summary>(Set|Get) The Day_30 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Day_31">
+ <summary>(Set|Get) The Day_31 as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Encrypt">
+ <summary>(Set|Get) The Encrypt as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.Compress">
+ <summary>(Set|Get) The Compress as Boolean.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Schema.NumberofOccurences">
+ <summary>(Set|Get) The NumberofOccurences as Integer.</summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.Clear">
+    <Summary>
+     (Set|Get) This will reinitialize the class element.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:840 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.Reset(SmartCoder.M_FileManager.LineInfo)">
+    <Summary>
+     (Set|Get) This will reinitialize the variables of this class.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:841 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.Add">
+    <Summary>
+     (Set|Get) This will add a new row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:843 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.Save">
+    <Summary>
+     (Set|Get) This will update a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:843 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.Delete">
+    <Summary>
+     (Set|Get) This will Delete a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:844 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.Open(System.String)">
+    <Summary>
+     (Set|Get) This will initialise the connection and import the data.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:844 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.Close(System.Boolean)">
+    <Summary>
+     (Set|Get) This willClosing the connection
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:844 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.List">
+    <Summary>
+     (Set|Get) Return the entire table listed
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:844 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.SearchByName(System.String)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search String.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:845 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.SearchByID(System.Double)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search Id.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:845 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.ToString">
+    <Summary>
+     (Set|Get) The function ToString.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:845 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.CheckConnection">
+    <Summary>
+     (Set|Get) Evaluate the connection to the DataBase
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:848 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Table">
+    <Summary>
+     (Set|Get) The Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:848 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Line">
+    <Summary>
+     (Set|Get) The Connection String To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:848 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.FilePath">
+    <Summary>
+     (Set|Get) The FilePath To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:849 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Password">
+    <Summary>
+     (Set|Get) The Password To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:849 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.UseSQL">
+    <Summary>
+     (Set|Get) Determines if the Database Connection is of type SQL.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:851 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.TableName">
+    <Summary>
+     (Set|Get) The name of the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:852 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Con">
+    <Summary>
+     (Set|Get) The Con To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:852 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Cmd">
+    <Summary>
+     (Set|Get) The Cmd To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:852 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.DataReader">
+    <Summary>
+     (Set|Get) The DataReader To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:852 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.DataAdapter">
+    <Summary>
+     (Set|Get) The DataAdapter To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:853 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Connector">
+    <Summary>
+     (Set|Get) The Connector To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:853 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Profile.Log">
+    <Summary>
+     (Set|Get) The Log To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:853 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.#ctor">
+    <Summary>
+     (Set|Get) The sub Empty.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:854 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Profile.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+    <Summary>
+     (Set|Get) The sub Filled.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:854 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>    ''' <param name="Name">(Set|Get) The Name as String.</param>
+ <param name="Source">(Set|Get) The Source as String.</param>
+ <param name="Destination">(Set|Get) The Destination as String.</param>
+ <param name="Hours">(Set|Get) The Hours as Integer.</param>
+ <param name="Minutes">(Set|Get) The Minutes as Integer.</param>
+ <param name="Monday">(Set|Get) The Monday as Boolean.</param>
+ <param name="Tuesday">(Set|Get) The Tuesday as Boolean.</param>
+ <param name="Wednesday">(Set|Get) The Wednesday as Boolean.</param>
+ <param name="Thursday">(Set|Get) The Thursday as Boolean.</param>
+ <param name="Friday">(Set|Get) The Friday as Boolean.</param>
+ <param name="Saturday">(Set|Get) The Saturday as Boolean.</param>
+ <param name="Sunday">(Set|Get) The Sunday as Boolean.</param>
+ <param name="EveryDay">(Set|Get) The EveryDay as Boolean.</param>
+ <param name="EveryWeek">(Set|Get) The EveryWeek as Boolean.</param>
+ <param name="EveryMonth">(Set|Get) The EveryMonth as Boolean.</param>
+ <param name="Day_01">(Set|Get) The Day_01 as Boolean.</param>
+ <param name="Day_02">(Set|Get) The Day_02 as Boolean.</param>
+ <param name="Day_03">(Set|Get) The Day_03 as Boolean.</param>
+ <param name="Day_04">(Set|Get) The Day_04 as Boolean.</param>
+ <param name="Day_05">(Set|Get) The Day_05 as Boolean.</param>
+ <param name="Day_06">(Set|Get) The Day_06 as Boolean.</param>
+ <param name="Day_07">(Set|Get) The Day_07 as Boolean.</param>
+ <param name="Day_08">(Set|Get) The Day_08 as Boolean.</param>
+ <param name="Day_09">(Set|Get) The Day_09 as Boolean.</param>
+ <param name="Day_10">(Set|Get) The Day_10 as Boolean.</param>
+ <param name="Day_11">(Set|Get) The Day_11 as Boolean.</param>
+ <param name="Day_12">(Set|Get) The Day_12 as Boolean.</param>
+ <param name="Day_13">(Set|Get) The Day_13 as Boolean.</param>
+ <param name="Day_14">(Set|Get) The Day_14 as Boolean.</param>
+ <param name="Day_15">(Set|Get) The Day_15 as Boolean.</param>
+ <param name="Day_16">(Set|Get) The Day_16 as Boolean.</param>
+ <param name="Day_17">(Set|Get) The Day_17 as Boolean.</param>
+ <param name="Day_18">(Set|Get) The Day_18 as Boolean.</param>
+ <param name="Day_19">(Set|Get) The Day_19 as Boolean.</param>
+ <param name="Day_20">(Set|Get) The Day_20 as Boolean.</param>
+ <param name="Day_21">(Set|Get) The Day_21 as Boolean.</param>
+ <param name="Day_22">(Set|Get) The Day_22 as Boolean.</param>
+ <param name="Day_23">(Set|Get) The Day_23 as Boolean.</param>
+ <param name="Day_24">(Set|Get) The Day_24 as Boolean.</param>
+ <param name="Day_25">(Set|Get) The Day_25 as Boolean.</param>
+ <param name="Day_26">(Set|Get) The Day_26 as Boolean.</param>
+ <param name="Day_27">(Set|Get) The Day_27 as Boolean.</param>
+ <param name="Day_28">(Set|Get) The Day_28 as Boolean.</param>
+ <param name="Day_29">(Set|Get) The Day_29 as Boolean.</param>
+ <param name="Day_30">(Set|Get) The Day_30 as Boolean.</param>
+ <param name="Day_31">(Set|Get) The Day_31 as Boolean.</param>
+ <param name="Encrypt">(Set|Get) The Encrypt as Boolean.</param>
+ <param name="Compress">(Set|Get) The Compress as Boolean.</param>
+ <param name="NumberofOccurences">(Set|Get) The NumberofOccurences as Integer.</param>
+</member>
+<member name="T:Archivis.Archivor.Archives.Save_Entry">
+    <Summary>
+     Class created automatically by SmartOffice (c)Copyright 2019.'''    Object Name :             Public  Class Save_Entry
+    Author Information :      David Shaw Informatique Sàrl|saadry.dunkel@ds-informatique.ch|https://www.ds-informatique.ch
+    Contributor Information : ||
+    Creation Date :           2019/07/16 14h48:788
+    |Schema|
+    |ID| |ObjectType |{Quantity}||UnitPrice||Total
+    |00| |Importation|{0}||1| |0
+    |01| |Properties |{8}||0.8| |6.4
+    |02| |Enumeration|{1}||0.4| |0.4
+    |03| |Structure  |{0}||0.4| |0
+    |04| |Sub        |{5}||1.2| |6
+    |05| |Function   |{7}||1.6| |11.2
+    |06| |Runtime    |{12}||0.4| |4.8
+    |07| |Loader     |{2}||0.8| |1.6
+    |08| |Class      |{0}||2| |0
+    |09| |Constante  |{0}||0.4| |0
+    |10| |Event      |{0}||1.2| |0
+    |11| |Members    |{8}||0.5| |4
+    |12| |Parameter  |{13}||0.5| |6.5
+    |Production Cost             |40.9
+    |Selling Price without VAT   |102.25
+    |Total TVA                   |7.87
+    |Grand Total                 |110.12
+    |/Schema|
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:872 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Save_Entry.Name">
+    <Summary>
+     (Set|Get) The Name as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:872 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Save_Entry.Profile">
+    <Summary>
+     (Set|Get) The Profile as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:873 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Save_Entry.DateSaved">
+    <Summary>
+     (Set|Get) The DateSaved as DateTime.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:873 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Save_Entry.Root">
+    <Summary>
+     (Set|Get) The Root as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:873 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Save_Entry.Origine">
+    <Summary>
+     (Set|Get) The Origine as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:874 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Save_Entry.ProfileIndex">
+    <Summary>
+     (Set|Get) The ProfileIndex as Double.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:874 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Save_Entry.Size">
+    <Summary>
+     (Set|Get) The Size as Double.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:874 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Save_Entry.CandidateForDelete">
+    <Summary>
+     (Set|Get) The CandidateForDelete as Boolean.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:874 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="T:Archivis.Archivor.Archives.Save_Entry.Schema">
+    <Summary>
+     (Set|Get) The enumeration of Schema.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:875 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Schema.Name">
+ <summary>(Set|Get) The Name as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Schema.Profile">
+ <summary>(Set|Get) The Profile as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Schema.DateSaved">
+ <summary>(Set|Get) The DateSaved as DateTime.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Schema.Root">
+ <summary>(Set|Get) The Root as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Schema.Origine">
+ <summary>(Set|Get) The Origine as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Schema.ProfileIndex">
+ <summary>(Set|Get) The ProfileIndex as Integer.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Schema.Size">
+ <summary>(Set|Get) The Size as Double.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Schema.CandidateForDelete">
+ <summary>(Set|Get) The CandidateForDelete as Boolean.</summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.Clear">
+    <Summary>
+     (Set|Get) This will reinitialize the class element.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:875 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.Reset(SmartCoder.M_FileManager.LineInfo)">
+    <Summary>
+     (Set|Get) This will reinitialize the variables of this class.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:875 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.Add">
+    <Summary>
+     (Set|Get) This will add a new row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:875 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.Save">
+    <Summary>
+     (Set|Get) This will update a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:875 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.Delete">
+    <Summary>
+     (Set|Get) This will Delete a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:875 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.Open(System.String)">
+    <Summary>
+     (Set|Get) This will initialise the connection and import the data.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:875 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.Close(System.Boolean)">
+    <Summary>
+     (Set|Get) This willClosing the connection
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:875 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.List">
+    <Summary>
+     (Set|Get) Return the entire table listed
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:876 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.SearchByName(System.String)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search String.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:876 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.SearchByID(System.Double)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search Id.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:876 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.ToString">
+    <Summary>
+     (Set|Get) The function ToString.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:876 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.CheckConnection">
+    <Summary>
+     (Set|Get) Evaluate the connection to the DataBase
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:876 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Table">
+    <Summary>
+     (Set|Get) The Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:877 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Line">
+    <Summary>
+     (Set|Get) The Connection String To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:877 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.FilePath">
+    <Summary>
+     (Set|Get) The FilePath To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:877 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Password">
+    <Summary>
+     (Set|Get) The Password To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:877 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.UseSQL">
+    <Summary>
+     (Set|Get) Determines if the Database Connection is of type SQL.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:878 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.TableName">
+    <Summary>
+     (Set|Get) The name of the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:878 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Con">
+    <Summary>
+     (Set|Get) The Con To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:878 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Cmd">
+    <Summary>
+     (Set|Get) The Cmd To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:878 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.DataReader">
+    <Summary>
+     (Set|Get) The DataReader To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:897 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.DataAdapter">
+    <Summary>
+     (Set|Get) The DataAdapter To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:897 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Connector">
+    <Summary>
+     (Set|Get) The Connector To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:898 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Save_Entry.Log">
+    <Summary>
+     (Set|Get) The Log To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:898 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.#ctor">
+    <Summary>
+     (Set|Get) The sub Empty.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:898 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Save_Entry.#ctor(System.String,System.String,System.DateTime,System.String,System.String,System.Int32,System.Double,System.Boolean)">
+    <Summary>
+     (Set|Get) The sub Filled.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/16 14h48:898 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>    ''' <param name="Name">(Set|Get) The Name as String.</param>
+ <param name="Profile">(Set|Get) The Profile as String.</param>
+ <param name="DateSaved">(Set|Get) The DateSaved as DateTime.</param>
+ <param name="Root">(Set|Get) The Root as String.</param>
+ <param name="Origine">(Set|Get) The Origine as String.</param>
+ <param name="ProfileIndex">(Set|Get) The ProfileIndex as Integer.</param>
+ <param name="Size">(Set|Get) The Size as Double.</param>
+ <param name="CandidateForDelete">(Set|Get) The CandidateForDelete as Boolean.</param>
+</member>
+<member name="T:Archivis.Archivor.Archives.Transfert">
+    <Summary>
+     Class created automatically by SmartOffice (c)Copyright 2019.'''    Object Name :             Public  Class Transfert
+    Author Information :      David Shaw Informatique Sàrl|saadry.dunkel@ds-informatique.ch|https://www.ds-informatique.ch
+    Contributor Information : ||
+    Creation Date :           2019/07/11 23h30:193
+    |Schema|
+    |ID| |ObjectType |{Quantity}||UnitPrice||Total
+    |00| |Importation|{0}||1| |0
+    |01| |Properties |{6}||0.8| |4.8
+    |02| |Enumeration|{1}||0.4| |0.4
+    |03| |Structure  |{0}||0.4| |0
+    |04| |Sub        |{5}||1.2| |6
+    |05| |Function   |{7}||1.6| |11.2
+    |06| |Runtime    |{12}||0.4| |4.8
+    |07| |Loader     |{2}||0.8| |1.6
+    |08| |Class      |{0}||2| |0
+    |09| |Constante  |{0}||0.4| |0
+    |10| |Event      |{0}||1.2| |0
+    |11| |Members    |{6}||0.5| |3
+    |12| |Parameter  |{11}||0.5| |5.5
+    |Production Cost             |37.3
+    |Selling Price without VAT   |93.25
+    |Total TVA                   |7.18
+    |Grand Total                 |100.43
+    |/Schema|
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:905 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Transfert.ID">
+    <Summary>
+     (Set|Get) The ID as Integer.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:905 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Transfert.Profile">
+    <Summary>
+     (Set|Get) The Profile as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:905 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Transfert.Source">
+    <Summary>
+     (Set|Get) The Source as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:905 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Transfert.Destination">
+    <Summary>
+     (Set|Get) The Destination as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:905 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Transfert.Size">
+    <Summary>
+     (Set|Get) The Size as Double.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:906 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Transfert.Etat">
+    <Summary>
+     (Set|Get) The Etat as String.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:906 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="T:Archivis.Archivor.Archives.Transfert.Schema">
+    <Summary>
+     (Set|Get) The enumeration of Schema.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:906 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Schema.ID">
+ <summary>(Set|Get) The ID as Integer.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Schema.Profile">
+ <summary>(Set|Get) The Profile as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Schema.Source">
+ <summary>(Set|Get) The Source as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Schema.Destination">
+ <summary>(Set|Get) The Destination as String.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Schema.Size">
+ <summary>(Set|Get) The Size as Double.</summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Schema.Etat">
+ <summary>(Set|Get) The Etat as String.</summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.Clear">
+    <Summary>
+     (Set|Get) This will reinitialize the class element.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:906 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.Reset(SmartCoder.M_FileManager.LineInfo)">
+    <Summary>
+     (Set|Get) This will reinitialize the variables of this class.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:906 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.Add">
+    <Summary>
+     (Set|Get) This will add a new row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:906 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.Save">
+    <Summary>
+     (Set|Get) This will update a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:907 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.Delete">
+    <Summary>
+     (Set|Get) This will Delete a row in the table.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:907 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.Open(System.String)">
+    <Summary>
+     (Set|Get) This will initialise the connection and import the data.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:907 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.Close(System.Boolean)">
+    <Summary>
+     (Set|Get) This willClosing the connection
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:907 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.List">
+    <Summary>
+     (Set|Get) Return the entire table listed
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:907 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.SearchByName(System.String)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search String.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:907 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.SearchByID(System.Double)">
+    <Summary>
+     (Set|Get) Search for each property that match the Search Id.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:908 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.ToString">
+    <Summary>
+     (Set|Get) The function ToString.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:908 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.CheckConnection">
+    <Summary>
+     (Set|Get) Evaluate the connection to the DataBase
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:909 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Table">
+    <Summary>
+     (Set|Get) The Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:909 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Line">
+    <Summary>
+     (Set|Get) The Connection String To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:909 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.FilePath">
+    <Summary>
+     (Set|Get) The FilePath To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:909 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Password">
+    <Summary>
+     (Set|Get) The Password To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:909 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.UseSQL">
+    <Summary>
+     (Set|Get) Determines if the Database Connection is of type SQL.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:910 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.TableName">
+    <Summary>
+     (Set|Get) The name of the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:910 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Con">
+    <Summary>
+     (Set|Get) The Con To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:910 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Cmd">
+    <Summary>
+     (Set|Get) The Cmd To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:910 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.DataReader">
+    <Summary>
+     (Set|Get) The DataReader To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:910 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.DataAdapter">
+    <Summary>
+     (Set|Get) The DataAdapter To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:910 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Connector">
+    <Summary>
+     (Set|Get) The Connector To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:910 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Transfert.Log">
+    <Summary>
+     (Set|Get) The Log To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:910 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.#ctor">
+    <Summary>
+     (Set|Get) The sub Empty.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:911 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Transfert.#ctor(System.Int32,System.String,System.String,System.String,System.Double,System.String)">
+    <Summary>
+     (Set|Get) The sub Filled.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:911 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>    ''' <param name="ID">(Set|Get) The ID as Integer.</param>
+ <param name="Profile">(Set|Get) The Profile as String.</param>
+ <param name="Source">(Set|Get) The Source as String.</param>
+ <param name="Destination">(Set|Get) The Destination as String.</param>
+ <param name="Size">(Set|Get) The Size as Double.</param>
+ <param name="Etat">(Set|Get) The Etat as String.</param>
+</member>
+<member name="T:Archivis.Archivor.Archives.Initializor_Backup">
+    <Summary>
+     '''    Object Name :             Public  Class Initializor_Backup
+    Author Information :      David Shaw Informatique Sàrl|saadry.dunkel@ds-informatique.ch|https://www.ds-informatique.ch
+    Contributor Information : ||
+    Creation Date :           2019/07/11 23h30:528
+    |Schema|
+    |ID| |ObjectType |{Quantity}||UnitPrice||Total
+    |00| |Importation|{0}||1| |0
+    |01| |Properties |{12}||0.8| |9.6
+    |02| |Enumeration|{0}||0.4| |0
+    |03| |Structure  |{0}||0.4| |0
+    |04| |Sub        |{1}||1.2| |1.2
+    |05| |Function   |{1}||1.6| |1.6
+    |06| |Runtime    |{4}||0.4| |1.6
+    |07| |Loader     |{2}||0.8| |1.6
+    |08| |Class      |{0}||2| |0
+    |09| |Constante  |{0}||0.4| |0
+    |10| |Event      |{0}||1.2| |0
+    |11| |Members    |{0}||0.5| |0
+    |12| |Parameter  |{2}||0.5| |1
+    |Production Cost             |16.6
+    |Selling Price without VAT   |41.5
+    |Total TVA                   |3.2
+    |Grand Total                 |44.7
+    |/Schema|
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:918 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.Archives_Data">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:919 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.List_Archives_Data">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:919 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.Backup">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:919 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.List_Backup">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:919 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.Profile">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:919 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.List_Profile">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:920 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.Save_Entry">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:920 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.List_Save_Entry">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:920 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.Transfert">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:920 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.List_Transfert">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:920 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.Portfolio">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:921 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="P:Archivis.Archivor.Archives.Initializor_Backup.DataBase">
+    <Summary>
+     (Set|Get) 
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:921 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Initializor_Backup.Clear">
+    <Summary>
+     (Set|Get) This will reinitialize the class properties element.
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:921 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Initializor_Backup.CheckConnection">
+    <Summary>
+     (Set|Get) Evaluate the connection to the DataBase
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:921 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Initializor_Backup.Line">
+    <Summary>
+     (Set|Get) The Connection String To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:921 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Initializor_Backup.FilePath">
+    <Summary>
+     (Set|Get) The FilePath To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:921 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Initializor_Backup.Password">
+    <Summary>
+     (Set|Get) The Password To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:922 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="F:Archivis.Archivor.Archives.Initializor_Backup.Connector">
+    <Summary>
+     (Set|Get) The Connector To the Table.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:922 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Initializor_Backup.#ctor">
+    <Summary>
+     (Set|Get) The sub Empty.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:922 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>
+</member>
+<member name="M:Archivis.Archivor.Archives.Initializor_Backup.#ctor(System.String,System.String)">
+    <Summary>
+     (Set|Get) The sub Filled.
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <Published>MASTER From MASTER\Saadry | Time : 2019/07/11 23h31:922 </Published>
+    <Updated>[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]</Updated>
+    </Summary>    ''' <param name="FilePath">The initial File Path</param>
+ <param name="Password">The password</param>
+</member>
+<member name="P:Archivis.NewBackup.Bm">
+ <summary>
+ Gets and sets the BindingManager we use in this
+ sampe to traverse through the set data collection
+ </summary>
+</member>
+<member name="M:Archivis.NewBackup.BmPositionChanged(System.Object,System.EventArgs)">
+ <summary>
+ Updates out VCR control when the user
+ moves position in the data collection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.NewBackup.VcrFirstClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles VCR "first record" clicks
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.NewBackup.VcrPreviousClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles user "previous record" clicks
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.NewBackup.VcrNextClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles user "Next record" clicks
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.NewBackup.VcrLastClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles user "Last record" clicks
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.NewBackup.InitializeGrid">
+ <summary>
+ Initializes our default sample environment
+ </summary>
+</member>
+<member name="M:Archivis.NewBackup.UpdateVcr">
+ <summary>
+ Updates our VCR states
+ </summary>
+</member>
+<member name="P:Archivis.Savings.Bm">
+ <summary>
+ Gets and sets the BindingManager we use in this
+ sampe to traverse through the set data collection
+ </summary>
+</member>
+<member name="M:Archivis.Savings.InitializeGrid">
+ <summary>
+ Initializes our default sample environment
+ </summary>
+</member>
+<member name="M:Archivis.Savings.UpdateVcr">
+ <summary>
+ Updates our VCR states
+ </summary>
+</member>
+<member name="M:Archivis.Savings.BmPositionChanged(System.Object,System.EventArgs)">
+ <summary>
+ Updates out VCR control when the user
+ moves position in the data collection
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.Savings.VcrFirstClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles VCR "first record" clicks
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.Savings.VcrPreviousClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles user "previous record" clicks
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.Savings.VcrNextClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles user "Next record" clicks
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.Savings.VcrLastClick(System.Object,System.EventArgs)">
+ <summary>
+ Handles user "Last record" clicks
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:Archivis.TreeExplorer.Collect_SubDir(DevComponents.AdvTree.Node)">
+ <summary>
+ Collect sub directories from DevComponents.AdvTree.Node
+ </summary>
+ <param name="ParentNode"></param>
+ <returns></returns>
+</member>
+<member name="M:Archivis.TreeExplorer.Add_Path(System.String)">
+ <summary>
+ Add a Dir Path without duplicate
+ </summary>
+ <param name="Path"></param>
+</member>
+</members>
+</doc>

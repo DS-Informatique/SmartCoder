@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Function xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>5</ImageIndex>
+  <Name>MapToNode</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>IsNothing</Status>
+  <Variables />
+  <Statements />
+  <Statement>Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+</Statement>
+  <XmlFile />
+  <VB_OpenStatement>Function </VB_OpenStatement>
+  <VB_CloseStatement>End Function</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Function&gt; &lt;&gt; |.MapToNode()|DevComponents.AdvTree.Node}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") &gt;</string>
+    <string>   Public Function MapToNode(ByVal [img] As ImageList ) As DevComponents.AdvTree.Node</string>
+    <string>Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+</string>
+    <string>   End Function</string>
+    <string>#End Region '(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Function&gt; &lt;&gt; |.MapToNode()|DevComponents.AdvTree.Node}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+    '''    &lt;Summary&gt;
+'''     (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    &lt;Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") &gt;
+   Public Function MapToNode(ByVal [img] As ImageList ) As DevComponents.AdvTree.Node
+Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+
+   End Function
+#End Region '(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+</VB>
+  <Print_C>
+    <string>#region |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Function&gt; &lt;&gt; |.MapToNode()|Function}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</string>
+    <string>   Public DevComponents.AdvTree.Node void MapToNode(ByVal [img] As ImageList )   {</string>
+    <string>Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+  </Print_C>
+  <C>#region |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Function&gt; &lt;&gt; |.MapToNode()|Function}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]
+   Public DevComponents.AdvTree.Node void MapToNode(ByVal [img] As ImageList )   {
+Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+
+   };
+#endregion (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+</C>
+  <Print_F>
+    <string>#region |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Sub&gt; &lt;&gt; |.MapToNode()|Sub}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</string>
+    <string>    Let MapToNode = </string>
+    <string>    Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+</string>
+    <string>#endregion (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+  </Print_F>
+  <F>#region |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Sub&gt; &lt;&gt; |.MapToNode()|Sub}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]
+    Let MapToNode = 
+    Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+
+#endregion (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+</F>
+  <Print_Python>
+    <string>#region |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Sub&gt; &lt;&gt; |.MapToNode()|Sub}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</string>
+    <string>    MapToNode ::= "MapToNode"</string>
+    <string>Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+</string>
+    <string>#endregion /(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+  </Print_Python>
+  <Python>#region |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Sub&gt; &lt;&gt; |.MapToNode()|Sub}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]
+    MapToNode ::= "MapToNode"
+Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+
+#endregion /(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Sub&gt; &lt;&gt; |.MapToNode()|Sub}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</string>
+    <string>   Public DevComponents.AdvTree.Node void MapToNode(ByVal [img] As ImageList )   {</string>
+    <string>Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/06/12 13h27:770| &lt;05.00.01&gt; &lt;Sub&gt; &lt;&gt; |.MapToNode()|Sub}|"' (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]
+   Public DevComponents.AdvTree.Node void MapToNode(ByVal [img] As ImageList )   {
+Dim Result As New DevComponents.AdvTree.Node
+With Result
+  .ImageIndex = 1
+  .Text = Me.TableName
+  .TagString = Me.FilePath
+  .Tag = Me
+End With
+Dim C As New DevComponents.AdvTree.Node
+With C
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Columns, My.Settings.Environmental) &amp; "(" &amp; Me.ColumnCount &amp; ")"
+  .Tag = Me.Columns
+End With
+If (Me.ColumnCount &gt;= 0) Then 
+  For Each Col As DataColumn In Me.Columns
+      Dim CN As New DevComponents.AdvTree.Node
+      With CN
+          .Text = Col.Caption &amp; "|" &amp; Col.DataType.ToString
+          .ImageIndex = 2
+          .Tag = Col
+      End With
+      C.Nodes.Add(CN)
+  Next
+End If
+Result.Nodes.Add(C)
+Dim R As New DevComponents.AdvTree.Node
+With R
+  .ImageIndex = 4
+  .Text =Translate(Sentences.Item, My.Settings.Environmental) &amp; "(" &amp; Me.RowCount &amp; ")"
+  .Tag = Me.Rows
+End With
+If (Me.RowCount &gt;= 0) Then 
+  If (Not IsNothing(Me.Items)) Then
+      For Each Rol As VirtualItem In Me.Items
+          Dim RN As New DevComponents.AdvTree.Node
+          With RN
+              .Text = Rol.Name &amp; "| "&amp; Rol.DataType.ToString
+              .ImageIndex = 3
+              .Tag = Rol
+          End With
+          R.Nodes.Add(RN)
+      Next
+  Else
+      If (Not IsNothing(Me.Data)) Then
+          Dim Lt As New List(Of VirtualItem)
+              If (Me.Data.Rows.Count -1 &gt;=0) Then
+                  For j As Integer = 0 To Me.Data.Rows.Count -1
+                      Dim Tol As DataRow = Me.Data.Rows(j)
+                      Dim Rn As New DevComponents.AdvTree.Node
+                      With Rn
+                          .Text = Tol.Item(0).ToString &amp; " | " &amp; Me.Columns(0).DataType.ToString
+                          .ImageIndex = 3 
+                          .Tag = Tol 
+                      End With
+                      R.Nodes.Add(Rn)
+                  Next
+              End If
+      End If
+  End If
+End If
+Result.Nodes.Add(R)
+Return Result
+
+   };
+#endregion (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+</JavaScript>
+  <ID>1</ID>
+  <StatementFormat>Function</StatementFormat>
+  <RegionCode>05.00.01</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     This will create a DevComponents.AdvTree.Node with the Current Table
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params>
+    <Param>
+      <Name>img</Name>
+      <Definition>The ImageList of the AdvTreeViewEx</Definition>
+    </Param>
+  </Params>
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") &gt;</VB>
+    <C>[Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</C>
+    <F>[Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</F>
+    <Python>[Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</Python>
+    <JavaScript>[Browsable(True) , Description("(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <FunctionName>MapToNode</FunctionName>
+  <ParameterList>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>img</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [img] As ImageList = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition>The ImageList of the AdvTreeViewEx</Definition>
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>img</ParameterName>
+      <ParameterType>ImageList</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+  </ParameterList>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) This will create a DevComponents.AdvTree.Node with the Current Table
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:770 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <ReturnType>DevComponents.AdvTree.Node</ReturnType>
+  <Partial>False</Partial>
+  <Handle />
+  <Implements />
+  <Production_Cost>2.1</Production_Cost>
+  <Quantity_Parameters>1</Quantity_Parameters>
+  <Unit_Cost_Function>1.6</Unit_Cost_Function>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Function>

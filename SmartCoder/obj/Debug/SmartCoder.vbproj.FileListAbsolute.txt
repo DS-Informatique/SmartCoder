@@ -1,0 +1,559 @@
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.FichierView.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MyComputerInfo.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Serializer.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.ShowProperty.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Resources.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_DataBase.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_VbNET.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Class.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Enumeration.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Function.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Loader.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Module.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Property.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Runtime.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Structure.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Sub.resources
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.CopyComplete
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\Laboratoire\SmartOffice\SmartCoder\obj\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.ResolveComReference.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.FichierView.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MyComputerInfo.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Serializer.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.ShowProperty.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Resources.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MediaPanel.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_DataBase.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_VbNET.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Class.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Enumeration.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Function.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Loader.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Module.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Property.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Runtime.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Structure.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Sub.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.SuperGridDemo.VcrControl.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.WebPage.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Form1.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.PrintException.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Print_ResultItem.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.RemoteDesktopConnection.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Test_Item.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.TV.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_MusicPlayer.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.YoutubePlayer.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.CopyComplete
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\SmartCoder\obj\Debug\SmartCoder.pdb
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbprojResolveAssemblyReference.cache
+F:\SmartOffice\SmartCoder\obj\Debug\Interop.AXVLC.dll
+F:\SmartOffice\SmartCoder\obj\Debug\Interop.MSTSCLib.dll
+F:\SmartOffice\SmartCoder\obj\Debug\AxInterop.MSTSCLib.dll
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.ResolveComReference.cache
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.FichierView.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MyComputerInfo.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Serializer.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.ShowProperty.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Resources.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MediaPanel.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_DataBase.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_VbNET.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Class.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Enumeration.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Function.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Loader.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Module.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Property.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Runtime.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Structure.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Sub.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.SuperGridDemo.VcrControl.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.WebPage.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Form1.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.PrintException.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Print_ResultItem.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.RemoteDesktopConnection.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Test_Item.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.TV.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_MusicPlayer.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.YoutubePlayer.resources
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.GenerateResource.Cache
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.dll
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.xml
+F:\SmartOffice\SmartCoder\obj\Debug\SmartCoder.pdb
+F:\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll.config
+F:\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll
+F:\SmartOffice\SmartCoder\bin\Debug\SmartCoder.pdb
+F:\SmartOffice\SmartCoder\bin\Debug\SmartCoder.xml
+F:\SmartOffice\SmartCoder\bin\Debug\Newtonsoft.Json.dll
+F:\SmartOffice\SmartCoder\bin\Debug\YoutubeExtractor.dll
+F:\SmartOffice\SmartCoder\bin\Debug\Interop.AXVLC.dll
+F:\SmartOffice\SmartCoder\bin\Debug\Interop.MSTSCLib.dll
+F:\SmartOffice\SmartCoder\bin\Debug\Interop.SHDocVw.dll
+F:\SmartOffice\SmartCoder\bin\Debug\Interop.WMPLib.dll
+F:\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+F:\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.xml
+F:\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+F:\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+F:\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.xml
+F:\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.xml
+F:\SmartOffice\SmartCoder\bin\Debug\Newtonsoft.Json.xml
+F:\SmartOffice\SmartCoder\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.ResolveComReference.cache
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.FichierView.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MyComputerInfo.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Serializer.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.ShowProperty.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Resources.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MediaPanel.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_DataBase.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_VbNET.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Class.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Enumeration.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Function.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Loader.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Module.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Property.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Runtime.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Structure.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Sub.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.SuperGridDemo.VcrControl.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.WebPage.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Form1.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.PrintException.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Print_ResultItem.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.RemoteDesktopConnection.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Test_Item.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.TV.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_MusicPlayer.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.YoutubePlayer.resources
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.CopyComplete
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.FolderView.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbprojAssemblyReference.cache
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\Interop.MSTSCLib.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\Interop.WMPLib.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\AxInterop.MSTSCLib.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\AxInterop.WMPLib.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.ResolveComReference.cache
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.pdb
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.FichierView.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.FolderView.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MyComputerInfo.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Serializer.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.ShowProperty.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Resources.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.MediaPanel.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_DataBase.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_VbNET.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Class.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Enumeration.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Function.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Loader.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Module.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Property.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Runtime.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Structure.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.VbNET_Sub.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.SuperGridDemo.VcrControl.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.WebPage.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Form1.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.PrintException.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Print_ResultItem.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.RemoteDesktopConnection.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.Test_Item.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.TV.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.U_MusicPlayer.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.YoutubePlayer.resources
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.GenerateResource.cache
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.CoreCompileInputs.cache
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\Interop.AXVLC.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll.config
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\SmartCoder.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\SmartCoder.pdb
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\SmartCoder.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.Charts.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Charts.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.SuperGrid.Design.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.TreeGX.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Newtonsoft.Json.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\YoutubeExtractor.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Interop.AXVLC.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Interop.MSTSCLib.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Interop.SHDocVw.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Interop.WMPLib.dll
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.DotNetBar2.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\DevComponents.Instrumentation.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\Newtonsoft.Json.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\bin\Debug\YoutubeExtractor.xml
+I:\Saadry\Documents\SmartOffice\SmartCoder\obj\Debug\SmartCoder.vbproj.CopyComplete
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.ResolveComReference.cache
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.FichierView.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.FolderView.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.MyComputerInfo.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Serializer.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.ShowProperty.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Resources.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.MediaPanel.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_DataBase.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_VbNET.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Class.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Enumeration.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Function.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Loader.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Module.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Property.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Runtime.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Structure.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Sub.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.SuperGridDemo.VcrControl.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.WebPage.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Form1.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.PrintException.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Print_ResultItem.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.RemoteDesktopConnection.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Test_Item.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.TV.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_MusicPlayer.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.YoutubePlayer.resources
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.CopyComplete
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.pdb
+D:\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.dll.config
+D:\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.pdb
+D:\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Charts.Design.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Charts.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Design.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar2.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.Design.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.SuperGrid.Design.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.TreeGX.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\Newtonsoft.Json.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\YoutubeExtractor.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar2.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\Newtonsoft.Json.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\YoutubeExtractor.xml
+D:\SmartOffice The one\SmartCoder\bin\Debug\Interop.AXVLC.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\Interop.MSTSCLib.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\Interop.SHDocVw.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\Interop.WMPLib.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.AXVLC.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.MSTSCLib.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.SHDocVw.dll
+D:\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.WMPLib.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbprojAssemblyReference.cache
+D:\SmartOffice The one\SmartCoder\obj\Debug\Interop.AXVLC.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\Interop.MSTSCLib.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\Interop.SHDocVw.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\Interop.WMPLib.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.AXVLC.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.MSTSCLib.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.SHDocVw.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.WMPLib.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.ResolveComReference.cache
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.FichierView.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.FolderView.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.MyComputerInfo.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Serializer.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.ShowProperty.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Resources.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.MediaPanel.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_DataBase.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_VbNET.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Class.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Enumeration.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Function.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Loader.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Module.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Property.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Runtime.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Structure.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Sub.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.SuperGridDemo.VcrControl.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.WebPage.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Form1.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.PrintException.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Print_ResultItem.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.RemoteDesktopConnection.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Test_Item.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.TV.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_MusicPlayer.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.YoutubePlayer.resources
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.GenerateResource.cache
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.CoreCompileInputs.cache
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.CopyComplete
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.dll
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.xml
+D:\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.pdb
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.dll.config
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.pdb
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\SmartCoder.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Charts.Design.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Charts.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Design.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar2.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.Design.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.SuperGrid.Design.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.TreeGX.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\Newtonsoft.Json.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\YoutubeExtractor.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Layout.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.DotNetBar2.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\DevComponents.Instrumentation.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\Newtonsoft.Json.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\YoutubeExtractor.xml
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\Interop.AXVLC.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\Interop.MSTSCLib.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\Interop.SHDocVw.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\Interop.WMPLib.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.AXVLC.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.MSTSCLib.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.SHDocVw.dll
+F:\Previous work\SmartOffice The one\SmartCoder\bin\Debug\AxInterop.WMPLib.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbprojAssemblyReference.cache
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\Interop.AXVLC.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\Interop.MSTSCLib.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\Interop.SHDocVw.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\Interop.WMPLib.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.AXVLC.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.MSTSCLib.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.SHDocVw.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\AxInterop.WMPLib.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.ResolveComReference.cache
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.FichierView.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.FolderView.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.MyComputerInfo.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Serializer.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.ShowProperty.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Resources.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.MediaPanel.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_DataBase.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_VbNET.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Class.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Enumeration.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Function.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Loader.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Module.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Property.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Runtime.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Structure.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.VbNET_Sub.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.SuperGridDemo.VcrControl.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.WebPage.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Form1.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.PrintException.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Print_ResultItem.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.RemoteDesktopConnection.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.Test_Item.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.TV.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.U_MusicPlayer.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.YoutubePlayer.resources
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.GenerateResource.cache
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.CoreCompileInputs.cache
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.vbproj.CopyComplete
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.dll
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.xml
+F:\Previous work\SmartOffice The one\SmartCoder\obj\Debug\SmartCoder.pdb

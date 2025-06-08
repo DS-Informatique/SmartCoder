@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>0</ImageIndex>
+  <Name>SetupComponents</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement>With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+</Statement>
+  <XmlFile />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) Prepare Components of the class.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) Prepare Components of the class.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) Prepare Components of the class.") &gt;</string>
+    <string>   Public Sub SetupComponents()</string>
+    <string>With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+</string>
+    <string>   End Sub</string>
+    <string>#End Region '(Set|Get) Prepare Components of the class.</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.
+    '''    &lt;Summary&gt;
+'''     (Set|Get) Prepare Components of the class.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+    &lt;Browsable(True) , Description("(Set|Get) Prepare Components of the class.") &gt;
+   Public Sub SetupComponents()
+With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+
+   End Sub
+#End Region '(Set|Get) Prepare Components of the class.
+</VB>
+  <Print_C>
+    <string>#region |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</string>
+    <string>   Public void SetupComponents()   {</string>
+    <string>With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Prepare Components of the class.</string>
+    <string>   Public final void SetupComponents()   {</string>
+  </Print_C>
+  <C>#region |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]
+   Public void SetupComponents()   {
+With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+
+   };
+#endregion (Set|Get) Prepare Components of the class.
+   Public final void SetupComponents()   {
+</C>
+  <Print_F>
+    <string>#region |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</string>
+    <string>    Let SetupComponents = </string>
+    <string>    With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+</string>
+    <string>#endregion (Set|Get) Prepare Components of the class.</string>
+  </Print_F>
+  <F>#region |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]
+    Let SetupComponents = 
+    With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+
+#endregion (Set|Get) Prepare Components of the class.
+</F>
+  <Print_Python>
+    <string>#region |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</string>
+    <string>    SetupComponents ::= "SetupComponents"</string>
+    <string>With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+</string>
+    <string>#endregion /(Set|Get) Prepare Components of the class.</string>
+  </Print_Python>
+  <Python>#region |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]
+    SetupComponents ::= "SetupComponents"
+With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+
+#endregion /(Set|Get) Prepare Components of the class.
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</string>
+    <string>    [Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</string>
+    <string>With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Prepare Components of the class.</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/06/12 13h27:654| &lt;04.00.06&gt; &lt;Sub&gt; &lt;&gt; |.SetupComponents()|Sub}|"' (Set|Get) Prepare Components of the class.
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+    [Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]
+With Me
+    .AddingModeEnable = False
+    .Columns = New List(Of DataColumn)
+    .DataSet = New DataSet
+    .FilePath = Nothing
+    .Items = New List(Of VirtualItem)
+    .Line = Nothing
+    .OleDb_Adaptor = New OleDb.OleDbDataAdapter
+    .OleDb_DeleteCommand = New OleDb.OleDbCommand
+    .OleDb_InsertCommand = New OleDb.OleDbCommand
+    .OleDb_Parameters = New List(Of OleDb.OleDbParameter)
+    .OleDb_SelectCommand = New OleDb.OleDbCommand
+    .OleDb_UpdateCommand = New OleDb.OleDbCommand
+    .Password = Nothing
+    .ProviderName = Nothing
+    .ProviderType = Nothing
+    .Rows = New List(Of DataRow)
+    .SelectedIndex = 0
+    .Sql_Adaptor = New SqlClient.SqlDataAdapter
+    .Sql_DeleteCommand = New SqlClient.SqlCommand
+    .Sql_InsertCommand = New SqlClient.SqlCommand
+    .Sql_Parameters = New List(Of SqlClient.SqlParameter)
+    .Sql_SelectCommand = New SqlClient.SqlCommand
+    .Sql_UpdateCommand = New SqlClient.SqlCommand
+    .TableName = Nothing
+    .UseSql = False
+End With
+
+   };
+#endregion (Set|Get) Prepare Components of the class.
+</JavaScript>
+  <ID>6</ID>
+  <StatementFormat>Sub</StatementFormat>
+  <RegionCode>04.00.06</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     Prepare Components of the class.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) Prepare Components of the class.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) Prepare Components of the class.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) Prepare Components of the class.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) Prepare Components of the class.") &gt;</VB>
+    <C>[Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</C>
+    <F>[Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</F>
+    <Python>[Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</Python>
+    <JavaScript>[Browsable(True) , Description("(Set|Get) Prepare Components of the class.") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Partial>false</Partial>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <SubName>SetupComponents</SubName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) Prepare Components of the class.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) Prepare Components of the class.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) Prepare Components of the class.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;TOWER1 From TOWER1\Saadry | Time : 2020/06/12 13h27:654 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Production_Cost>1.2</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Sub>1.2</Unit_Cost_Sub>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Sub>

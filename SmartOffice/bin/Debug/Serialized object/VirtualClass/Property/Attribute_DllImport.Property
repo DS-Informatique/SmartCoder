@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>1</ImageIndex>
+  <Name>Attribute_DllImport</Name>
+  <Text>Attribute_DllImport | String</Text>
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>StandBye</Status>
+  <Variables />
+  <Statements />
+  <Statement />
+  <XmlFile />
+  <VB_OpenStatement>Property </VB_OpenStatement>
+  <VB_CloseStatement>End Property</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <AttributeList>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description />
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes />
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB />
+    <Print_C />
+    <Print_F />
+    <Print_Python />
+    <Print_JavaScript />
+    <VB />
+    <C />
+    <F />
+    <Python />
+    <JavaScript />
+  </AttributeList>
+  <Browsable>true</Browsable>
+  <Category>Columns</Category>
+  <Description>(Set|Get) The Attribute_DllImport as String.</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB />
+  <VB />
+  <Print_C />
+  <C />
+  <Print_F />
+  <F />
+  <Print_Python />
+  <Python />
+  <Print_JavaScript />
+  <JavaScript />
+  <ID>35</ID>
+  <StatementFormat>Property</StatementFormat>
+  <RegionCode>01.00.35</RegionCode>
+  <AuthorEmail />
+  <AuthorName />
+  <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary />
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params />
+  <Rules />
+  <Syntax />
+  <Production_Cost>0</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Property>0</Unit_Cost_Property>
+  <Unit_Cost_Parameters>0</Unit_Cost_Parameters>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@ds-informatique.ch</AuthorEmail>
+    <AuthorName>David Shaw Informatique Sàrl</AuthorName>
+    <AuthorUri>https://www.ds-informatique.ch</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published>2020/07/25 21h56:798</Published>
+    <Rights />
+    <Summary>The Attribute_DllImport as String.</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     The Attribute_DllImport as String.
+'''    &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:798 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    The Attribute_DllImport as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:798 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    The Attribute_DllImport as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:798 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    The Attribute_DllImport as String.
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@ds-informatique.ch&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;David Shaw Informatique Sàrl&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.ds-informatique.ch&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:798 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category>Columns</Category>
+    <Description>(Set|Get) The Attribute_DllImport as String.</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>CategoryAttribute</AttributeName>
+        <AttributeValue>Columns</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) The Attribute_DllImport as String.</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") &gt;</VB>
+    <C>[Browsable(true) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") ]</C>
+    <F>[Browsable(true) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") ]</F>
+    <Python>[Browsable(true) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") ]</Python>
+    <JavaScript>[Browsable(true) , CategoryAttribute("Columns") , Description("(Set|Get) The Attribute_DllImport as String.") ]</JavaScript>
+  </Attribute>
+  <Default>false</Default>
+  <AccessModifier>Public</AccessModifier>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <WriteOnly>false</WriteOnly>
+  <ReturnType>String</ReturnType>
+  <Variable_Name>_Attribute_DllImport</Variable_Name>
+  <Variable_AccessModifier>Private</Variable_AccessModifier>
+  <Variable_ReturnType>String</Variable_ReturnType>
+  <SetStatement />
+  <GetStatement />
+  <ParentName />
+</Property>

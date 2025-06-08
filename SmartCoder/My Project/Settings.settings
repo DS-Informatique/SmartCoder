@@ -1,0 +1,192 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="DownloadDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Langue" Type="System.String" Scope="User">
+      <Value Profile="(Default)">English</Value>
+    </Setting>
+    <Setting Name="AuthorName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">David Shaw Informatique Sàrl</Value>
+    </Setting>
+    <Setting Name="AuthorEmail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">saadry.dunkel@ds-informatique.ch</Value>
+    </Setting>
+    <Setting Name="AuthorUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.ds-informatique.ch</Value>
+    </Setting>
+    <Setting Name="Price_Import" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Price_Property" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.8</Value>
+    </Setting>
+    <Setting Name="Price_Enumeration" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.4</Value>
+    </Setting>
+    <Setting Name="Price_Structure" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.4</Value>
+    </Setting>
+    <Setting Name="Price_Sub" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.2</Value>
+    </Setting>
+    <Setting Name="Price_Function" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.6</Value>
+    </Setting>
+    <Setting Name="Price_Runtime" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.4</Value>
+    </Setting>
+    <Setting Name="Price_Loader" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.8</Value>
+    </Setting>
+    <Setting Name="Price_Class" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="Price_Constante" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.4</Value>
+    </Setting>
+    <Setting Name="Price_Events" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.2</Value>
+    </Setting>
+    <Setting Name="Price_DataBase" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">523.5</Value>
+    </Setting>
+    <Setting Name="Price_Table" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">116.5</Value>
+    </Setting>
+    <Setting Name="Price_Fichier" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">309.5</Value>
+    </Setting>
+    <Setting Name="Price_Parameter" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.5</Value>
+    </Setting>
+    <Setting Name="Price_Member" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.5</Value>
+    </Setting>
+    <Setting Name="VAT" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.077</Value>
+    </Setting>
+    <Setting Name="Font" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Century Gothic, 11.25pt</Value>
+    </Setting>
+    <Setting Name="Adaptor_Accdb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft.ACE.OLEDB.12.0</Value>
+    </Setting>
+    <Setting Name="Adaptor_Dbf" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft.Jet.OLEDB.4.0</Value>
+    </Setting>
+    <Setting Name="Adaptor_Excel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft.ACE.OLEDB.12.0</Value>
+    </Setting>
+    <Setting Name="Adaptor_Mdb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft.Jet.OLEDB.4.0</Value>
+    </Setting>
+    <Setting Name="Adaptor_Saadry" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft.ACE.OLEDB.12.0</Value>
+    </Setting>
+    <Setting Name="Counter" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Dbf_ExtendedProperty_0" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Extended Properties</Value>
+    </Setting>
+    <Setting Name="Dbf_ExtendedProperty_1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dBase III</Value>
+    </Setting>
+    <Setting Name="Excel_Ext1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Extended Properties</Value>
+    </Setting>
+    <Setting Name="Excel_Ext2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Excel 12.0 Xml</Value>
+    </Setting>
+    <Setting Name="Excel_Ext3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HDR=YES</Value>
+    </Setting>
+    <Setting Name="HasConnection" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dunke92606!</Value>
+    </Setting>
+    <Setting Name="LAN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.0</Value>
+    </Setting>
+    <Setting Name="OleDbSetPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Jet OLEDB:Database Password</Value>
+    </Setting>
+    <Setting Name="Routeur" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.0</Value>
+    </Setting>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Saphire</Value>
+    </Setting>
+    <Setting Name="Speak" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Sql_DataSource" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=</Value>
+    </Setting>
+    <Setting Name="Web" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8.8.8.8</Value>
+    </Setting>
+    <Setting Name="Style" Type="DevComponents.DotNetBar.eStyle" Scope="User">
+      <Value Profile="(Default)">Office2007VistaGlass</Value>
+    </Setting>
+    <Setting Name="ManagerColorTint" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">26, 97, 139</Value>
+    </Setting>
+    <Setting Name="CanvasColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="BaseColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">43, 87, 154</Value>
+    </Setting>
+    <Setting Name="DefaultOuput" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SummaryRights" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Copyright on SmartOffice programming tools.All rights, including those for reproduction, reprinting and translation of training materials are the property of David Shaw Informatique Sàrl or the specified supplier. The
+training materials may not be reproduced in any form, used for academic purposes, or used for public
+without the prior written permission of David Shaw Informatique Sàrl.The software, components and data used in the course are protected by copyright and should not be copied on any media or
+taken out of the classroom.</Value>
+    </Setting>
+    <Setting Name="SpeechVolume" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="SpeechRate" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Price_Folder" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">134.5</Value>
+    </Setting>
+    <Setting Name="Price_LineInfo" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">35.5</Value>
+    </Setting>
+    <Setting Name="Cypher" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dunke92606!</Value>
+    </Setting>
+    <Setting Name="Price_RetrieveIcons" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">29.5</Value>
+    </Setting>
+    <Setting Name="Price_SizeInfo" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">36.5</Value>
+    </Setting>
+    <Setting Name="Marge" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2.5</Value>
+    </Setting>
+    <Setting Name="Db_Empty_Compta_FilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Db_Empty_Compta_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Db_Empty_Compta_Line" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MusicFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

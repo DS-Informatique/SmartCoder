@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Function xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>5</ImageIndex>
+  <Name>List</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>IsNothing</Status>
+  <Variables />
+  <Statements />
+  <Statement>   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+</Statement>
+  <XmlFile />
+  <VB_OpenStatement>Function </VB_OpenStatement>
+  <VB_CloseStatement>End Function</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) Return the entire table listed</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.List()|List(Of [MDT_CLIENT])}|"' (Set|Get) Return the entire table listed</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</string>
+    <string>   Public Function List() As List(Of [MDT_CLIENT])</string>
+    <string>   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+</string>
+    <string>   End Function</string>
+    <string>#End Region '(Set|Get) Return the entire table listed</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.List()|List(Of [MDT_CLIENT])}|"' (Set|Get) Return the entire table listed
+    '''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;
+   Public Function List() As List(Of [MDT_CLIENT])
+   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+
+   End Function
+#End Region '(Set|Get) Return the entire table listed
+</VB>
+  <Print_C>
+    <string>#region |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.List()|Function}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>   Public List(Of [MDT_CLIENT]) void List()   {</string>
+    <string>   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_C>
+  <C>#region |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.List()|Function}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]
+   Public List(Of [MDT_CLIENT]) void List()   {
+   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+
+   };
+#endregion (Set|Get) Return the entire table listed
+</C>
+  <Print_F>
+    <string>#region |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.List()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>    Let List = </string>
+    <string>       Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_F>
+  <F>#region |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.List()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]
+    Let List = 
+       Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+
+#endregion (Set|Get) Return the entire table listed
+</F>
+  <Print_Python>
+    <string>#region |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.List()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>    List ::= "List"</string>
+    <string>   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+</string>
+    <string>#endregion /(Set|Get) Return the entire table listed</string>
+  </Print_Python>
+  <Python>#region |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.List()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]
+    List ::= "List"
+   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+
+#endregion /(Set|Get) Return the entire table listed
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.List()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>   Public List(Of [MDT_CLIENT]) void List()   {</string>
+    <string>   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/09/27 15h38:121| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.List()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]
+   Public List(Of [MDT_CLIENT]) void List()   {
+   Dim Result As New List(Of [MDT_CLIENT])
+   If (Me.HasSettings = True) Then
+      If (Me.UseSql = True) Then
+          Import()
+          For Each Row As DataRow In Me.Data.Rows
+              Dim Element As New [MDT_CLIENT](
+                  IIF(IsDBNull(Row.Item(0)),"", Row.Item(0)),
+                  IIF(IsDBNull(Row.Item(1)),0, Row.Item(1)),
+                  IIF(IsDBNull(Row.Item(2)),"", Row.Item(2)),
+                  IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+                  IIF(IsDBNull(Row.Item(4)),"", Row.Item(4)),
+                  IIF(IsDBNull(Row.Item(5)),"", Row.Item(5)),
+                  IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+                  IIF(IsDBNull(Row.Item(7)),"", Row.Item(7)),
+                  IIF(IsDBNull(Row.Item(8)),"", Row.Item(8)),
+                  IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+                  IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+                  IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+                  IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+                  IIF(IsDBNull(Row.Item(13)),0, Row.Item(13)))
+          Element.Reset("MDT_CLIENT",Me.DataBase,Me.Password)
+          Result.Add(Element)
+          Next
+      ElseIf (Me.UseSql = False) Then
+      End If '(Me.UseSql)
+   Else 'If (Me.HasSettings = False) Then
+   End If '(Me.HasSettings)
+   Return Result
+
+   };
+#endregion (Set|Get) Return the entire table listed
+</JavaScript>
+  <ID>3</ID>
+  <StatementFormat>Function</StatementFormat>
+  <RegionCode>05.00.03</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:121 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) Return the entire table listed</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) Return the entire table listed</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Shared>false</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <FunctionName>List</FunctionName>
+  <ParameterList />
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) Return the entire table listed</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/09/27 15h38:122 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <ReturnType>List(Of [MDT_CLIENT])</ReturnType>
+  <Partial>False</Partial>
+  <Handle />
+  <Implements />
+  <Production_Cost>1.6</Production_Cost>
+  <Quantity_Parameters>0</Quantity_Parameters>
+  <Unit_Cost_Function>1.6</Unit_Cost_Function>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Function>

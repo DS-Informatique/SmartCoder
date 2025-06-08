@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Function xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageIndex>5</ImageIndex>
+  <Name>GetStructure_Event</Name>
+  <Text />
+  <Tooltip />
+  <Enable>true</Enable>
+  <Status>IsNothing</Status>
+  <Variables />
+  <Statements />
+  <Statement>   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</Statement>
+  <XmlFile />
+  <VB_OpenStatement>Function </VB_OpenStatement>
+  <VB_CloseStatement>End Function</VB_CloseStatement>
+  <C_OpenStatement>{</C_OpenStatement>
+  <C_CloseStatement>}</C_CloseStatement>
+  <F_OpenStatement>def </F_OpenStatement>
+  <F_CloseStatement>:</F_CloseStatement>
+  <Python_OpenStatement>def </Python_OpenStatement>
+  <Python_CloseStatement>:</Python_CloseStatement>
+  <JS_OpenStatement />
+  <JS_CloseStatement />
+  <Browsable>true</Browsable>
+  <Category />
+  <Description>(Set|Get) Return the entire table listed</Description>
+  <DefaultValue />
+  <Editor />
+  <DllImport />
+  <Custom>
+    <AttributeName />
+    <AttributeValue />
+    <AttributeFormat>String</AttributeFormat>
+  </Custom>
+  <Deserializable>false</Deserializable>
+  <NonSerialized>false</NonSerialized>
+  <Serializable>false</Serializable>
+  <XmlRoot />
+  <XmlIgnore>false</XmlIgnore>
+  <XmlInclude>false</XmlInclude>
+  <RelatedImageList />
+  <Print_VB>
+    <string>#Region"[On] |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.GetStructure_Event()|List(Of [Structure_Event])}|"' (Set|Get) Return the entire table listed</string>
+    <string>    '''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</string>
+    <string>    &lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</string>
+    <string>   Public Shared Function GetStructure_Event(ByVal [Connector] As ToolBoxDLL.LineBuilder) As List(Of [Structure_Event])</string>
+    <string>   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>   End Function</string>
+    <string>#End Region '(Set|Get) Return the entire table listed</string>
+  </Print_VB>
+  <VB>#Region"[On] |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.GetStructure_Event()|List(Of [Structure_Event])}|"' (Set|Get) Return the entire table listed
+    '''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+
+    &lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;
+   Public Shared Function GetStructure_Event(ByVal [Connector] As ToolBoxDLL.LineBuilder) As List(Of [Structure_Event])
+   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+   End Function
+#End Region '(Set|Get) Return the entire table listed
+</VB>
+  <Print_C>
+    <string>#region |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.GetStructure_Event()|Function}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>   Public static List(Of [Structure_Event]) void GetStructure_Event(ByVal [Connector] As ToolBoxDLL.LineBuilder)   {</string>
+    <string>   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_C>
+  <C>#region |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Function&gt; &lt;&gt; |.GetStructure_Event()|Function}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]
+   Public static List(Of [Structure_Event]) void GetStructure_Event(ByVal [Connector] As ToolBoxDLL.LineBuilder)   {
+   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+   };
+#endregion (Set|Get) Return the entire table listed
+</C>
+  <Print_F>
+    <string>#region |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetStructure_Event()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>    Let GetStructure_Event = </string>
+    <string>       Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_F>
+  <F>#region |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetStructure_Event()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]
+    Let GetStructure_Event = 
+       Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+#endregion (Set|Get) Return the entire table listed
+</F>
+  <Print_Python>
+    <string>#region |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetStructure_Event()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>    GetStructure_Event ::= "GetStructure_Event"</string>
+    <string>   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>#endregion /(Set|Get) Return the entire table listed</string>
+  </Print_Python>
+  <Python>#region |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetStructure_Event()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]
+    GetStructure_Event ::= "GetStructure_Event"
+   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+#endregion /(Set|Get) Return the entire table listed
+</Python>
+  <Print_JavaScript>
+    <string>#region |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetStructure_Event()|Sub}|"' (Set|Get) Return the entire table listed</string>
+    <string>     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</string>
+    <string>    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    <string>   Public static List(Of [Structure_Event]) void GetStructure_Event(ByVal [Connector] As ToolBoxDLL.LineBuilder)   {</string>
+    <string>   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+</string>
+    <string>   };</string>
+    <string>#endregion (Set|Get) Return the entire table listed</string>
+  </Print_JavaScript>
+  <JavaScript>#region |2020/07/25 21h56:779| &lt;05.00.03&gt; &lt;Sub&gt; &lt;&gt; |.GetStructure_Event()|Sub}|"' (Set|Get) Return the entire table listed
+     ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+
+    [Browsable(true) , Description("(Set|Get) Return the entire table listed") ]
+   Public static List(Of [Structure_Event]) void GetStructure_Event(ByVal [Connector] As ToolBoxDLL.LineBuilder)   {
+   Dim Result As New List(Of [Structure_Event])
+   If (IsNothing([Connector])) Then
+       Return Nothing
+       Exit Function
+   End If ' (IsNothing([Connector]) 
+   ' Grabbing Line Configuration
+   Dim Tb As New DataTable
+   If ([Connector].UseSql = True) Then
+       Dim Con As New SqlClient.SqlConnection([Connector].ConnectionLine)
+       Dim Cmd As New SqlClient.SqlCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   ElseIf ([Connector].UseSql = False)
+       Dim Con As New OleDb.OleDbConnection([Connector].ConnectionLine)
+       Dim Cmd As New OleDb.OleDbCommand
+       With Cmd
+           .CommandText = "SELECT * FROM [Structure_Event]"
+           .Connection = con
+           Try
+               Con.Open()
+               Tb.Load(.ExecuteReader)
+           Catch ex As Exception
+           Finally
+               Con.Close()
+               Con.Dispose()
+               Cmd.Dispose()
+           End Try
+       End With 'Cmd
+   End If '([Connector].UseSql = True)
+       
+   If (Tb.Columns.Count - 1 &gt; 0) Then
+       For Each Row As DataRow in Tb.Rows
+           Dim Element As New [Structure_Event](               IIF(IsDBNull(Row.Item(0)),0, Row.Item(0)),
+               IIF(IsDBNull(Row.Item(1)),"", Row.Item(1)),
+               IIF(IsDBNull(Row.Item(2)),False, Row.Item(2)),
+               IIF(IsDBNull(Row.Item(3)),"", Row.Item(3)),
+               IIF(IsDBNull(Row.Item(4)),New DateTime(1970,1,1), Row.Item(4)),
+               IIF(IsDBNull(Row.Item(5)),0, Row.Item(5)),
+               IIF(IsDBNull(Row.Item(6)),"", Row.Item(6)),
+               IIF(IsDBNull(Row.Item(7)),False, Row.Item(7)),
+               IIF(IsDBNull(Row.Item(8)),False, Row.Item(8)),
+               IIF(IsDBNull(Row.Item(9)),"", Row.Item(9)),
+               IIF(IsDBNull(Row.Item(10)),"", Row.Item(10)),
+               IIF(IsDBNull(Row.Item(11)),"", Row.Item(11)),
+               IIF(IsDBNull(Row.Item(12)),"", Row.Item(12)),
+               IIF(IsDBNull(Row.Item(13)),"", Row.Item(13)),
+               IIF(IsDBNull(Row.Item(14)),"", Row.Item(14)),
+               IIF(IsDBNull(Row.Item(15)),"", Row.Item(15)),
+               IIF(IsDBNull(Row.Item(16)),"", Row.Item(16)),
+               IIF(IsDBNull(Row.Item(17)),"", Row.Item(17)),
+               IIF(IsDBNull(Row.Item(18)),"", Row.Item(18)),
+               IIF(IsDBNull(Row.Item(19)),"", Row.Item(19)),
+               IIF(IsDBNull(Row.Item(20)),"", Row.Item(20)),
+               IIF(IsDBNull(Row.Item(21)),"", Row.Item(21)),
+               IIF(IsDBNull(Row.Item(22)),"", Row.Item(22)),
+               IIF(IsDBNull(Row.Item(23)),"", Row.Item(23)),
+               IIF(IsDBNull(Row.Item(24)),"", Row.Item(24)),
+               IIF(IsDBNull(Row.Item(25)),"", Row.Item(25)),
+               IIF(IsDBNull(Row.Item(26)),"", Row.Item(26)),
+               IIF(IsDBNull(Row.Item(27)),"", Row.Item(27)),
+               IIF(IsDBNull(Row.Item(28)),"", Row.Item(28)),
+               IIF(IsDBNull(Row.Item(29)),"", Row.Item(29)),
+               IIF(IsDBNull(Row.Item(30)),"", Row.Item(30)),
+               IIF(IsDBNull(Row.Item(31)),"", Row.Item(31)),
+               IIF(IsDBNull(Row.Item(32)),False, Row.Item(32)),
+               IIF(IsDBNull(Row.Item(33)),"", Row.Item(33)),
+               IIF(IsDBNull(Row.Item(34)),"", Row.Item(34)),
+               IIF(IsDBNull(Row.Item(35)),"", Row.Item(35)),
+               IIF(IsDBNull(Row.Item(36)),0, Row.Item(36)),
+               IIF(IsDBNull(Row.Item(37)),"", Row.Item(37)),
+               IIF(IsDBNull(Row.Item(38)),0, Row.Item(38)),
+               IIF(IsDBNull(Row.Item(39)),False, Row.Item(39)),
+               IIF(IsDBNull(Row.Item(40)),"", Row.Item(40)),
+               IIF(IsDBNull(Row.Item(41)),False, Row.Item(41)),
+               IIF(IsDBNull(Row.Item(42)),False, Row.Item(42)),
+               IIF(IsDBNull(Row.Item(43)),False, Row.Item(43)),
+               IIF(IsDBNull(Row.Item(44)),"", Row.Item(44)),
+               IIF(IsDBNull(Row.Item(45)),"", Row.Item(45)),
+               IIF(IsDBNull(Row.Item(46)),"", Row.Item(46)),
+               IIF(IsDBNull(Row.Item(47)),"", Row.Item(47)),
+               IIF(IsDBNull(Row.Item(48)),"", Row.Item(48)),
+               IIF(IsDBNull(Row.Item(49)),"", Row.Item(49)),
+               IIF(IsDBNull(Row.Item(50)),"", Row.Item(50)),
+               IIF(IsDBNull(Row.Item(51)),"", Row.Item(51)),
+               IIF(IsDBNull(Row.Item(52)),"", Row.Item(52)),
+               IIF(IsDBNull(Row.Item(53)),"", Row.Item(53)),
+               IIF(IsDBNull(Row.Item(54)),"", Row.Item(54)),
+               IIF(IsDBNull(Row.Item(55)),"", Row.Item(55)),
+               IIF(IsDBNull(Row.Item(56)),"", Row.Item(56)),
+               IIF(IsDBNull(Row.Item(57)),"", Row.Item(57)),
+               IIF(IsDBNull(Row.Item(58)),"", Row.Item(58)),
+               IIF(IsDBNull(Row.Item(59)),"", Row.Item(59)),
+               IIF(IsDBNull(Row.Item(60)),"", Row.Item(60)),
+               IIF(IsDBNull(Row.Item(61)),"", Row.Item(61)),
+               IIF(IsDBNull(Row.Item(62)),"", Row.Item(62)),
+               IIF(IsDBNull(Row.Item(63)),"", Row.Item(63)),
+               IIF(IsDBNull(Row.Item(64)),0, Row.Item(64)),
+               IIF(IsDBNull(Row.Item(65)),0, Row.Item(65)),
+               IIF(IsDBNull(Row.Item(66)),0, Row.Item(66)),
+               IIF(IsDBNull(Row.Item(67)),0, Row.Item(67)),
+               IIF(IsDBNull(Row.Item(68)),0, Row.Item(68)),
+               IIF(IsDBNull(Row.Item(69)),0, Row.Item(69)),
+               IIF(IsDBNull(Row.Item(70)),0, Row.Item(70)),
+               IIF(IsDBNull(Row.Item(71)),0, Row.Item(71)),
+               IIF(IsDBNull(Row.Item(72)),0, Row.Item(72)),
+               IIF(IsDBNull(Row.Item(73)),0, Row.Item(73)))
+       Element.Reset("Structure_Event", [Connector].DataSource, [Connector].Password)
+       Result.Add(Element)
+       Next
+   Else '(Tb.Columns.Count - 1 &gt;= 0)
+   End If '(Tb.Columns.Count - 1 &lt; 0)
+   Return Result
+
+   };
+#endregion (Set|Get) Return the entire table listed
+</JavaScript>
+  <ID>3</ID>
+  <StatementFormat>Function</StatementFormat>
+  <RegionCode>05.00.03</RegionCode>
+  <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+  <AuthorName>Saadry Dunkel</AuthorName>
+  <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+  <ContributorEmail />
+  <ContributorName />
+  <ContributorUri />
+  <CustomProperty />
+  <Published />
+  <Rights />
+  <Summary>'''    &lt;Summary&gt;
+'''     Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Summary>
+  <Title />
+  <Usage />
+  <Remarks />
+  <Example />
+  <Note />
+  <See />
+  <SeeAlso />
+  <Params>
+    <Param>
+      <Name>Connector</Name>
+      <Definition />
+    </Param>
+  </Params>
+  <Rules />
+  <Syntax />
+  <Attribute>
+    <Browsable>true</Browsable>
+    <Category />
+    <Description>(Set|Get) Return the entire table listed</Description>
+    <DefaultValue />
+    <Editor />
+    <DllImport />
+    <Custom>
+      <AttributeName />
+      <AttributeValue />
+      <AttributeFormat>String</AttributeFormat>
+    </Custom>
+    <Deserializable>false</Deserializable>
+    <NonSerialized>false</NonSerialized>
+    <Serializable>false</Serializable>
+    <XmlRoot />
+    <XmlIgnore>false</XmlIgnore>
+    <XmlInclude>false</XmlInclude>
+    <RelatedImageList />
+    <Attributes>
+      <Attribute>
+        <AttributeName>Browsable</AttributeName>
+        <AttributeValue>True</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+      </Attribute>
+      <Attribute>
+        <AttributeName>Description</AttributeName>
+        <AttributeValue>(Set|Get) Return the entire table listed</AttributeValue>
+        <AttributeInUse>true</AttributeInUse>
+        <AttributeFormat>String</AttributeFormat>
+      </Attribute>
+    </Attributes>
+    <CodeLangue>Vb</CodeLangue>
+    <Print_VB>
+      <string>&lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</string>
+    </Print_VB>
+    <Print_C>
+      <string>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_C>
+    <Print_F>
+      <string>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_F>
+    <Print_Python>
+      <string>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_Python>
+    <Print_JavaScript>
+      <string>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</string>
+    </Print_JavaScript>
+    <VB>&lt;Browsable(True) , Description("(Set|Get) Return the entire table listed") &gt;</VB>
+    <C>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</C>
+    <F>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</F>
+    <Python>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</Python>
+    <JavaScript>[Browsable(true) , Description("(Set|Get) Return the entire table listed") ]</JavaScript>
+  </Attribute>
+  <AccessModifier>Public</AccessModifier>
+  <ProcedureModifier>Nothing</ProcedureModifier>
+  <Shared>true</Shared>
+  <Shadows>false</Shadows>
+  <Async>false</Async>
+  <FunctionName>GetStructure_Event</FunctionName>
+  <ParameterList>
+    <ParameterList_Statement>
+      <ImageIndex>2</ImageIndex>
+      <Name>Connector</Name>
+      <Text>CodeBuilder.VB.InnerStatement.ParameterList_Statement</Text>
+      <Tooltip>ByVal [Connector] As ToolBoxDLL.LineBuilder = Nothing</Tooltip>
+      <Enable>true</Enable>
+      <Syntax>[ &lt;attributelist&gt; ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   parametername[( )] [ As parametertype ] [ = defaultvalue ]  </Syntax>
+      <Example />
+      <Remarks />
+      <Rules />
+      <Definition />
+      <AttributeList>
+        <Browsable>true</Browsable>
+        <Category />
+        <Description />
+        <DefaultValue />
+        <Editor />
+        <DllImport />
+        <Custom>
+          <AttributeName />
+          <AttributeValue />
+          <AttributeFormat>String</AttributeFormat>
+        </Custom>
+        <Deserializable>false</Deserializable>
+        <NonSerialized>false</NonSerialized>
+        <Serializable>false</Serializable>
+        <XmlRoot />
+        <XmlIgnore>false</XmlIgnore>
+        <XmlInclude>false</XmlInclude>
+        <RelatedImageList />
+        <Attributes />
+        <CodeLangue>Vb</CodeLangue>
+        <Print_VB />
+        <Print_C />
+        <Print_F />
+        <Print_Python />
+        <Print_JavaScript />
+        <VB />
+        <C />
+        <F />
+        <Python />
+        <JavaScript />
+      </AttributeList>
+      <Optional>false</Optional>
+      <ByVal>true</ByVal>
+      <ByRef>false</ByRef>
+      <ParamArray>false</ParamArray>
+      <ParameterName>Connector</ParameterName>
+      <ParameterType>ToolBoxDLL.LineBuilder</ParameterType>
+      <DefaultValue />
+      <Modifier>ByVal </Modifier>
+    </ParameterList_Statement>
+  </ParameterList>
+  <SummaryStatement>
+    <AuthorEmail>saadry.dunkel@outlook.com</AuthorEmail>
+    <AuthorName>Saadry Dunkel</AuthorName>
+    <AuthorUri>https://www.saadry-dunkel.com</AuthorUri>
+    <ContributorEmail />
+    <ContributorName />
+    <ContributorUri />
+    <Published />
+    <Rights />
+    <Summary>(Set|Get) Return the entire table listed</Summary>
+    <Title />
+    <Status>NotTested</Status>
+    <Usage />
+    <Remarks />
+    <Example />
+    <Note />
+    <Params />
+    <See />
+    <SeeAlso />
+    <Print_VB>'''    &lt;Summary&gt;
+'''     (Set|Get) Return the entire table listed
+'''    &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+'''    &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+'''    &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+'''    &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+'''    &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+'''    &lt;/Summary&gt;
+</Print_VB>
+    <Print_C> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_C>
+    <Print_F> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_F>
+    <Print_Python> ///     &lt;Summary&gt;
+ ///    (Set|Get) Return the entire table listed
+ ///     &lt;AuthorEmail&gt;saadry.dunkel@outlook.com&lt;/AuthorEmail&gt;
+ ///     &lt;AuthorName&gt;Saadry Dunkel&lt;/AuthorName&gt;
+ ///     &lt;AuthorUri&gt;https://www.saadry-dunkel.com&lt;/AuthorUri&gt;
+ ///     &lt;Published&gt;MASTER From MASTER\Saadry | Time : 2020/07/25 21h56:779 &lt;/Published&gt;
+ ///     &lt;Updated&gt;[Created=][Status=NotTested][Tested On]1/01/01 00h00:000[/Tested On]&lt;/Updated&gt;
+ ///     &lt;/Summary&gt;
+</Print_Python>
+    <Rules />
+    <Syntax />
+  </SummaryStatement>
+  <ReturnType>List(Of [Structure_Event])</ReturnType>
+  <Partial>False</Partial>
+  <Handle />
+  <Implements />
+  <Production_Cost>2.1</Production_Cost>
+  <Quantity_Parameters>1</Quantity_Parameters>
+  <Unit_Cost_Function>1.6</Unit_Cost_Function>
+  <Unit_Cost_Parameters>0.5</Unit_Cost_Parameters>
+</Function>

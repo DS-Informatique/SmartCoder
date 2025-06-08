@@ -1,0 +1,153 @@
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\Archivis.exe.config
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\Archivis.exe
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\Archivis.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\Archivis.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\FastColoredTextBox.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.Resources.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.vbproj.CopyComplete
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.exe
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.xml
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.pdb
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.Manager.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.NewBackup.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.TreeExplorer.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.Sauvegarde.resources
+C:\Users\Saadry\Documents\Laboratoire\Projet en cours\SmartOffice\SmartOffice\Archivis\obj\Debug\Archivis.ManageBackup.resources
+F:\SmartOffice\Archivis\bin\Debug\Archivis.exe.config
+F:\SmartOffice\Archivis\obj\Debug\Archivis.exe
+F:\SmartOffice\Archivis\obj\Debug\Archivis.xml
+F:\SmartOffice\Archivis\obj\Debug\Archivis.pdb
+F:\SmartOffice\Archivis\obj\Debug\Archivis.vbprojResolveAssemblyReference.cache
+F:\SmartOffice\Archivis\obj\Debug\Archivis.ManageBackup.resources
+F:\SmartOffice\Archivis\obj\Debug\Archivis.Manager.resources
+F:\SmartOffice\Archivis\obj\Debug\Archivis.Resources.resources
+F:\SmartOffice\Archivis\obj\Debug\Archivis.NewBackup.resources
+F:\SmartOffice\Archivis\obj\Debug\Archivis.Sauvegarde.resources
+F:\SmartOffice\Archivis\obj\Debug\Archivis.TreeExplorer.resources
+F:\SmartOffice\Archivis\obj\Debug\Archivis.vbproj.GenerateResource.Cache
+F:\SmartOffice\Archivis\bin\Debug\Archivis.exe
+F:\SmartOffice\Archivis\bin\Debug\Archivis.pdb
+F:\SmartOffice\Archivis\bin\Debug\Archivis.xml
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.Charts.Design.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Charts.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Design.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar2.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.Design.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.SuperGrid.Design.dll
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.TreeGX.dll
+F:\SmartOffice\Archivis\bin\Debug\SmartCoder.dll
+F:\SmartOffice\Archivis\bin\Debug\FastColoredTextBox.dll
+F:\SmartOffice\Archivis\bin\Debug\AxInterop.AXVLC.dll
+F:\SmartOffice\Archivis\bin\Debug\YoutubeExtractor.dll
+F:\SmartOffice\Archivis\bin\Debug\AxInterop.WMPLib.dll
+F:\SmartOffice\Archivis\bin\Debug\AxInterop.SHDocVw.dll
+F:\SmartOffice\Archivis\bin\Debug\AxInterop.MSTSCLib.dll
+F:\SmartOffice\Archivis\bin\Debug\Interop.MSTSCLib.dll
+F:\SmartOffice\Archivis\bin\Debug\Interop.AXVLC.dll
+F:\SmartOffice\Archivis\bin\Debug\Interop.WMPLib.dll
+F:\SmartOffice\Archivis\bin\Debug\Interop.SHDocVw.dll
+F:\SmartOffice\Archivis\bin\Debug\SmartCoder.pdb
+F:\SmartOffice\Archivis\bin\Debug\SmartCoder.xml
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.xml
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar2.xml
+F:\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.xml
+F:\SmartOffice\Archivis\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\Archivis.exe.config
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\Archivis.exe
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\Archivis.pdb
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\Archivis.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.Charts.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Charts.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\SmartCoder.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\FastColoredTextBox.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\AxInterop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\YoutubeExtractor.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\AxInterop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\AxInterop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\Interop.MSTSCLib.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\Interop.AXVLC.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\Interop.WMPLib.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\Interop.SHDocVw.dll
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\SmartCoder.pdb
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\SmartCoder.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\SmartCoder.dll.config
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Layout.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\bin\Debug\YoutubeExtractor.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.vbprojAssemblyReference.cache
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.ManageBackup.resources
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.Manager.resources
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.Resources.resources
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.NewBackup.resources
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.Sauvegarde.resources
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.TransfertUnit.resources
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.TreeExplorer.resources
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.vbproj.GenerateResource.cache
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.vbproj.CoreCompileInputs.cache
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.vbproj.CopyComplete
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.exe
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.xml
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.pdb
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.Form1.resources
+C:\Users\Saadry\Documents\SmartOffice\Archivis\obj\Debug\Archivis.Savings.resources
