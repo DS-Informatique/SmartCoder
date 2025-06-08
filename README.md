@@ -21,3 +21,44 @@ Also included:
  All of these programs could help one to create a mini ERP.
  
 Althouth not all methoddes are functioning properly the project is still operational. It has evolved now to a new technology : ASP.NET CORE MVC version 9 which will be available on https://dsi.swiss very soon.
+Sample of code for example:
+
+Dim P_01_02_00 As New VbNET.Property("AddingModeEnable",
+                                                 "Boolean",
+                                                 "Option",
+                                                 True, 'Required
+                                                 0, ' ID
+                                                 "", 'DefaultValue
+                                                 False, 'Shared
+                                                 False, 'Shadows
+                                                 False, 'WriteOnly
+                                                 False, 'ReadOnly
+                                                 False, 'Default
+                                                 AccessModifiers.Public,
+                                                 PropertyModifiers.Nothing,
+                                                 "_AddingModeEnable",
+                                                 "Boolean",
+                                                 AccessModifiers.Private,
+                                                 "", 'Get Statement
+                                                 "", 'Set Statement
+                                                 True, 'Browsable
+                                                 "Boolean", 'Returns
+                                                 , 'ParameterList
+                                                 True, 'Enable
+                                                 "(Set|Get) Determines if we are adding a new element or updating an existing element.", 'Summary Description
+                                                 , 'AttributeList
+                                                 My.Settings.AuthorName, 'Author Name
+                                                 My.Settings.AuthorEmail,'Author Email
+                                                 My.Settings.AuthorUrl, ' Author Url
+                                                 "", 'Contributor Name
+                                                 "", 'Contributor Email
+                                                 "", 'Contributor Url
+                                                 "", 'Summary Usage
+                                                 , 'Remark
+                                                 , 'Example
+                                                 , 'Note
+                                                 , 'Published
+                                                 , 'Rights
+                                                 , 'Title
+                                                 ,)
+            ' Result.Add_Property(P_01_02_00)
