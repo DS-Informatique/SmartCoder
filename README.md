@@ -20,3 +20,4 @@ Also included:
 
  All of these programs could help one to create a mini ERP.
  
+Althouth not all methoddes are functioning properly the project is still operational. It has evolved now to a new technology : ASP.NET CORE MVC version 9 which will be available on https://dsi.swiss very soon.
